@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscaping Company in Cedar Park & Austin, TX | Southern Love Landscaping & Design</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15H9V9h2v8zm4 0h-2V9h2v8z' fill='%236B8E23'/%3E%3C/svg%3E" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: #222;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1519781523456-11f868fe2562?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Placeholder image, ideally a landscape design */
+            background-size: cover;
+            background-position: center;
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #A9D18E; /* Light green for hover effect */
+            transition: width .3s ease-out;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .btn-primary {
+            background-color: #6B8E23; /* Olive Green */
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #55711A;
+        }
+        .card-bg {
+            background-color: #eeeeee;
+            border-radius: 12px;
+        }
+        .footer-trapezoid {
+            position: relative;
+        }
+        .footer-trapezoid::before {
+            content: '';
+            position: absolute;
+            top: -30px; /* Adjust for desired cutout height */
+            left: 0;
+            width: 100%;
+            height: 30px; /* Same as top for a clean edge */
+            background: linear-gradient(to right bottom, transparent 49.5%, #1a1a1a 50.5%);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        @media (min-width: 768px) {
+            .footer-trapezoid::before {
+                background: linear-gradient(to right top, transparent 49.5%, #1a1a1a 50.5%);
+                top: -30px;
+                height: 60px; /* Make it taller for a more pronounced trapezoid */
+            }
+        }
+        /* Mobile nav specific styles */
+        .mobile-menu {
+            display: none; /* Hidden by default */
+        }
+        .mobile-menu.active {
+            display: flex; /* Shown when active */
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-gray-800 bg-opacity-90 shadow-lg backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-white tracking-wide">
+                Southern Love <span class="text-green-400">Landscaping</span>
+            </a>
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-white text-lg nav-link">Landscape Design & Build</a>
+                <a href="#services" class="text-white text-lg nav-link">Outdoor Living</a>
+                <a href="#services" class="text-white text-lg nav-link">Commercial Services</a>
+                <a href="#why-us" class="text-white text-lg nav-link">Why Choose Us</a>
+                <a href="#contact" class="btn-primary text-white text-lg hover:underline-none">Contact Us</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="mobile-menu md:hidden flex-col items-center pb-4 space-y-4 bg-gray-800 bg-opacity-95">
+            <a href="#services" class="text-white text-lg hover:text-green-400 block py-2" onclick="document.getElementById('mobile-menu').classList.remove('active');">Landscape Design & Build</a>
+            <a href="#services" class="text-white text-lg hover:text-green-400 block py-2" onclick="document.getElementById('mobile-menu').classList.remove('active');">Outdoor Living</a>
+            <a href="#services" class="text-white text-lg hover:text-green-400 block py-2" onclick="document.getElementById('mobile-menu').classList.remove('active');">Commercial Services</a>
+            <a href="#why-us" class="text-white text-lg hover:text-green-400 block py-2" onclick="document.getElementById('mobile-menu').classList.remove('active');">Why Choose Us</a>
+            <a href="#contact" class="btn-primary text-white text-lg hover:underline-none block py-2 px-6" onclick="document.getElementById('mobile-menu').classList.remove('active');">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center justify-center text-white py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-12 md:space-y-0 md:space-x-12">
+            <!-- Left side: Content -->
+            <div class="md:w-1/2 text-center md:text-left space-y-8">
+                <span class="inline-block bg-green-600 bg-opacity-80 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-md">
+                    <svg class="inline-block h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    Top Rated Local® Austin Landscapers
+                </span>
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                    Transforming Austin & Cedar Park Outdoor Spaces
+                </h1>
+                <p class="text-xl md:text-2xl font-light opacity-90">
+                    Southern Love Landscaping & Design specializes in comprehensive landscape design, outdoor living installations, and commercial services across Austin and Cedar Park, Texas.
+                </p>
+                <div class="pt-4">
+                    <a href="#contact" class="btn-primary text-white text-xl hover:scale-105 transform inline-block">
+                        Get Your Free Consultation
+                    </a>
+                </div>
+            </div>
+            <!-- Right side: Card with Image (Placeholder) -->
+            <div class="md:w-1/2 flex justify-center md:justify-end relative">
+                <div class="card-bg p-8 max-w-sm w-full shadow-2xl relative z-10">
+                    <div class="absolute inset-0 bg-cover bg-center opacity-10 rounded-lg" style="background-image: url('https://images.unsplash.com/photo-1549497042-32120ee84620?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
+                    <div class="relative z-20">
+                        <h3 class="text-3xl font-bold text-gray-800 mb-4">Your Dream Outdoor Oasis Awaits</h3>
+                        <p class="text-gray-700 text-lg">
+                            From custom fire pits and beautiful patios to lush native plantings, our team delivers impressive results with attention to detail. We make it easy to work with us from the very beginning.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 mt-4 space-y-2">
+                            <li>Expert Landscape Design & Build</li>
+                            <li>Personalized Outdoor Living Solutions</li>
+                            <li>Reliable Commercial Landscaping</li>
+                        </ul>
+                        <div class="mt-6 text-center">
+                            <a href="#contact" class="text-white text-lg font-semibold underline hover:text-green-700 transition-colors">
+                                Call Us Today!
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-6">Our Comprehensive Landscaping Services</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16">
+                Southern Love Landscaping & Design offers a full spectrum of services to elevate your property's appeal and functionality, serving homeowners and commercial properties throughout Austin, Cedar Park, and surrounding communities.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service Card 1 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1519781523456-11f868fe2562?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Landscape Design" class="w-full h-48 object-cover rounded-md mb-6 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Landscape Design & Build</h3>
+                    <p class="text-gray-700">
+                        Crafting thoughtful designs and executing larger-scale improvements that enhance your property's natural beauty and value. Our crew manages comprehensive projects with precision.
+                    </p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1627915908953-d14a589e4722?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Outdoor Living" class="w-full h-48 object-cover rounded-md mb-6 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Custom Outdoor Living Spaces</h3>
+                    <p class="text-gray-700">
+                        From inviting patios to custom fire pits, we design and build functional and beautiful outdoor spaces perfect for relaxation and entertaining.
+                    </p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1547466549-3079633e4401?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Commercial Services" class="w-full h-48 object-cover rounded-md mb-6 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Reliable Commercial Services</h3>
+                    <p class="text-gray-700">
+                        Maintaining and enhancing commercial properties with professional landscaping solutions tailored to your business needs and aesthetic.
+                    </p>
+                </div>
+                <!-- Service Card 4 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1596796931448-9f170b6d9e0e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Patios and Fire Pits" class="w-full h-48 object-cover rounded-md mb-6 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Patios & Custom Fire Pits</h3>
+                    <p class="text-gray-700">
+                        Create the perfect gathering spot with beautifully crafted patios and bespoke fire pit designs that reflect your style.
+                    </p>
+                </div>
+                <!-- Service Card 5 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1569429598282-e565c6f1947b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pergolas and Irrigation" class="w-full h-48 object-cover rounded-md mb-6 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Pergolas & Irrigation Systems</h3>
+                    <p class="text-gray-700">
+                        Add elegance and efficiency with custom pergolas and advanced irrigation systems for a thriving landscape.
+                    </p>
+                </div>
+                <!-- Service Card 6 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+                    <img src="https://images.unsplash.com/photo-1522066604677-703666b6c00d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Outdoor Lighting" class="w-full h-48 object-cover rounded-md mb-6 shadow-sm">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Enchanting Outdoor Lighting</h3>
+                    <p class="text-gray-700">
+                        Illuminate your landscape and extend your outdoor enjoyment with expertly designed and installed lighting solutions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Trust Section -->
+    <section id="why-us" class="py-20 px-6 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-extrabold mb-6">Why Southern Love Landscaping & Design?</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-16">
+                We're more than just landscapers; we're partners in creating the outdoor space you've always dreamed of. Our commitment to quality, customer satisfaction, and innovative design sets us apart.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-left hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <div class="text-green-600 mb-4">
+                        <svg class="w-12 h-12 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Consistently Impressive Results</h3>
+                    <p class="text-gray-700">
+                        "According to customer feedback, Southern Love Landscaping & Design <strong>consistently delivers impressive results</strong>. Reviewers frequently praise their attention to detail, noting the crew’s hardworking and professional approach." - Wheree
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-left hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <div class="text-green-600 mb-4">
+                        <svg class="w-12 h-12 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.333-3.333 3.333-5 5-5s5 1.667 5 5-2 10-5 10c-1 0-3 0-5-5-2-5-5-5-5-5s-2-10-5-10S2 5 2 8c0 5 2 10 5 10s5 0 5-5z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Easy & Personalized Process</h3>
+                    <p class="text-gray-700">
+                        "It was easy to work with Southern Love from the very beginning. Harrison listened to my ideas and preferences and then designed the perfect combination of native plants and low maintenance that I was looking for." - Birdeye Review
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg text-left hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                    <div class="text-green-600 mb-4">
+                        <svg class="w-12 h-12 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Flexible Financing Options</h3>
+                    <p class="text-gray-700">
+                        Invest in your dream landscape today! Financing options are available for qualified projects, allowing you to move forward with patios, pergolas, irrigation, lighting, and full outdoor renovations without delay.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Footer -->
+    <footer id="contact" class="bg-gray-900 text-white py-20 px-6 relative footer-trapezoid">
+        <div class="container mx-auto text-center max-w-4xl">
+            <h2 class="text-5xl font-extrabold mb-8 leading-tight">Ready to Reimagine Your Outdoor Space?</h2>
+            <p class="text-xl opacity-90 mb-10">
+                Let Southern Love Landscaping & Design transform your property in Austin, Cedar Park, or Round Rock. We offer expert landscaping, custom fire pits, and beautiful patios designed to elevate your home's appeal and functionality.
+            </p>
+            <a href="tel:+1-512-555-1234" class="btn-primary text-2xl px-8 py-4 hover:scale-105 transform inline-block">
+                Call Us for a Free Consultation Today!
+            </a>
+            <p class="text-gray-400 mt-10 text-lg">
+                <span class="font-semibold block mb-2">Southern Love Landscaping & Design</span>
+                111 Congress Ave, Austin, Texas
+            </p>
+            <p class="text-gray-400 text-lg">
+                Phone: <a href="tel:+1-512-555-1234" class="underline hover:text-white"> (512) 555-1234</a> (Placeholder)
+            </p>
+            <p class="text-gray-500 text-sm mt-10">
+                &copy; 2026 Southern Love Landscaping & Design. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking outside (optional, for better UX)
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target) && mobileMenu.classList.contains('active')) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

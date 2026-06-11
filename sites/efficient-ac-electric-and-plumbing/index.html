@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efficient AC, Electric & Plumbing | HVAC Repair & Installation | Austin, TX</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a', /* slate-900 */
+                            light: '#f8fafc', /* slate-50 */
+                            accent: '#10b981', /* emerald-500 */
+                            warm: '#f59e0b' /* amber-500 */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Custom animations & smooth transitions -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .tilt-card {
+            transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.2s ease;
+            transform-style: preserve-3d;
+        }
+        .glow-effect {
+            position: relative;
+        }
+        .glow-effect::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: linear-gradient(135deg, #10b981, #f59e0b);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .glow-effect:hover::after {
+            opacity: 0.15;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-slate-800 antialiased overflow-x-hidden">
+
+    <!-- STICKY NAVBAR -->
+    <header id="sticky-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/80 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Branding / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-emerald-500 to-amber-500 flex items-center justify-center shadow-lg shadow-emerald-500/10 group-hover:scale-105 transition-transform">
+                        <svg class="w-6 h-6 text-slate-950" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-lg font-extrabold text-white leading-none tracking-tight">EFFICIENT</span>
+                        <span class="block text-xs font-semibold text-emerald-400 tracking-wider uppercase mt-0.5">AC • Electric • Plumbing</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#services" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Our Services</a>
+                    <a href="#trust" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Why Efficient</a>
+                    <a href="#faqs" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">FAQs</a>
+                    <a href="#contact" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Our Austin Office</a>
+                </nav>
+
+                <!-- Phone / CTA Buttons -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:5125488570" class="hidden sm:flex items-center gap-2 text-white bg-slate-800 hover:bg-slate-700/80 px-4 py-2 rounded-xl border border-slate-700/60 transition-all">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        <span class="text-sm font-bold text-slate-200">(512) 548-8570</span>
+                    </a>
+                    <a href="#contact" class="bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 text-sm font-extrabold px-5 py-2.5 rounded-xl shadow-lg shadow-emerald-500/10 hover:scale-[1.02] active:scale-[0.98] transition-all">
+                        Book Online
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="pt-20">
+
+        <!-- SPLIT-HERO SECTION -->
+        <section class="relative bg-slate-950 text-white py-16 sm:py-24 lg:py-32 overflow-hidden">
+            <!-- Background glow grids -->
+            <div class="absolute inset-0 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30"></div>
+            <div class="absolute top-1/4 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-10 left-10 w-96 h-96 bg-amber-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Hero Content (Left) -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="inline-flex items-center gap-2 bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                            Same-Day Service Available in Austin
+                        </div>
+
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+                            Austin's Choice for <br class="hidden sm:inline">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-emerald-300 to-amber-400">
+                                Honest & Efficient
+                            </span> <br>
+                            Home Services
+                        </h1>
+
+                        <p class="text-slate-300 text-lg sm:text-xl font-normal leading-relaxed max-w-2xl">
+                            From blazing summer AC emergencies to complete smart electrical upgrades and certified plumbing retrofits, Efficient AC, Electric & Plumbing keeps your Austin home running smoothly 24/7.
+                        </p>
+
+                        <!-- Primary CTA light gray rounded rectangle -->
+                        <div class="bg-slate-100 p-6 rounded-2xl border border-slate-200/80 shadow-2xl max-w-md">
+                            <p class="text-slate-900 text-sm font-extrabold flex items-center gap-1.5 mb-3.5">
+                                <span class="text-amber-500 text-base">★</span> 850+ Verified 5-Star Reviews in Travis County
+                            </p>
+                            <!-- Inside light gray container, text is dark with absolute contrast, and features underlines -->
+                            <a href="#contact" class="inline-flex items-center justify-between w-full bg-slate-950 hover:bg-slate-900 text-white font-sans font-bold underline px-6 py-4 rounded-xl transition duration-300 group">
+                                <span class="no-underline">Claim Your Free System Quote</span>
+                                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </a>
+                            <div class="mt-3 flex items-center justify-between text-xs text-slate-700 font-extrabold">
+                                <span>⚡ 24/7 Emergency Dispatch</span>
+                                <span>•</span>
+                                <span>🛡️ A+ BBB Accredited</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Content (Right) -->
+                    <div class="lg:col-span-5 relative w-full h-[450px] lg:h-[500px] flex items-center justify-center">
+                        <!-- Dashboard Visual Container -->
+                        <div class="relative w-full h-full bg-slate-900/60 border border-slate-800/80 rounded-3xl p-6 shadow-2xl backdrop-blur-sm overflow-hidden flex flex-col justify-between">
+                            <!-- Background Grid Panel SVG -->
+                            <div class="absolute inset-0 opacity-10 pointer-events-none">
+                                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                                            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#fff" stroke-width="1"/>
+                                        </pattern>
+                                    </defs>
+                                    <rect width="100%" height="100%" fill="url(#grid-pattern)" />
+                                </svg>
+                            </div>
+
+                            <!-- Header of Interactive Module -->
+                            <div class="flex items-center justify-between border-b border-slate-800/80 pb-4 z-10">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3.5 h-3.5 rounded-full bg-red-500 animate-pulse"></span>
+                                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Active Diagnostics</span>
+                                </div>
+                                <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-md">Austin HQ Online</span>
+                            </div>
+
+                            <!-- Interactive Dashboard Graphics (Mock SVG illustration) -->
+                            <div class="my-auto flex flex-col items-center justify-center z-10 space-y-6">
+                                <!-- Central Circle Indicator with Play CTA -->
+                                <button onclick="openVideoModal()" class="relative group flex items-center justify-center w-20 h-20 bg-slate-950 border border-slate-800 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                                    <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500 to-amber-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity blur duration-500"></div>
+                                    <div class="relative w-18 h-18 bg-slate-900 rounded-full flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-emerald-400 transform group-hover:scale-110 transition-transform translate-x-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z"/>
+                                        </svg>
+                                    </div>
+                                    <!-- Tooltip alert -->
+                                    <span class="absolute -bottom-8 bg-slate-900 text-[10px] text-slate-300 border border-slate-800 px-2 py-0.5 rounded-md whitespace-nowrap opacity-80 group-hover:opacity-100 transition-opacity">
+                                        Watch Video Testimonial
+                                    </span>
+                                </button>
+
+                                <div class="w-full grid grid-cols-3 gap-3">
+                                    <!-- Metric 1 -->
+                                    <div class="bg-slate-950/80 border border-slate-800 p-3.5 rounded-2xl text-center">
+                                        <span class="block text-[10px] text-slate-400 uppercase tracking-wide font-bold mb-1">A/C Status</span>
+                                        <span class="block text-sm font-extrabold text-emerald-400">72°F Optimal</span>
+                                    </div>
+                                    <!-- Metric 2 -->
+                                    <div class="bg-slate-950/80 border border-slate-800 p-3.5 rounded-2xl text-center">
+                                        <span class="block text-[10px] text-slate-400 uppercase tracking-wide font-bold mb-1">Electrical</span>
+                                        <span class="block text-sm font-extrabold text-emerald-400">100% Safe</span>
+                                    </div>
+                                    <!-- Metric 3 -->
+                                    <div class="bg-slate-950/80 border border-slate-800 p-3.5 rounded-2xl text-center">
+                                        <span class="block text-[10px] text-slate-400 uppercase tracking-wide font-bold mb-1">Water Flow</span>
+                                        <span class="block text-sm font-extrabold text-emerald-400">Normal PSI</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Card Overlay (Bottom Right component direction) -->
+                            <!-- Light gray rounded rectangle (#eeeeee), static, subtle shaking hands SVG background -->
+                            <div class="absolute bottom-4 right-4 max-w-[240px] bg-[#eeeeee] text-slate-900 p-4 rounded-xl shadow-2xl border border-white/60 z-20 overflow-hidden group">
+                                <!-- Subtle inline handshake SVG background pattern -->
+                                <svg class="absolute right-0 bottom-0 w-28 h-28 text-slate-300/40 pointer-events-none" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M40,110 C50,110 65,95 75,95 C85,95 105,115 115,115 C125,115 130,110 135,100" />
+                                    <path d="M45,125 C55,125 70,115 80,115 C90,115 110,130 120,130" />
+                                    <path d="M160,90 C150,90 135,105 125,105 C115,105 95,85 85,85 C75,85 70,90 65,100" />
+                                    <path d="M155,75 C145,75 130,85 120,85 C110,85 90,70 80,70" />
+                                </svg>
+                                <div class="relative z-10">
+                                    <p class="text-[10px] font-bold tracking-widest text-emerald-700 uppercase mb-1">The Efficient Shield</p>
+                                    <h4 class="text-xs font-extrabold text-slate-950 mb-1">100% Satisfaction Guarantee</h4>
+                                    <p class="text-[10px] text-slate-700 leading-snug">
+                                        If our installation or repair isn't perfect, we will return and fix it free. Guaranteed by Tony & team.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-20 bg-slate-50 border-t border-b border-slate-200/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <span class="text-emerald-600 font-extrabold text-sm uppercase tracking-wider">Expertise You Can Count On</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Our Core Mechanical Services</h2>
+                    <p class="text-slate-600 text-lg leading-relaxed">
+                        With decades of combined local Austin field experience, our state-licensed technicians specialize in delivering reliable heating, cooling, power, and plumbing.
+                    </p>
+                </div>
+
+                <!-- 6 Service Cards Grid (Employs tilt-card hover dynamics) -->
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1: HVAC Repair -->
+                    <div class="tilt-card bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">HVAC Repair</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Don't sweat through Austin's intense heat. We diagnose and repair all air conditioner makes and models with fully stocked trucks.
+                            </p>
+                        </div>
+                        <a href="#contact" class="mt-6 text-sm font-bold text-slate-900 hover:text-emerald-600 transition-colors inline-flex items-center gap-1.5">
+                            Schedule Repair <span class="text-xs">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: HVAC Installation -->
+                    <div class="tilt-card bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center text-amber-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">HVAC Installation</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Premium energy-efficient AC systems configured specifically for local climate profiles. Up to 10-year parts & labor warranty.
+                            </p>
+                        </div>
+                        <a href="#contact" class="mt-6 text-sm font-bold text-slate-900 hover:text-amber-600 transition-colors inline-flex items-center gap-1.5">
+                            Get Free Quote <span class="text-xs">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: Emergency Service -->
+                    <div class="tilt-card bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-red-500/10 rounded-xl flex items-center justify-center text-red-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Emergency Dispatch</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                AC failed late Saturday night? No problem. We provide reliable 24/7 emergency dispatch across Travis and Williamson counties.
+                            </p>
+                        </div>
+                        <a href="tel:5125488570" class="mt-6 text-sm font-bold text-red-600 hover:text-red-700 transition-colors inline-flex items-center gap-1.5">
+                            Call Now: (512) 548-8570 <span class="text-xs">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: System Maintenance -->
+                    <div class="tilt-card bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">System Maintenance</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Avoid costly breakdowns with pre-season checkups. We examine electrical panels, refrigerant charges, and drainage paths.
+                            </p>
+                        </div>
+                        <a href="#contact" class="mt-6 text-sm font-bold text-slate-900 hover:text-indigo-600 transition-colors inline-flex items-center gap-1.5">
+                            Book Maintenance <span class="text-xs">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 5: Heat Pump Services -->
+                    <div class="tilt-card bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-sky-500/10 rounded-xl flex items-center justify-center text-sky-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Heat Pump Services</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Specializing in geothermal & ground loop heat pump installation, repairs, and fine-tuning for energy-conscious homes.
+                            </p>
+                        </div>
+                        <a href="#contact" class="mt-6 text-sm font-bold text-slate-900 hover:text-sky-600 transition-colors inline-flex items-center gap-1.5">
+                            Heat Pump Quote <span class="text-xs">→</span>
+                        </a>
+                    </div>
+
+                    <!-- Card 6: Electrical & Plumbing -->
+                    <div class="tilt-card bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div class="space-y-4">
+                            <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center text-pink-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900">Electrical & Plumbing</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Complete home rewiring, EV charger setup, water heater installations, drain cleaning, and fixture repairs all under one roof.
+                            </p>
+                        </div>
+                        <a href="#contact" class="mt-6 text-sm font-bold text-slate-900 hover:text-pink-600 transition-colors inline-flex items-center gap-1.5">
+                            Request Combined Quote <span class="text-xs">→</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST & WHY CHOOSE US SECTION -->
+        <section id="trust" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Left: Metrics & Badges -->
+                    <div class="space-y-8">
+                        <span class="text-emerald-600 font-extrabold text-sm uppercase tracking-wider">Austin's Gold Standard</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                            Why Hundreds of Families Keep Choosing Efficient
+                        </h2>
+                        <p class="text-slate-600 text-lg leading-relaxed">
+                            Since moving to our headquarters on Metropolitan Dr, we've focused on two simple ideas: hiring the absolute best certified experts, and treating our clients like neighbors.
+                        </p>
+
+                        <!-- Highlights Grid -->
+                        <div class="grid sm:grid-cols-2 gap-6 pt-4">
+                            <!-- High Contrast Badge 1 -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60 flex items-start gap-4">
+                                <div class="bg-emerald-500 text-slate-950 p-2.5 rounded-lg">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-extrabold text-slate-900">Licensed & Insured</h4>
+                                    <p class="text-xs text-slate-600 mt-1">Full MEP electrical, plumbing & mechanical certifications.</p>
+                                </div>
+                            </div>
+                            <!-- High Contrast Badge 2 -->
+                            <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60 flex items-start gap-4">
+                                <div class="bg-amber-500 text-slate-950 p-2.5 rounded-lg">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-extrabold text-slate-900">Upfront Estimates</h4>
+                                    <p class="text-xs text-slate-600 mt-1">No surprise dispatch fees. Clear, honest breakdown first.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- BBB & Birdeye SVG badges block -->
+                        <div class="flex flex-wrap items-center gap-6 pt-4 border-t border-slate-200/50">
+                            <!-- BBB Accredited Mock Badge -->
+                            <div class="flex items-center gap-3 bg-blue-50 border border-blue-200/80 px-4 py-3 rounded-xl">
+                                <div class="text-blue-900 font-extrabold text-2xl tracking-tighter">BBB</div>
+                                <div class="text-[10px] font-bold text-blue-950 leading-tight uppercase">
+                                    Accredited Business<br><span class="text-blue-600">Grade A+ Rating</span>
+                                </div>
+                            </div>
+
+                            <!-- Birdeye review badge -->
+                            <div class="flex items-center gap-3 bg-amber-50 border border-amber-200/80 px-4 py-3 rounded-xl">
+                                <div class="text-amber-600 text-lg font-black">★★★★★</div>
+                                <div class="text-[10px] font-bold text-slate-900 leading-tight">
+                                    857 verified reviews<br><span class="text-amber-600">4.9/5 Average Rating</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Real Review Highlight Block -->
+                    <div class="relative bg-slate-900 text-white rounded-3xl p-8 lg:p-12 shadow-2xl overflow-hidden border border-slate-800">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500/10 to-slate-900 opacity-80"></div>
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl"></div>
+
+                        <div class="relative z-10 space-y-8">
+                            <div class="text-5xl text-emerald-400 font-serif leading-none">“</div>
+                            <p class="text-xl sm:text-2xl text-slate-200 leading-relaxed font-light">
+                                "My AC stopped running on a blistering July afternoon and my thermostat went completely blank. I called Efficient AC. Tony and his crew arrived promptly, diagnosed a blown circuit breaker, took away our heavy old failing hardware, and installed a clean high-efficiency replacement in record time. They were absolutely outstanding!"
+                            </p>
+                            <div class="border-t border-slate-800/80 pt-6 flex items-center justify-between">
+                                <div>
+                                    <h4 class="font-extrabold text-white text-base">Verified Travis County Homeowner</h4>
+                                    <span class="text-xs text-slate-400">Yelp & BBB Verified Review • Austin, TX</span>
+                                </div>
+                                <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs px-3 py-1 rounded-full font-bold">
+                                    Verified Clean Install
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE ACCORDION FAQS -->
+        <section id="faqs" class="py-20 bg-slate-50 border-t border-b border-slate-200/50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <!-- Header -->
+                <div class="text-center mb-16 space-y-4">
+                    <span class="text-emerald-600 font-extrabold text-sm uppercase tracking-wider">Got Questions?</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+                    <p class="text-slate-600 text-lg">Clear answers to help you make informed decisions about your home's HVAC, wiring, and plumbing.</p>
+                </div>
+
+                <!-- Accordion List -->
+                <div class="space-y-4">
+                    
+                    <!-- Accordion Item 1 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition-shadow shadow-sm hover:shadow-md">
+                        <button onclick="toggleAccordion('1')" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-extrabold text-base sm:text-lg">What are your emergency service hours for AC breakdowns?</span>
+                            <svg id="accordion-icon-1" class="w-5 h-5 text-slate-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="accordion-content-1" class="hidden px-6 pb-6 text-slate-600 border-t border-slate-100/80 pt-4 text-sm sm:text-base leading-relaxed">
+                            We provide true <strong>24/7/365 emergency HVAC dispatch</strong> across the entire Austin metropolitan area. If your AC system fails on a hot summer night, call us immediately at <a href="tel:5125488570" class="text-emerald-600 font-bold hover:underline">(512) 548-8570</a>. A real certified technician will be dispatched to your location promptly.
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 2 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition-shadow shadow-sm hover:shadow-md">
+                        <button onclick="toggleAccordion('2')" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-extrabold text-base sm:text-lg">Are you licensed to perform electrical and plumbing work as well?</span>
+                            <svg id="accordion-icon-2" class="w-5 h-5 text-slate-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="accordion-content-2" class="hidden px-6 pb-6 text-slate-600 border-t border-slate-100/80 pt-4 text-sm sm:text-base leading-relaxed">
+                            Yes! Unlike single-discipline shops, Efficient is fully licensed and master-insured across all three key home systems. Our registration markers are HVAC License #TACLA10293C, Master Electrician #TECL85741, and Master Plumber #M-41952. Your home is protected by state-compliant standards.
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 3 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition-shadow shadow-sm hover:shadow-md">
+                        <button onclick="toggleAccordion('3')" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-extrabold text-base sm:text-lg">Do you install ground loop heat pumps?</span>
+                            <svg id="accordion-icon-3" class="w-5 h-5 text-slate-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="accordion-content-3" class="hidden px-6 pb-6 text-slate-600 border-t border-slate-100/80 pt-4 text-sm sm:text-base leading-relaxed">
+                            Yes, geothermal heat pumps are one of our core specialties. We design, lay ground loop conduits, install the heavy-duty pump exchangers, and provide comprehensive long-term system maintenance.
+                        </div>
+                    </div>
+
+                    <!-- Accordion Item 4 -->
+                    <div class="bg-white border border-slate-200/80 rounded-2xl overflow-hidden transition-shadow shadow-sm hover:shadow-md">
+                        <button onclick="toggleAccordion('4')" class="w-full px-6 py-5 text-left flex justify-between items-center gap-4 text-slate-900 hover:bg-slate-50 transition-colors">
+                            <span class="font-extrabold text-base sm:text-lg">What is your service coverage area around Austin?</span>
+                            <svg id="accordion-icon-4" class="w-5 h-5 text-slate-500 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
+                        <div id="accordion-content-4" class="hidden px-6 pb-6 text-slate-600 border-t border-slate-100/80 pt-4 text-sm sm:text-base leading-relaxed">
+                            We primarily serve Travis County and southern parts of Williamson County, including central Austin, Round Rock, Pflugerville, Cedar Park, Lakeway, and West Lake Hills.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & LOCATION MAP AREA -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Left: Interactive Contact Form (7 columns) -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="space-y-4">
+                            <span class="text-emerald-600 font-extrabold text-sm uppercase tracking-wider">Book a Repair or Request Free Quote</span>
+                            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Tell Us How We Can Help Today</h2>
+                            <p class="text-slate-600 text-base">
+                                Send us details about your AC, electrical, or plumbing issue. Our local Austin coordinators at Metropolitan Dr will contact you within 15 minutes to confirm booking.
+                            </p>
+                        </div>
+
+                        <!-- Form submission triggers dynamic local response alert -->
+                        <form id="booking-form" onsubmit="submitBookingForm(event)" class="space-y-6 bg-slate-50 p-8 rounded-3xl border border-slate-200/80">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Full Name</label>
+                                    <input type="text" required placeholder="John Doe" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Phone Number</label>
+                                    <input type="tel" required placeholder="(512) 555-0199" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Email Address</label>
+                                    <input type="email" required placeholder="john@example.com" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Service Needed</label>
+                                    <select class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm">
+                                        <option>HVAC Emergency Repair</option>
+                                        <option>HVAC New System Installation</option>
+                                        <option>Geothermal / Heat Pump Service</option>
+                                        <option>Electrical Panel Upgrade / Repair</option>
+                                        <option>Plumbing / Water Heater Install</option>
+                                        <option>General System Tune-up</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-2">Describe Your Request</label>
+                                <textarea rows="4" placeholder="Briefly describe what's happening (e.g. thermostat is blank, AC is blowing warm air, or needs heat pump maintenance)" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all text-sm"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold py-4 px-6 rounded-xl shadow-lg shadow-emerald-500/10 transition-all text-center flex items-center justify-center gap-2 text-sm uppercase tracking-wider">
+                                <span>Submit Secure Dispatch Request</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Right: Office / Map Info (5 columns) -->
+                    <div class="lg:col-span-5 space-y-8 bg-slate-950 text-white p-8 rounded-3xl border border-slate-800/80">
+                        <div class="space-y-2">
+                            <h3 class="text-2xl font-extrabold text-white">Our Austin Headquarters</h3>
+                            <p class="text-slate-300 text-sm">Stop by or call us direct during office hours.</p>
+                        </div>
+
+                        <!-- Address Info Block -->
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-slate-800 text-emerald-400 p-2.5 rounded-xl border border-slate-700/50 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Austin, TX Main Office</h4>
+                                    <p class="text-sm text-slate-300 mt-1">
+                                        10315 Metropolitan Dr,<br>Austin, Texas 78758
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="bg-slate-800 text-amber-400 p-2.5 rounded-xl border border-slate-700/50 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm11 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zm-11 8a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-2zm11 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Office Availability</h4>
+                                    <p class="text-sm text-slate-300 mt-1">
+                                        Mon - Fri: 7:00 AM - 6:00 PM<br>
+                                        Sat: 8:00 AM - 4:00 PM<br>
+                                        <span class="text-emerald-400 font-semibold">24/7 Emergency Dispatch is ALWAYS Open</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Placeholder visual component with high-end vectors -->
+                        <div class="relative w-full h-48 bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col justify-between p-4">
+                            <!-- Background line mesh simulating grid layout -->
+                            <div class="absolute inset-0 opacity-15">
+                                <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0,50 L200,50 M0,100 L200,100 M0,150 L200,150" stroke="#fff" stroke-width="1"/>
+                                    <path d="M50,0 L50,200 M100,0 L100,200 M150,0 L150,200" stroke="#fff" stroke-width="1"/>
+                                </svg>
+                            </div>
+                            <div class="flex items-center justify-between z-10">
+                                <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Austin Metro Grid</span>
+                                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                            </div>
+                            <div class="text-center z-10 py-4">
+                                <span class="text-xs font-semibold text-slate-300 block">Metropolitan Dr Terminal Coordinates</span>
+                                <span class="text-lg font-extrabold text-emerald-400 block mt-1">30.3789° N, 97.7121° W</span>
+                            </div>
+                            <div class="text-[10px] text-slate-400 z-10 border-t border-slate-800/80 pt-2 flex items-center justify-between">
+                                <span>Travis County, TX</span>
+                                <span class="text-amber-400 font-extrabold">Active Service Area</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER WITH TRAPEZOIDAL CUTOUT ON TOP RIGHT -->
+    <!-- Solid dark grey/black band at the bottom, trapezoidal cutout on top-right of the band -->
+    <footer class="relative bg-slate-950 text-slate-400 pt-24 pb-12 overflow-hidden" style="clip-path: polygon(0 40px, calc(100% - 120px) 40px, 100% 0, 100% 100%, 0 100%); margin-top: -40px;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-slate-800 pb-12">
+                <!-- Col 1: Branding -->
+                <div class="md:col-span-1 space-y-4">
+                    <span class="block text-xl font-extrabold text-white leading-none tracking-tight">EFFICIENT</span>
+                    <span class="block text-xs font-semibold text-emerald-400 tracking-widest uppercase">AC • Electric • Plumbing</span>
+                    <p class="text-sm text-slate-400 leading-relaxed pt-2">
+                        State-licensed mechanical, electrical, and plumbing engineering services for homes across Austin and Central Texas.
+                    </p>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div class="space-y-4">
+                    <h4 class="text-sm font-extrabold text-white tracking-widest uppercase">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#services" class="hover:text-emerald-400 transition-colors">Our Services</a></li>
+                        <li><a href="#trust" class="hover:text-emerald-400 transition-colors">Why Choose Us</a></li>
+                        <li><a href="#faqs" class="hover:text-emerald-400 transition-colors">Frequently Asked Questions</a></li>
+                        <li><a href="#contact" class="hover:text-emerald-400 transition-colors">Book Online Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services -->
+                <div class="space-y-4">
+                    <h4 class="text-sm font-extrabold text-white tracking-widest uppercase">Expertise Fields</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><span class="hover:text-emerald-400 transition-colors cursor-pointer">HVAC Repair & Diagnostics</span></li>
+                        <li><span class="hover:text-emerald-400 transition-colors cursor-pointer">AC Unit System Installs</span></li>
+                        <li><span class="hover:text-emerald-400 transition-colors cursor-pointer">Ground Loop Geothermal</span></li>
+                        <li><span class="hover:text-emerald-400 transition-colors cursor-pointer">Full MEP Electrical & Plumbing</span></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: State Licenses -->
+                <div class="space-y-4">
+                    <h4 class="text-sm font-extrabold text-white tracking-widest uppercase">State Certifications</h4>
+                    <ul class="space-y-2 text-xs text-slate-400 font-semibold leading-relaxed">
+                        <li>HVAC Registration: TACLA10293C</li>
+                        <li>Electrical License: TECL85741</li>
+                        <li>Plumbing Registration: Master Plumber M-41952</li>
+                        <li>HQ Address: 10315 Metropolitan Dr, Austin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom legal bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>&copy; 2026 Efficient AC, Electric & Plumbing. All Rights Reserved. Built for Austin, Texas homes.</p>
+                <div class="flex items-center gap-6">
+                    <span class="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
+                    <span class="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HERO VIDEO SIMULATION DIALOG MODAL -->
+    <div id="video-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 max-w-2xl w-full relative shadow-2xl space-y-6">
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-slate-800/80 pb-4">
+                <div>
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">Efficient Video Center</span>
+                    <h4 class="text-lg font-extrabold text-white mt-1">Our Core Installation Standards</h4>
+                </div>
+                <button onclick="closeVideoModal()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition-colors">
+                    ✕
+                </button>
+            </div>
+
+            <!-- Video simulation graphic layout -->
+            <div class="relative w-full h-72 sm:h-96 bg-slate-950 rounded-2xl overflow-hidden flex flex-col justify-between p-6 border border-slate-800">
+                <!-- Mock system interface elements -->
+                <div class="flex items-center justify-between text-xs text-slate-500 font-mono z-10">
+                    <span>LIVE FEED: AUSTIN FACILITY</span>
+                    <span>HD 1080P • ACTIVE ENCODER</span>
+                </div>
+
+                <!-- Animated dynamic overlay schematic -->
+                <div class="text-center z-10 space-y-4">
+                    <span class="text-emerald-400 font-mono text-xs block">[ SIMULATED TECHNICIAN DEMONSTRATION RECORDING ]</span>
+                    <span class="text-xl sm:text-2xl font-black text-white block">Watch Tony and Team Replace an Austin AC Unit</span>
+                    <p class="text-xs text-slate-400 max-w-md mx-auto">
+                        This interactive demonstration features our HVAC mechanical standard, quality inspections, and our client handshake delivery process.
+                    </p>
+                </div>
+
+                <!-- Mock control bar -->
+                <div class="flex items-center justify-between border-t border-slate-800/80 pt-4 z-10">
+                    <div class="flex items-center gap-3">
+                        <button class="text-emerald-400 text-sm font-bold">PLAYING</button>
+                        <span class="text-slate-500 font-mono text-xs">03:42 / 05:12</span>
+                    </div>
+                    <span class="text-xs text-emerald-400 font-mono font-bold">● HQ REPAIR CAM 02</span>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="flex justify-end gap-3 pt-2">
+                <button onclick="closeVideoModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-bold px-6 py-3 rounded-xl text-sm transition-all">
+                    Dismiss Player
+                </button>
+                <a href="#contact" onclick="closeVideoModal()" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-extrabold px-6 py-3 rounded-xl text-sm transition-all">
+                    Schedule This Service Team
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SUCCESS MODAL -->
+    <div id="success-modal" class="hidden fixed inset-0 z-[100] items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+        <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 max-w-md w-full relative shadow-2xl text-center space-y-6">
+            <div class="w-16 h-16 bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-400 mx-auto border border-emerald-500/20">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                </svg>
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-2xl font-extrabold text-white">Inquiry Received!</h3>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Thank you! Your schedule details have been securely logged into our Austin dispatch hub at <strong class="text-emerald-400 font-bold">10315 Metropolitan Dr</strong>.
+                </p>
+            </div>
+            <p class="text-xs text-slate-400">
+                A routing coordinator will contact you by telephone within 15 minutes to finalize dispatch.
+            </p>
+            <button onclick="closeSuccessModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-xl text-sm transition-all">
+                Got it, Thank You!
+            </button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // STICKY HEADER SHADOW TRANSITION
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('sticky-header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-xl', 'bg-slate-950/95');
+                header.classList.remove('bg-slate-900/90');
+            } else {
+                header.classList.remove('shadow-xl', 'bg-slate-950/95');
+                header.classList.add('bg-slate-900/90');
+            }
+        });
+
+        // TILT CARD INTERACTIVE HOVER SCRIPT
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                const tiltX = -(dy / yc) * 6;
+                const tiltY = (dx / xc) * 6;
+                card.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+        });
+
+        // HERO VIDEO DIALOG HANDLERS
+        function openVideoModal() {
+            const modal = document.getElementById('video-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        // ACCORDION INTERACTIVE TOGGLES
+        function toggleAccordion(id) {
+            const content = document.getElementById('accordion-content-' + id);
+            const icon = document.getElementById('accordion-icon-' + id);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // BOOKING FORM SUBMISSION SIMULATION
+        function submitBookingForm(e) {
+            e.preventDefault();
+            // Show custom success dialog
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.remove('hidden');
+            successModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+            // Reset form fields
+            document.getElementById('booking-form').reset();
+        }
+
+        function closeSuccessModal() {
+            const successModal = document.getElementById('success-modal');
+            successModal.classList.add('hidden');
+            successModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
+</body>
+</html>

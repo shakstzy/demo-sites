@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AAA AUGER Plumbing Services | 24/7 Professional Plumbing & Water Heaters</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts (Inter & Plus Jakarta Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Premium Trapezoidal Cutout for Footer */
+    .trapezoid-footer {
+      position: relative;
+      background-color: #171717; /* Solid dark grey/black band */
+    }
+    
+    /* We implement a responsive clip path for the top-right trapezoidal cutout */
+    @media (min-width: 768px) {
+      .trapezoid-footer {
+        clip-path: polygon(0 0, calc(100% - 120px) 0, 100% 60px, 100% 100%, 0 100%);
+      }
+    }
+    @media (max-width: 767px) {
+      .trapezoid-footer {
+        clip-path: polygon(0 0, calc(100% - 60px) 0, 100% 30px, 100% 100%, 0 100%);
+      }
+    }
+
+    /* Smooth transitions */
+    .accordion-content {
+      transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-800 antialiased font-sans">
+
+  <!-- Sticky Navbar (Fixed to top, dark gray background with subtle transparency) -->
+  <nav class="fixed top-0 left-0 right-0 z-40 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Brand Logo / Name -->
+        <a href="#" class="flex items-center gap-3 group">
+          <div class="h-10 w-10 bg-[#d92323] text-white rounded-lg flex items-center justify-center font-display font-black text-xl tracking-tighter shadow-md">
+            AAA
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white font-display font-extrabold text-lg leading-tight tracking-wider uppercase">AAA AUGER</span>
+            <span class="text-neutral-400 font-sans text-xs uppercase tracking-widest font-semibold">Plumbing Services</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-sans font-semibold text-neutral-300">
+          <a href="#services" class="hover:text-[#d92323] transition-colors">Our Services</a>
+          <a href="#why-us" class="hover:text-[#d92323] transition-colors">Why Choose Us</a>
+          <a href="#faq" class="hover:text-[#d92323] transition-colors">FAQ</a>
+          <a href="#contact" class="hover:text-[#d92323] transition-colors">Contact</a>
+        </div>
+
+        <!-- Phone / CTA Button -->
+        <div class="hidden sm:flex items-center gap-4">
+          <a href="tel:18005552843" class="bg-[#d92323] hover:bg-[#b01c1c] text-white font-sans font-extrabold text-sm px-5 py-3 rounded-xl transition-all duration-300 shadow-md flex items-center gap-2">
+            <i class="fas fa-phone-alt"></i>
+            <span>(800) 555-2843</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden text-neutral-300 hover:text-white focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800 p-6 space-y-4">
+      <a href="#services" class="block text-neutral-300 hover:text-white font-semibold" onclick="toggleMobileMenu()">Our Services</a>
+      <a href="#why-us" class="block text-neutral-300 hover:text-white font-semibold" onclick="toggleMobileMenu()">Why Choose Us</a>
+      <a href="#faq" class="block text-neutral-300 hover:text-white font-semibold" onclick="toggleMobileMenu()">FAQ</a>
+      <a href="#contact" class="block text-neutral-300 hover:text-white font-semibold" onclick="toggleMobileMenu()">Contact</a>
+      <div class="pt-4 border-t border-neutral-800">
+        <a href="tel:18005552843" class="w-full bg-[#d92323] hover:bg-[#b01c1c] text-white font-sans font-extrabold text-center block py-3 rounded-xl shadow-md">
+          <i class="fas fa-phone-alt mr-2"></i>Call (800) 555-2843
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (Static split-hero layout with centered intro details) -->
+  <section class="relative pt-32 pb-20 px-4 md:px-8 bg-gradient-to-b from-neutral-50 to-white overflow-hidden">
+    <!-- Centered Header content inside Hero -->
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center mb-12">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 bg-neutral-900 text-white rounded-full px-4 py-1.5 text-xs font-sans font-semibold mb-6 shadow-md border border-neutral-800">
+        <span class="flex h-2.5 w-2.5 relative">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span>Active 24/7 in Texas</span>
+        <span class="text-neutral-500">|</span>
+        <span class="text-[#d92323]"><i class="fas fa-award"></i> 50+ Years</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl md:text-6xl font-display font-extrabold text-neutral-900 tracking-tight max-w-4xl leading-tight">
+        Professional, Reliable & Affordable <br class="hidden md:inline" />
+        <span class="text-[#d92323]">Plumbing Solutions</span> Around the Clock
+      </h1>
+
+      <!-- Sub-copy -->
+      <p class="mt-6 text-lg md:text-xl text-neutral-600 font-sans max-w-2xl leading-relaxed">
+        Don’t let a leak or broken water heater ruin your day. Backed by over 50 years of experience, AAA AUGER Plumbing Services dispatches licensed, respectful experts within the hour.
+      </p>
+    </div>
+
+    <!-- Split Hero Grid below Centered Content -->
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left side: Primary CTA Container -->
+      <div class="lg:col-span-6 flex flex-col justify-center">
+        <!-- Light Gray Rounded Rectangle holding primary CTA -->
+        <div class="bg-neutral-100 rounded-2xl p-8 border border-neutral-200 shadow-sm relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-36 h-36 bg-[#d92323]/5 rounded-full blur-2xl"></div>
+          
+          <h3 class="text-xl font-display font-bold text-neutral-900 mb-4 flex items-center gap-2">
+            <i class="fas fa-calendar-check text-[#d92323]"></i>
+            <span>Need Fast, Professional Help?</span>
+          </h3>
+          <p class="text-sm text-neutral-600 font-sans mb-6 leading-relaxed">
+            Call us directly or schedule an appointment online. Our dispatch team is online right now, ready to send a clean, licensed technician to solve your most difficult plumbing problem.
+          </p>
+          
+          <!-- Primary CTA Button (White text, sans-serif font, underlined text, appears below hero headline) -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <a href="tel:18005552843" class="bg-[#d92323] hover:bg-[#b01c1c] text-white font-sans font-extrabold text-center px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 group">
+              <i class="fas fa-phone-alt animate-bounce"></i>
+              <span class="underline underline-offset-4 decoration-2">CALL (800) 555-2843 NOW</span>
+            </a>
+            
+            <a href="#contact" class="bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-300 font-sans font-bold text-center px-6 py-4 rounded-xl transition-all flex items-center justify-center gap-2">
+              <span>Book Appointment</span>
+              <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+          
+          <!-- Quick Trust Markers inside CTA Container -->
+          <div class="mt-6 pt-6 border-t border-neutral-200 grid grid-cols-2 gap-4 text-xs text-neutral-500 font-sans">
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check text-emerald-500"></i>
+              <span>Rated 4.6/5 stars on Angi</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fas fa-check text-emerald-500"></i>
+              <span>Sunday Dispatch & Emergency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Video and Core Value Card -->
+      <div class="lg:col-span-6">
+        <!-- Vertical layout prevents ANY overlapping between elements under all conditions -->
+        <div class="space-y-6 flex flex-col justify-end items-end w-full">
+          <!-- Mock Video Player Card -->
+          <div class="relative w-full aspect-video bg-neutral-800 rounded-2xl overflow-hidden shadow-xl border border-neutral-700 flex items-center justify-center group">
+            <!-- Play/Watch Button -->
+            <button id="open-video-btn" class="relative z-10 flex items-center gap-3 bg-[#d92323] hover:bg-[#b01c1c] text-white px-6 py-4 rounded-full font-sans font-extrabold shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 group/btn">
+              <span class="flex h-5 w-5 items-center justify-center bg-white text-[#d92323] rounded-full shadow-inner">
+                <i class="fas fa-play text-xs ml-0.5 animate-pulse"></i>
+              </span>
+              <span>Watch AAA AUGER in Action</span>
+              <!-- Pulse Effect -->
+              <span class="absolute -inset-1 rounded-full border-2 border-[#d92323] opacity-30 animate-ping pointer-events-none"></span>
+            </button>
+            <!-- Background Design for Mock Video -->
+            <div class="absolute inset-0 bg-cover bg-center mix-blend-overlay opacity-40 bg-[url('https://images.unsplash.com/photo-1581094288338-2314dddb7eed?auto=format&fit=crop&q=80&w=800')]"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-neutral-900/90 to-transparent"></div>
+            <!-- Subtle Video Badges -->
+            <div class="absolute bottom-4 left-4 flex items-center gap-2 text-white text-xs bg-neutral-900/60 px-3 py-1.5 rounded-lg backdrop-blur-sm">
+              <span class="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+              <span class="font-sans">50 Years of History</span>
+            </div>
+          </div>
+
+          <!-- Our Core Value Card (Positioned bottom-right of visual, light gray rounded rectangle, shaking hands background) -->
+          <div class="w-full sm:w-5/6 bg-[#eeeeee] rounded-xl p-5 shadow-md relative overflow-hidden border border-neutral-200 self-end transition-all duration-300 hover:shadow-lg">
+            <!-- Sleek Handshake SVG Background -->
+            <div class="absolute -right-4 -bottom-4 w-20 h-20 text-neutral-400 opacity-20 pointer-events-none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+              </svg>
+            </div>
+            <!-- Dynamic Handshake Icon & Copy based on reviews -->
+            <div class="relative z-10">
+              <div class="flex items-center gap-2.5 mb-2 text-neutral-800">
+                <i class="fas fa-handshake text-[#d92323] text-lg"></i>
+                <h4 class="font-sans font-bold text-sm tracking-wider uppercase text-neutral-800">Our Core Value</h4>
+              </div>
+              <p class="text-xs text-neutral-600 font-sans leading-relaxed">
+                "AAA AUGER Plumbing Services treats their employees with respect and like a family." This mutual respect guarantees that when our clean, respectful, licensed technician arrives at your home, you are treated like family too.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tilt Card Showcase (Interactive Local Special) -->
+  <section class="py-4 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="tilt-card-container cursor-pointer select-none" style="perspective: 1000px;">
+        <div class="tilt-card relative bg-gradient-to-br from-neutral-800 to-neutral-900 border border-neutral-700 rounded-full px-8 py-4 flex flex-col md:flex-row items-center justify-between gap-4 shadow-xl transition-all duration-200 ease-out transform-gpu">
+          <div class="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
+            <div class="h-12 w-12 rounded-full bg-[#d92323] text-white flex items-center justify-center text-xl shadow-inner shrink-0">
+              <i class="fas fa-tag"></i>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wider text-[#d92323] font-sans font-bold">Limited-Time Local Special</p>
+              <p class="text-white font-sans font-bold text-sm md:text-base">Get $50 Off Any Plumbing or Water Heater Service!</p>
+            </div>
+          </div>
+          <div class="shrink-0">
+            <a href="tel:18005552843" class="bg-white hover:bg-neutral-100 text-neutral-900 font-sans font-bold text-xs uppercase px-5 py-2.5 rounded-full shadow-md transition-all inline-block">
+              Claim Discount
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-24 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-neutral-900">
+          Our Specialities & Plumbing Services
+        </h2>
+        <p class="mt-4 text-neutral-600 font-sans">
+          Whether you have a midnight leak, a cold shower, or a complex diagnostic headache, our highly trained professionals are equipped to resolve it flawlessly.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Service 1: Emergency Plumbing -->
+        <div class="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+          <div class="h-14 w-14 rounded-2xl bg-[#d92323]/10 text-[#d92323] flex items-center justify-center text-2xl mb-6 transition-colors group-hover:bg-[#d92323] group-hover:text-white">
+            <i class="fas fa-truck-fast animate-pulse"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-neutral-900 mb-3">Emergency Plumbing</h3>
+          <p class="text-sm text-neutral-600 font-sans leading-relaxed mb-4">
+            Available 24/7. Even if you call at 10 PM on a Sunday night, we guarantee we will have dispatch in motion and can often have a certified technician at your door in under an hour.
+          </p>
+          <span class="text-[#d92323] font-sans font-bold text-xs tracking-wider uppercase inline-flex items-center gap-2">
+            <span>24/7 Response</span>
+            <i class="fas fa-chevron-right text-[10px]"></i>
+          </span>
+        </div>
+
+        <!-- Service 2: Hot Water Heater Replacement -->
+        <div class="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+          <div class="h-14 w-14 rounded-2xl bg-[#d92323]/10 text-[#d92323] flex items-center justify-center text-2xl mb-6 transition-colors group-hover:bg-[#d92323] group-hover:text-white">
+            <i class="fas fa-fire-alt"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-neutral-900 mb-3">Water Heater Replacement</h3>
+          <p class="text-sm text-neutral-600 font-sans leading-relaxed mb-4">
+            We furnish and install high-performing hot water heaters. Our installers are legendary for maintaining positive smiles and incredible workmanship even in extremely cramped working conditions.
+          </p>
+          <span class="text-[#d92323] font-sans font-bold text-xs tracking-wider uppercase inline-flex items-center gap-2">
+            <span>Impeccable A+++ Work</span>
+            <i class="fas fa-chevron-right text-[10px]"></i>
+          </span>
+        </div>
+
+        <!-- Service 3: Difficult Plumbing Problem Solving -->
+        <div class="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+          <div class="h-14 w-14 rounded-2xl bg-[#d92323]/10 text-[#d92323] flex items-center justify-center text-2xl mb-6 transition-colors group-hover:bg-[#d92323] group-hover:text-white">
+            <i class="fas fa-wrench"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-neutral-900 mb-3">Difficult Diagnostics</h3>
+          <p class="text-sm text-neutral-600 font-sans leading-relaxed mb-4">
+            Some plumbing errors baffle standard repair services. Our elite state-licensed professionals specialize in analyzing and resolving the most complicated structural and sewer issues.
+          </p>
+          <span class="text-[#d92323] font-sans font-bold text-xs tracking-wider uppercase inline-flex items-center gap-2">
+            <span>Godsend Specialists</span>
+            <i class="fas fa-chevron-right text-[10px]"></i>
+          </span>
+        </div>
+
+        <!-- Service 4: General Plumbing Services -->
+        <div class="bg-white rounded-2xl p-8 border border-neutral-200/60 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-xl group">
+          <div class="h-14 w-14 rounded-2xl bg-[#d92323]/10 text-[#d92323] flex items-center justify-center text-2xl mb-6 transition-colors group-hover:bg-[#d92323] group-hover:text-white">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-neutral-900 mb-3">General Maintenance</h3>
+          <p class="text-sm text-neutral-600 font-sans leading-relaxed mb-4">
+            All general repairs, faucet leaks, toilet unclogs, and safety checks are backed by over 50 years of company standards. All our techs are clean, respectful, and required to attend continuing education.
+          </p>
+          <span class="text-[#d92323] font-sans font-bold text-xs tracking-wider uppercase inline-flex items-center gap-2">
+            <span>50+ Years Standard</span>
+            <i class="fas fa-chevron-right text-[10px]"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Why Us Section -->
+  <section id="why-us" class="py-24 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Content left -->
+        <div>
+          <span class="text-xs font-sans font-extrabold uppercase tracking-widest text-[#d92323] bg-[#d92323]/10 px-3 py-1 rounded-full">
+            Why Choose AAA AUGER
+          </span>
+          <h2 class="mt-4 text-3xl md:text-4xl font-display font-extrabold text-neutral-900 leading-tight">
+            Our Fanatical Goal is Clean, Respectful, and Competent Service
+          </h2>
+          <p class="mt-6 text-neutral-600 font-sans leading-relaxed">
+            AAA AUGER Plumbing Services has been the bedrock of professional local plumbing for over half a century. We ensure that all our Technicians are in good standing with state licensing boards and receive constant continuing training. We are rated an exceptional <strong>4.6 overall out of 5 stars</strong> on Angi, based on hundreds of homeowners just like you.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="mt-8 space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="h-8 w-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0">
+                <i class="fas fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-neutral-900">Always On-Time & Prepared</h4>
+                <p class="text-sm text-neutral-500 font-sans">Our technicians arrive in tidy uniforms, values-focused, and with the necessary stock to complete your job immediately.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="h-8 w-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0">
+                <i class="fas fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-neutral-900">Exceptional Employee Treatment</h4>
+                <p class="text-sm text-neutral-500 font-sans">We treat our employees like respected family. That positive energy translates directly into friendly smiles and top-tier client customer service.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="h-8 w-8 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-sm shrink-0">
+                <i class="fas fa-check"></i>
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-neutral-900">Continuing Education Required</h4>
+                <p class="text-sm text-neutral-500 font-sans">Every technician attends annual training to remain in compliance with state codes and advanced diagnostic methods.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Proof Grid / Testimonials -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <!-- Stat 1 -->
+          <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-200">
+            <p class="text-4xl font-display font-black text-[#d92323]">4.6<span class="text-xl text-neutral-500">/5</span></p>
+            <p class="text-sm font-sans font-bold text-neutral-800 mt-2">Angi Rated Overall</p>
+            <p class="text-xs text-neutral-500 font-sans mt-1">Based on hundreds of verified regional listings and reviews.</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-200">
+            <p class="text-4xl font-display font-black text-[#d92323]">50+</p>
+            <p class="text-sm font-sans font-bold text-neutral-800 mt-2">Years of Service</p>
+            <p class="text-xs text-neutral-500 font-sans mt-1">Reliable, licensed solutions since the early 1970s.</p>
+          </div>
+
+          <!-- Testimonial 1 -->
+          <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-200 sm:col-span-2">
+            <div class="flex items-center gap-1 text-[#d92323] text-sm mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-xs text-neutral-600 font-sans italic">
+              "AAA Auger was able to replace our old hot water heater that went out after 28 faithful years. Our installer, Sam, showed up with a smile and kept a positive attitude throughout the entire day even though he encountered extremely cramped conditions and obstacles. Impeccable job! A+++."
+            </p>
+            <p class="text-xs font-sans font-bold text-neutral-800 mt-3">— Local Angi Customer, Fort Worth</p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-neutral-50 p-6 rounded-2xl border border-neutral-200 sm:col-span-2">
+            <div class="flex items-center gap-1 text-[#d92323] text-sm mb-3">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="text-xs text-neutral-600 font-sans italic">
+              "Excellent professionals show up on time and solve difficult plumbing problems quickly. They are a godsend."
+            </p>
+            <p class="text-xs font-sans font-bold text-neutral-800 mt-3">— Katherine W., Customer Review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Accordion FAQ Section -->
+  <section id="faq" class="py-24 bg-neutral-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold text-neutral-900">
+          Frequently Asked Questions
+        </h2>
+        <p class="mt-4 text-neutral-600 font-sans">
+          Got questions about emergency hours, pricing, or licenses? Here is everything you need to know.
+        </p>
+      </div>
+
+      <!-- Accordion Container -->
+      <div class="max-w-3xl mx-auto space-y-4">
+        <!-- Accordion Item 1 -->
+        <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-300">
+          <button class="accordion-header w-full flex items-center justify-between p-5 text-left font-sans font-bold text-neutral-800 hover:bg-neutral-50 transition-colors focus:outline-none">
+            <span>How quickly can a plumber arrive for an emergency?</span>
+            <i class="fas fa-chevron-down text-neutral-500 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-sm text-neutral-600 leading-relaxed font-sans border-t border-neutral-100">
+              We answer calls 24/7—even late on Sunday nights. In fact, many customers report that after calling us at 10 PM on a Sunday, a licensed technician was at their door and solving their problem in under an hour! We aim for the timeliest, most fanatical dispatch in Texas.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-300">
+          <button class="accordion-header w-full flex items-center justify-between p-5 text-left font-sans font-bold text-neutral-800 hover:bg-neutral-50 transition-colors focus:outline-none">
+            <span>Are your technicians fully licensed and qualified?</span>
+            <i class="fas fa-chevron-down text-neutral-500 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-sm text-neutral-600 leading-relaxed font-sans border-t border-neutral-100">
+              Absolutely. AAA AUGER Plumbing Services ensures that all of our Service Technicians have fully met the state licensing requirements and remain in good standing. To guarantee absolute compliance and competence, all technicians are required to annually attend continuing education courses.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-300">
+          <button class="accordion-header w-full flex items-center justify-between p-5 text-left font-sans font-bold text-neutral-800 hover:bg-neutral-50 transition-colors focus:outline-none">
+            <span>How do you handle difficult water heater replacements?</span>
+            <i class="fas fa-chevron-down text-neutral-500 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-sm text-neutral-600 leading-relaxed font-sans border-t border-neutral-100">
+              We specialize in sourcing and installing hot water heaters even in highly complex or cramped conditions. Our technicians, like our highly praised installer Sam, are renowned for maintaining positive attitudes and exceptional work standards when facing obstacles, delivering impeccable A+++ solutions.
+            </div>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="border border-neutral-200 rounded-xl overflow-hidden bg-white shadow-sm transition-all duration-300">
+          <button class="accordion-header w-full flex items-center justify-between p-5 text-left font-sans font-bold text-neutral-800 hover:bg-neutral-50 transition-colors focus:outline-none">
+            <span>Is your pricing affordable for local families?</span>
+            <i class="fas fa-chevron-down text-neutral-500 transition-transform duration-300"></i>
+          </button>
+          <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+            <div class="p-5 pt-0 text-sm text-neutral-600 leading-relaxed font-sans border-t border-neutral-100">
+              While our service can occasionally be characterized as premium, our customers consistently declare it "worth every single penny." When you choose AAA AUGER, you are paying for permanent solutions, prompt arrivals, and elite problem-solving that prevents future costly breakdowns.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Lead Capture Section -->
+  <section id="contact" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Info left -->
+        <div class="lg:col-span-5 flex flex-col justify-center">
+          <span class="text-xs font-sans font-extrabold uppercase tracking-widest text-[#d92323] bg-[#d92323]/10 px-3 py-1 rounded-full w-max">
+            Schedule Today
+          </span>
+          <h2 class="mt-4 text-3xl md:text-4xl font-display font-extrabold text-neutral-900 leading-tight">
+            Ready to Solve Your Plumbing Hassles?
+          </h2>
+          <p class="mt-4 text-neutral-600 font-sans leading-relaxed">
+            Fill out our swift booking form, or call directly to get connected with a dispatcher. We serve all surrounding metro areas.
+          </p>
+
+          <div class="mt-8 space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-400 font-sans font-semibold uppercase">Emergency Dispatch</p>
+                <a href="tel:18005552843" class="text-lg font-sans font-extrabold text-neutral-900 hover:text-[#d92323]">(800) 555-2843</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="h-10 w-10 rounded-full bg-neutral-100 text-neutral-600 flex items-center justify-center">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-400 font-sans font-semibold uppercase">Regional Headquarters</p>
+                <p class="text-sm font-sans font-bold text-neutral-900">400 Houston St, Fort Worth, Texas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form right -->
+        <div class="lg:col-span-7 bg-neutral-50 rounded-2xl p-8 border border-neutral-200">
+          <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you! AAA AUGER Plumbing Services has received your request and is dispatching help.');">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-xs font-sans font-bold text-neutral-700 uppercase mb-2">Your Name</label>
+                <input type="text" required placeholder="John Doe" class="w-full bg-white border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#d92323] font-sans">
+              </div>
+              <div>
+                <label class="block text-xs font-sans font-bold text-neutral-700 uppercase mb-2">Phone Number</label>
+                <input type="tel" required placeholder="(555) 555-5555" class="w-full bg-white border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#d92323] font-sans">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-sans font-bold text-neutral-700 uppercase mb-2">Email Address</label>
+              <input type="email" required placeholder="john@example.com" class="w-full bg-white border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#d92323] font-sans">
+            </div>
+
+            <div>
+              <label class="block text-xs font-sans font-bold text-neutral-700 uppercase mb-2">Service Needed</label>
+              <select class="w-full bg-white border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#d92323] font-sans">
+                <option>Emergency Plumbing Repair</option>
+                <option>Water Heater Replacement</option>
+                <option>Difficult Diagnostic Problems</option>
+                <option>General Plumbing Maintenance</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-sans font-bold text-neutral-700 uppercase mb-2">How Can We Help You?</label>
+              <textarea rows="4" placeholder="Briefly describe your situation..." class="w-full bg-white border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#d92323] font-sans"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-[#d92323] hover:bg-[#b01c1c] text-white font-sans font-extrabold text-sm py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+              <i class="fas fa-paper-plane"></i>
+              <span>Book Appointment Now</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky / Top-Right Trapezoid Cutout Footer -->
+  <footer class="trapezoid-footer text-neutral-400 font-sans pt-24 pb-12 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-neutral-800">
+        
+        <!-- Info column -->
+        <div class="md:col-span-5 space-y-6">
+          <a href="#" class="flex items-center gap-3">
+            <div class="h-10 w-10 bg-[#d92323] text-white rounded-lg flex items-center justify-center font-display font-black text-xl tracking-tighter shadow-md">
+              AAA
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-display font-extrabold text-lg leading-tight tracking-wider uppercase">AAA AUGER</span>
+              <span class="text-neutral-500 font-sans text-xs uppercase tracking-widest font-semibold">Plumbing Services</span>
+            </div>
+          </a>
+          <p class="text-sm text-neutral-400 max-w-sm leading-relaxed">
+            Professional, Reliable & Affordable for over 50 Years! It is our fanatical goal to send a clean, respectful, licensed and competent plumber in the timeliest manner.
+          </p>
+          <div class="flex items-center gap-4 text-neutral-500 text-lg">
+            <a href="#" class="hover:text-white transition-colors"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-white transition-colors"><i class="fab fa-yelp"></i></a>
+          </div>
+        </div>
+
+        <!-- Links column 1 -->
+        <div class="md:col-span-3 space-y-4">
+          <h4 class="text-white font-display font-bold text-sm tracking-widest uppercase">Specialties</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-[#d92323] transition-colors">Emergency Plumbing</a></li>
+            <li><a href="#services" class="hover:text-[#d92323] transition-colors">Water Heater Services</a></li>
+            <li><a href="#services" class="hover:text-[#d92323] transition-colors">Complex Diagnostics</a></li>
+            <li><a href="#services" class="hover:text-[#d92323] transition-colors">General Line Cleaning</a></li>
+          </ul>
+        </div>
+
+        <!-- Links column 2 -->
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-white font-display font-bold text-sm tracking-widest uppercase">State Compliance</h4>
+          <p class="text-xs text-neutral-500 leading-relaxed">
+            AAA AUGER Plumbing Services ensures that all Service Technicians have properly fulfilled state regulations and remain in compliance. Licensed plumbers are required to annually attend continuing education courses to assure excellent residential solutions.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Copyright row -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
+        <p>&copy; 2026 AAA AUGER Plumbing Services. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-neutral-400">Privacy Policy</a>
+          <a href="#" class="hover:text-neutral-400">Terms of Service</a>
+          <a href="#" class="hover:text-neutral-400">Licensing Info</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hero Video Dialog Modal -->
+  <div id="video-dialog" class="fixed inset-0 z-50 hidden bg-neutral-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-neutral-900 border border-neutral-800 rounded-2xl max-w-3xl w-full overflow-hidden shadow-2xl relative">
+      <!-- Close Button -->
+      <button id="close-video-btn" class="absolute top-4 right-4 text-neutral-400 hover:text-white transition-colors bg-neutral-800/80 p-2 rounded-full focus:outline-none z-20">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+      <!-- Modal Content -->
+      <div class="p-6">
+        <h3 class="text-xl font-display font-bold text-white mb-4 flex items-center gap-2">
+          <i class="fas fa-film text-[#d92323]"></i>
+          <span>AAA AUGER Plumbing Services - Dedicated to Service</span>
+        </h3>
+        <!-- Simulated Video Player -->
+        <div class="relative aspect-video bg-black rounded-lg overflow-hidden flex flex-col items-center justify-center text-center p-8">
+          <!-- Background Graphics -->
+          <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=800');"></div>
+          <div class="relative z-10 space-y-4">
+            <div class="h-16 w-16 bg-[#d92323] text-white rounded-full flex items-center justify-center mx-auto shadow-lg animate-pulse">
+              <i class="fas fa-play text-2xl ml-1"></i>
+            </div>
+            <p class="text-white font-sans font-semibold text-lg">Over 50 Years of Trusted Plumbing Expertise</p>
+            <p class="text-neutral-400 text-sm max-w-md mx-auto">
+              From emergency 24/7 plumbing to hot water heater replacements, see how our licensed, continuing-education-trained specialists solve your most difficult plumbing problems.
+            </p>
+            <div class="pt-4 flex justify-center gap-4">
+              <a href="tel:18005552843" class="bg-[#d92323] hover:bg-[#b01c1c] text-white font-sans font-bold px-6 py-2.5 rounded-lg shadow transition-all flex items-center gap-2 text-sm">
+                <i class="fas fa-phone-alt"></i> Call Now
+              </a>
+              <button id="close-video-action" class="bg-neutral-800 hover:bg-neutral-700 text-white font-sans font-semibold px-6 py-2.5 rounded-lg transition-all text-sm">
+                Close Preview
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    // Mobile menu toggling
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMobileMenu() {
+      if (mobileMenu) {
+        mobileMenu.classList.toggle('hidden');
+      }
+    }
+
+    if (mobileMenuBtn) {
+      mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Interactive Accordion Logic
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+    accordionHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const parent = header.parentElement;
+        const content = header.nextElementSibling;
+        const icon = header.querySelector('i');
+        
+        const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+        
+        // Close other accordion items
+        accordionHeaders.forEach(otherHeader => {
+          const otherContent = otherHeader.nextElementSibling;
+          const otherIcon = otherHeader.querySelector('i');
+          otherContent.style.maxHeight = '0px';
+          otherIcon.classList.remove('rotate-180');
+          otherHeader.parentElement.classList.remove('border-[#d92323]');
+        });
+        
+        // Open/Close clicked item
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px';
+          icon.classList.add('rotate-180');
+          parent.classList.add('border-[#d92323]');
+        } else {
+          content.style.maxHeight = '0px';
+          icon.classList.remove('rotate-180');
+          parent.classList.remove('border-[#d92323]');
+        }
+      });
+    });
+
+    // 3D Tilt Card Interactive hover effect
+    const tiltCards = document.querySelectorAll('.tilt-card-container');
+
+    tiltCards.forEach(container => {
+      const card = container.querySelector('.tilt-card');
+      if (!card) return;
+
+      container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const maxRotateX = 8;
+        const maxRotateY = 8;
+        
+        const rotateX = ((centerY - y) / centerY) * maxRotateX;
+        const rotateY = ((x - centerX) / centerX) * maxRotateY;
+        
+        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+      });
+
+      container.addEventListener('mouseleave', () => {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+      });
+    });
+
+    // Video Dialog Handler
+    const openVideoBtn = document.getElementById('open-video-btn');
+    const closeVideoBtn = document.getElementById('close-video-btn');
+    const closeVideoAction = document.getElementById('close-video-action');
+    const videoDialog = document.getElementById('video-dialog');
+
+    if (openVideoBtn && videoDialog) {
+      openVideoBtn.addEventListener('click', () => {
+        videoDialog.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // stop scroll on body
+      });
+    }
+
+    const hideModal = () => {
+      if (videoDialog) {
+        videoDialog.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    };
+
+    if (closeVideoBtn) closeVideoBtn.addEventListener('click', hideModal);
+    if (closeVideoAction) closeVideoAction.addEventListener('click', hideModal);
+    if (videoDialog) {
+      videoDialog.addEventListener('click', (e) => {
+        if (e.target === videoDialog) hideModal();
+      });
+    }
+  </script>
+</body>
+</html>

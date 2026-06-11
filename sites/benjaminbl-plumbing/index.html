@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BenjaminBL Plumbing - Austin's Top-Rated Residential & Business Plumber</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0F172A',
+                            blue: '#1E40AF',
+                            accent: '#F97316',
+                            lightgray: '#F8FAFC',
+                            cardgray: '#EEEEEE'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts for professional typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Trapezoidal cutout for footer */
+        .trapezoid-footer {
+            position: relative;
+            background-color: #0F172A;
+        }
+        .trapezoid-footer::before {
+            content: '';
+            position: absolute;
+            top: -24px;
+            right: 0;
+            width: 180px;
+            height: 24px;
+            background-color: #0F172A;
+            clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%);
+        }
+        /* Standard smooth transitions */
+        .transition-all-300 {
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
+
+    <!-- STICKY NAVBAR -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-900/95 border-b border-slate-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo & Brand Name -->
+                <div class="flex items-center gap-3">
+                    <a href="#" class="flex items-center gap-3 group">
+                        <div class="bg-gradient-to-tr from-brand-accent to-amber-500 p-2.5 rounded-xl shadow-lg shadow-brand-accent/20 group-hover:scale-105 transition-transform duration-300">
+                            <!-- Plumbing Wrench & Pipe Icon -->
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a1 1 0 00-1 1v3a2 2 0 11-4 0V7a1 1 0 00-1-1H8a1 1 0 01-1-1V4a1 1 0 011-1h3zm-4 12v4m0 0H3m4 0h4m-4-4V8m0 8h4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="text-xl font-extrabold tracking-tight text-white block">BenjaminBL</span>
+                            <span class="text-xs font-semibold tracking-wider text-brand-accent uppercase block -mt-1">Plumbing Austin</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#services" class="hover:text-brand-accent transition-colors duration-200">Services</a>
+                    <a href="#why-us" class="hover:text-brand-accent transition-colors duration-200">Why Choose Us</a>
+                    <a href="#faqs" class="hover:text-brand-accent transition-colors duration-200">FAQs</a>
+                    <a href="#reviews" class="hover:text-brand-accent transition-colors duration-200">Reviews</a>
+                    <a href="#contact" class="hover:text-brand-accent transition-colors duration-200">Contact</a>
+                </div>
+
+                <!-- Phone CTA Button -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="tel:5125550192" class="inline-flex items-center gap-2 px-5 bg-slate-800 text-white border border-slate-700 hover:border-brand-accent/50 hover:bg-slate-800/80 font-bold py-2.5 rounded-xl text-sm transition-all duration-300 shadow-md">
+                        <svg class="w-4 h-4 text-brand-accent animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        <span>(512) 555-0192</span>
+                    </a>
+                    <a href="#contact" class="inline-flex items-center justify-center px-5 py-2.5 bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg shadow-brand-accent/20 hover:-translate-y-0.5">
+                        Book Online
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg id="menu-icon-open" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu, show/hide based on menu state. -->
+        <div class="hidden md:hidden bg-slate-950 border-b border-slate-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#services" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Services</a>
+                <a href="#why-us" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Why Choose Us</a>
+                <a href="#faqs" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">FAQs</a>
+                <a href="#reviews" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Reviews</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Contact Us</a>
+                <div class="pt-4 pb-2 border-t border-slate-800 flex flex-col gap-3 px-3">
+                    <a href="tel:5125550192" class="inline-flex items-center justify-center gap-2 w-full px-5 py-3 bg-slate-800 text-white font-bold rounded-xl text-sm border border-slate-700">
+                        <svg class="w-4 h-4 text-brand-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        <span>Call (512) 555-0192</span>
+                    </a>
+                    <a href="#contact" onclick="toggleMobileMenu()" class="inline-flex items-center justify-center w-full px-5 py-3 bg-brand-accent hover:bg-orange-600 text-white font-bold text-sm rounded-xl">
+                        Book Online Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SPLIT-HERO SECTION -->
+    <section class="relative bg-gradient-to-b from-slate-900 to-slate-800 text-white pt-16 pb-24 lg:pt-24 lg:pb-32 overflow-hidden">
+        <!-- Background accents -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(30,58,138,0.3),transparent_45%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(249,115,22,0.05),transparent_40%)]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Content Area -->
+                <div class="lg:col-span-7 space-y-8 text-left">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 bg-slate-800/80 border border-slate-700/80 px-4 py-2 rounded-full shadow-inner">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-semibold tracking-wide text-slate-100 flex items-center gap-1.5">
+                            ⭐ Top-Rated Plumber in Austin, TX
+                            <span class="text-slate-500">|</span>
+                            <span class="text-brand-accent">BBB Accredited Since 2022</span>
+                        </span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-white">
+                        Plumbing Problems <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-sky-300 to-brand-accent">
+                            Solved. Swiftly.
+                        </span>
+                    </h1>
+
+                    <!-- Sub-copy -->
+                    <p class="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
+                        Whether it’s an urgent burst pipe at midnight, a clogged toilet, or transitioning to a premium energy-efficient tankless water heater, Austin homes and businesses trust <strong class="text-white font-semibold">Benjamin and Emily</strong> for outstanding, licensed plumbing solutions.
+                    </p>
+
+                    <!-- Primary CTA Area: Rounded Light Gray Box containing underlined link CTA -->
+                    <div class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-2xl max-w-xl shadow-lg backdrop-blur-sm">
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <div class="space-y-1">
+                                <span class="text-xs text-brand-accent font-bold uppercase tracking-wider block">Get a Fast, Free Quote</span>
+                                <a href="#contact" class="text-white hover:text-brand-accent text-lg font-bold tracking-tight inline-block underline decoration-brand-accent decoration-2 underline-offset-4 transition-all duration-300">
+                                    Schedule Your Free Consultation Today ➔
+                                </a>
+                            </div>
+                            <span class="text-2xl hidden sm:block">💧</span>
+                        </div>
+                    </div>
+
+                    <!-- Trust Stats -->
+                    <div class="grid grid-cols-3 gap-6 pt-4 max-w-lg">
+                        <div class="space-y-1">
+                            <span class="text-3xl font-extrabold text-white block">110+</span>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">5-Star Reviews</span>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-3xl font-extrabold text-white block">100%</span>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Licensed & Insured</span>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-3xl font-extrabold text-white block">24/7</span>
+                            <span class="text-xs font-medium text-slate-400 uppercase tracking-wider">Emergency Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Illustration / Image & Video Player (NO EMPTY SPACE) -->
+                <div class="lg:col-span-5 relative flex justify-center items-center">
+                    
+                    <!-- Main visual wrapper with standard framing -->
+                    <div class="relative w-full max-w-md lg:max-w-none bg-slate-900 border border-slate-700/80 rounded-3xl p-6 shadow-2xl overflow-hidden group">
+                        
+                        <!-- Header banner of the mock illustration screen -->
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-4 mb-6">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+                            </div>
+                            <span class="text-xs font-medium tracking-widest text-slate-400 uppercase">Interactive System View</span>
+                        </div>
+
+                        <!-- Beautiful Custom Interactive SVG Plumbing Diagram -->
+                        <div class="relative rounded-2xl bg-slate-950 p-6 flex flex-col items-center justify-center min-h-[300px]">
+                            
+                            <!-- Video Overlay Button (Hero Video Dialog Trigger) -->
+                            <div class="absolute inset-0 bg-slate-950/40 backdrop-blur-[1px] hover:backdrop-blur-[0px] flex flex-col items-center justify-center transition-all duration-300 cursor-pointer rounded-2xl group" onclick="openVideoModal()">
+                                <!-- Glowing play button -->
+                                <div class="w-20 h-20 rounded-full bg-brand-accent/90 group-hover:bg-brand-accent flex items-center justify-center shadow-lg shadow-brand-accent/30 group-hover:scale-110 transition-all duration-300 relative z-20">
+                                    <svg class="w-8 h-8 text-white fill-current ml-1" viewBox="0 0 24 24">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                    <span class="absolute -inset-2 rounded-full border-2 border-brand-accent/30 animate-ping"></span>
+                                </div>
+                                <span class="mt-4 text-xs font-bold text-slate-200 tracking-wider bg-slate-900/90 px-3 py-1.5 rounded-full border border-slate-700/50 relative z-20">
+                                    Watch How We Work (1:30)
+                                </span>
+                            </div>
+
+                            <!-- Animated Plumbing SVG Illustration -->
+                            <svg class="w-full h-56 text-slate-700" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background grid -->
+                                <defs>
+                                    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+                                    </pattern>
+                                    <linearGradient id="pipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#1E40AF" />
+                                        <stop offset="50%" stop-color="#3B82F6" />
+                                        <stop offset="100%" stop-color="#1D4ED8" />
+                                    </linearGradient>
+                                    <linearGradient id="hotPipeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" stop-color="#B91C1C" />
+                                        <stop offset="50%" stop-color="#EF4444" />
+                                        <stop offset="100%" stop-color="#991B1B" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#grid)" />
+
+                                <!-- Pipes layout -->
+                                <!-- Water Inlet Main (Blue) -->
+                                <path d="M 20 200 L 140 200 L 140 100 L 220 100" stroke="url(#pipeGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <!-- Hot Water Outlet (Red) -->
+                                <path d="M 220 70 L 300 70 L 300 160 L 380 160" stroke="url(#hotPipeGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                                
+                                <!-- Tankless Water Heater Unit -->
+                                <rect x="180" y="50" width="80" height="110" rx="12" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+                                <rect x="195" y="65" width="50" height="40" rx="6" fill="#0F172A" stroke="#334155" stroke-width="1.5"/>
+                                <!-- Digital Temperature Gauge -->
+                                <text x="220" y="88" fill="#F59E0B" font-family="monospace" font-size="14" font-weight="bold" text-anchor="middle">120°F</text>
+                                
+                                <!-- Water valves and status circles -->
+                                <circle cx="140" cy="140" r="10" fill="#F97316" stroke="#FFFFFF" stroke-width="2" class="animate-pulse"/>
+                                <circle cx="300" cy="110" r="10" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2" />
+                                
+                                <!-- Flows / water droplets -->
+                                <circle cx="80" cy="200" r="3" fill="#60A5FA" class="animate-bounce" />
+                                <circle cx="340" cy="160" r="3" fill="#F87171" class="animate-bounce" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic TILT CARD Positioned Overlapping Bottom-Right -->
+                    <div id="tilt-card" data-tilt class="absolute -bottom-10 -right-6 md:-right-8 bg-brand-cardgray hover:bg-slate-100 text-slate-900 rounded-2xl p-5 shadow-2xl border border-slate-300 w-72 transition-all-300 cursor-pointer hidden sm:block relative overflow-hidden">
+                        <!-- Shaking Hands subtle watermarked background SVG -->
+                        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none p-4">
+                            <svg class="w-full h-full text-slate-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                            </svg>
+                        </div>
+                        <!-- Card Content -->
+                        <div class="relative z-10 flex items-start gap-3.5">
+                            <div class="bg-blue-600 text-white rounded-xl p-2 shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="font-extrabold text-sm uppercase tracking-wider text-slate-500 block mb-1">Our Promise</span>
+                                <h4 class="font-bold text-slate-900 text-base leading-tight">100% Satisfaction Guaranteed</h4>
+                                <p class="text-xs text-slate-600 mt-1">Austin's Best Pros in Town. Benjamin and Emily ensure meticulous results.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUSTED ACCREDITATIONS & REVIEW SIGNAL HIGHLIGHTS -->
+    <section class="bg-white py-12 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+                <div>
+                    <h3 class="text-slate-400 text-xs sm:text-sm font-bold uppercase tracking-widest block">Accredited & Top-Rated Locally</h3>
+                    <p class="text-slate-700 font-extrabold text-lg sm:text-xl mt-1">Honored to serve our Austin community with integrity.</p>
+                </div>
+                <!-- Real Listing Logos & Accreditations (Styled in CSS / Custom SVGs) -->
+                <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 opacity-85">
+                    <!-- BBB Accredited -->
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl hover:scale-105 transition-transform duration-300">
+                        <div class="bg-blue-700 text-white font-extrabold text-xs px-2 py-1 rounded">BBB</div>
+                        <div class="text-left">
+                            <span class="text-[10px] text-slate-500 block leading-none font-bold uppercase">Accredited Business</span>
+                            <span class="text-xs text-slate-800 font-extrabold block">A+ Rating</span>
+                        </div>
+                    </div>
+                    <!-- BestProsInTown -->
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl hover:scale-105 transition-transform duration-300">
+                        <div class="text-yellow-500 text-lg font-bold">⭐ 5.0</div>
+                        <div class="text-left">
+                            <span class="text-[10px] text-slate-500 block leading-none font-bold uppercase">BestProsInTown</span>
+                            <span class="text-xs text-slate-800 font-extrabold block">110+ Reviews</span>
+                        </div>
+                    </div>
+                    <!-- Yelp Featured -->
+                    <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-xl hover:scale-105 transition-transform duration-300">
+                        <div class="bg-red-600 text-white font-extrabold text-xs px-2 py-0.5 rounded">yelp</div>
+                        <div class="text-left">
+                            <span class="text-[10px] text-slate-500 block leading-none font-bold uppercase">Highly Rated</span>
+                            <span class="text-xs text-slate-800 font-extrabold block">Austin Choice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPREHENSIVE SERVICES SECTION -->
+    <section id="services" class="py-20 lg:py-28 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-16">
+            
+            <!-- Section Header -->
+            <div class="max-w-3xl mx-auto space-y-4">
+                <span class="text-brand-accent text-sm font-bold uppercase tracking-widest block">What We Do Best</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+                    Professional Plumbing Services Tailored for Austin Households & Businesses
+                </h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-blue-600 to-brand-accent mx-auto rounded-full"></div>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Whether troubleshooting complex business issues or handling immediate residential repair needs, our fully insured and licensed team arrives promptly to deliver exceptional service.
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                
+                <!-- Service 1: Water Heater Repair & Install -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all-300 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900">Water Heater Repair & Install</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Never run out of hot water again. We repair, service, and install traditional storage water heaters, restoring high efficiency and ensuring consistent heating.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center gap-1 pt-6 group">
+                        Get Estimate 
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Service 2: Tankless Water Heaters -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all-300 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 bg-orange-100 text-brand-accent rounded-2xl flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900">Tankless Water Heaters</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Transition to modern gas or electric tankless systems. Save space, reduce energy bills significantly, and enjoy endless hot water on demand with expert installation.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center gap-1 pt-6 group">
+                        Learn More 
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Service 3: Clogged Toilet Repair -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all-300 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900">Clogged Toilet Repair</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                From standard clogs to complex backing leaks, we diagnose issues instantly and clear obstructions safely, preventing plumbing overflow and maintaining sanitation.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center gap-1 pt-6 group">
+                        Emergency Clear 
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Service 4: Sewer Line Repair -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all-300 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 19v-5H16" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900">Sewer Line Repair</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Prevent disastrous structural damage. We locate, inspect, and perform premium sewer line diagnostics and repairs to resolve odor and backed-up drainage safely.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center gap-1 pt-6 group">
+                        Get Inspection 
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Service 5: Burst Pipe Repair -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all-300 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900">Burst Pipe Repair</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Act immediately to minimize property water damage. Our rapid emergency response safely caps leaks, repairs lines, and guarantees structural durability.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="tel:5125550192" class="text-red-600 font-semibold text-sm hover:text-red-700 inline-flex items-center gap-1 pt-6 group">
+                        Call Dispatch Now 
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+                <!-- Service 6: Residential & Business Plumbing -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200/60 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all-300 flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center shadow-md">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-xl font-bold text-slate-900">Residential & Business Plumbing</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Complete service for any commercial kitchen, corporate bathroom, custom garbage disposals, or residential system. Restoring robust flow and total utility.
+                            </p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="text-blue-600 font-semibold text-sm hover:text-blue-700 inline-flex items-center gap-1 pt-6 group">
+                        Schedule Call 
+                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST & WHY-US SECTION -->
+    <section id="why-us" class="py-20 lg:py-28 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(30,58,138,0.25),transparent_40%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left: Beautiful text with bold details -->
+                <div class="space-y-8">
+                    <span class="text-brand-accent text-sm font-bold uppercase tracking-widest block">The BenjaminBL Difference</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                        Why Austin Property Owners Depend on Benjamin and Emily
+                    </h2>
+                    <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+                        Plumbing systems can be incredibly complex. When you call us, you are not hiring a random subcontractor. You are getting Austin’s finest local family-run operation.
+                    </p>
+
+                    <!-- Core Value Pillars -->
+                    <div class="space-y-6">
+                        
+                        <!-- Value 1 -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-600/30 border border-blue-500/50 p-2.5 rounded-xl shrink-0 text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Full License & Insurance Protection</h4>
+                                <p class="text-slate-400 text-sm mt-1">
+                                    Our plumbing staff is completely certified, licensed, and highly insured. Your property is fully protected, eliminating standard liabilities entirely.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Value 2 -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-600/30 border border-blue-500/50 p-2.5 rounded-xl shrink-0 text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">Rapid Emergency Responses</h4>
+                                <p class="text-slate-400 text-sm mt-1">
+                                    Plumbing issues wait for no one. Leaking kitchen sinks, overflowing toilets, or main line backings are prioritized immediately by Benjamin & Emily.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Value 3 -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-600/30 border border-blue-500/50 p-2.5 rounded-xl shrink-0 text-brand-accent">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg text-white">No-Hassle Honest Pricing</h4>
+                                <p class="text-slate-400 text-sm mt-1">
+                                    We estimate properly, explain options transparently, and never pad your bill with surprise charges. We value our A+ Better Business Bureau reputation.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Testimonials & Customer Feedback Map -->
+                <div id="reviews" class="space-y-6">
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-8 shadow-xl">
+                        <span class="text-yellow-400 text-2xl tracking-widest block">★★★★★</span>
+                        <p class="text-slate-200 italic text-base sm:text-lg leading-relaxed mt-4">
+                            "Benjamin and Emily are fantastic! Our kitchen sink was leaking severely late at night. They responded immediately, gave an upfront reasonable price, and completely fixed the line within an hour. They are now our exclusive family plumbers."
+                        </p>
+                        <div class="flex items-center gap-4 mt-6 pt-6 border-t border-slate-700/60">
+                            <div class="w-12 h-12 rounded-full bg-slate-600 flex items-center justify-center font-bold text-lg text-white">
+                                MD
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Marcus D.</h5>
+                                <span class="text-xs text-slate-400 block">Austin, TX Resident & Yelp Reviewer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/40 border border-slate-700/60 rounded-3xl p-8 shadow-md">
+                        <span class="text-yellow-400 text-2xl tracking-widest block">★★★★★</span>
+                        <p class="text-slate-200 italic text-base leading-relaxed mt-4">
+                            "Super fast installation of our new commercial tankless water heater (gas) unit. They handled all local Austin plumbing permits effortlessly. Amazing communication throughout!"
+                        </p>
+                        <div class="flex items-center gap-4 mt-6 pt-6 border-t border-slate-700/60">
+                            <div class="w-12 h-12 rounded-full bg-slate-600 flex items-center justify-center font-bold text-lg text-white">
+                                SK
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white text-base">Sarah K.</h5>
+                                <span class="text-xs text-slate-400 block">Business Manager in Austin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQS ACCORDION SECTION -->
+    <section id="faqs" class="py-20 lg:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+            
+            <!-- Header -->
+            <div class="text-center space-y-4">
+                <span class="text-brand-accent text-sm font-bold uppercase tracking-widest block">Got Questions?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Accordions Container -->
+            <div class="space-y-4">
+                
+                <!-- FAQ item 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-300">
+                    <button class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50 focus:outline-none transition-colors" onclick="toggleAccordion(1)">
+                        <span>Are Benjamin and Emily fully licensed and insured in Austin, TX?</span>
+                        <svg id="accordion-arrow-1" class="w-5 h-5 text-slate-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="accordion-content-1" class="max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+                        <div class="p-6 pt-0 border-t border-slate-100 text-slate-600 text-sm leading-relaxed space-y-2">
+                            <p>Yes, absolutely. BenjaminBL Plumbing is fully certified, licensed, and heavily insured to provide full-scale residential and business plumbing operations in Austin, TX.</p>
+                            <p>This protection ensures that neither you nor our team faces any unnecessary liability during complex plumbing tasks or emergency pipe caps.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ item 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-300">
+                    <button class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50 focus:outline-none transition-colors" onclick="toggleAccordion(2)">
+                        <span>What is the benefit of transitioning to a tankless water heater?</span>
+                        <svg id="accordion-arrow-2" class="w-5 h-5 text-slate-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="accordion-content-2" class="max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+                        <div class="p-6 pt-0 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+                            <p>Tankless water heaters only heat water when you turn on a faucet, providing an unlimited stream of hot water on demand. This eliminates standby heating losses, reduces space in your basement or utility closet, and lowers monthly energy expenditures by up to 30% compared to traditional tanks.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ item 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-300">
+                    <button class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50 focus:outline-none transition-colors" onclick="toggleAccordion(3)">
+                        <span>How quickly do you respond to urgent residential leaks or toilet clogs?</span>
+                        <svg id="accordion-arrow-3" class="w-5 h-5 text-slate-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="accordion-content-3" class="max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+                        <div class="p-6 pt-0 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+                            <p>We treat severe issues like burst pipes, leaking water heaters, and major commercial plumbing overflows as top emergencies. We coordinate prompt dispatches in Austin, TX to get a licensed pro to your location as quickly as possible.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ item 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-300">
+                    <button class="w-full flex items-center justify-between p-6 text-left font-bold text-lg text-slate-900 hover:bg-slate-50 focus:outline-none transition-colors" onclick="toggleAccordion(4)">
+                        <span>Do you help with sewer line inspections and local permits?</span>
+                        <svg id="accordion-arrow-4" class="w-5 h-5 text-slate-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="accordion-content-4" class="max-h-0 overflow-hidden transition-all duration-350 ease-in-out">
+                        <div class="p-6 pt-0 border-t border-slate-100 text-slate-600 text-sm leading-relaxed">
+                            <p>Yes. We provide modern camera-based diagnostics to evaluate sewer blockages accurately. Furthermore, we handle all municipal Austin, TX plumbing repair and water heater replacement permits to guarantee code compliance for your property.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL-TO-ACTION & BOOKING FORM SECTION -->
+    <section id="contact" class="py-20 lg:py-28 bg-slate-50 border-t border-slate-200 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Left: Info & Urgency -->
+                <div class="lg:col-span-5 space-y-8 text-left">
+                    <span class="text-brand-accent text-sm font-bold uppercase tracking-widest block">Get a Bid Today</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        Schedule Your Professional Service with BenjaminBL Plumbing
+                    </h2>
+                    <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+                        Don’t let a plumbing problem compromise your home comfort or disrupt your business operations. Submit our safe inquiry form, and Benjamin or Emily will reach out to schedule an exact appointment.
+                    </p>
+
+                    <div class="bg-blue-900 text-white rounded-3xl p-6 shadow-lg border border-blue-800 space-y-6">
+                        <h4 class="font-bold text-lg flex items-center gap-2">
+                            <span class="text-brand-accent text-xl">📞</span> 
+                            Prefer to speak now?
+                        </h4>
+                        <p class="text-slate-300 text-sm">
+                            If you are experiencing an urgent water leak or emergency toilet overflow, call our local line directly for quick support:
+                        </p>
+                        <a href="tel:5125550192" class="inline-flex items-center gap-2 text-xl font-extrabold text-white hover:text-brand-accent transition-colors">
+                            (512) 555-0192
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Secure Form -->
+                <div class="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-200">
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-6">Request Your Free Plumbing Quote</h3>
+                    
+                    <form action="#" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                        <!-- Name & Phone -->
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-semibold text-slate-700 mb-2">Your Name *</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:bg-white outline-none transition-all duration-200 text-sm" placeholder="e.g. David Miller">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-semibold text-slate-700 mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:bg-white outline-none transition-all duration-200 text-sm" placeholder="e.g. (512) 555-0100">
+                            </div>
+                        </div>
+
+                        <!-- Email & Area -->
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-sm font-semibold text-slate-700 mb-2">Email Address *</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:bg-white outline-none transition-all duration-200 text-sm" placeholder="e.g. david@domain.com">
+                            </div>
+                            <div>
+                                <label for="service-type" class="block text-sm font-semibold text-slate-700 mb-2">Requested Service *</label>
+                                <select id="service-type" class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:bg-white outline-none transition-all duration-200 text-sm text-slate-700">
+                                    <option value="water-heater">Water Heater Repair & Install</option>
+                                    <option value="tankless">Tankless Water Heater Transition</option>
+                                    <option value="clogged-toilet">Clogged Toilet / Sewer Line</option>
+                                    <option value="burst-pipe">Burst Pipe Cap & Repair</option>
+                                    <option value="commercial">Commercial / Business Plumbing</option>
+                                    <option value="other">Other Leak / Maintenance Concern</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Details -->
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-slate-700 mb-2">How can Benjamin & Emily help you? *</label>
+                            <textarea id="message" rows="4" required class="w-full px-4 py-3 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:bg-white outline-none transition-all duration-200 text-sm" placeholder="Briefly describe the plumbing issue (e.g., leaking kitchen sink drain, broken water heater safety valve, etc.)"></textarea>
+                        </div>
+
+                        <!-- Success Alert (Hidden initially) -->
+                        <div id="form-success" class="hidden bg-emerald-50 border border-emerald-300 text-emerald-800 p-4 rounded-xl text-sm font-semibold text-center animate-fade-in">
+                            🎉 Thank you! Your request was received. Benjamin and Emily will call you shortly.
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full py-4 bg-brand-accent hover:bg-orange-600 text-white font-extrabold text-base rounded-xl transition-all duration-300 shadow-lg shadow-brand-accent/25 hover:-translate-y-0.5">
+                            Submit Request & Book Estimate
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH SOLID DARK GRAY/BLACK BAND & TRAPEZOIDAL CUTOUT -->
+    <footer class="trapezoid-footer text-white py-12 border-t border-slate-800/50 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-12 items-start pb-8 border-b border-slate-800/80">
+                
+                <!-- Col 1: Brand -->
+                <div class="space-y-4 text-left">
+                    <span class="text-lg font-extrabold tracking-tight text-white block">BenjaminBL Plumbing</span>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Top-rated residential and business plumbing services across Austin, TX. Committed to reliable service, clean craftsmanship, and 100% satisfaction.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-widest block">Lic #M-382910</span>
+                        <span class="text-slate-700">|</span>
+                        <span class="text-xs text-slate-500 font-bold uppercase tracking-widest block">Austin, TX</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services Quick Links -->
+                <div class="space-y-4 text-left">
+                    <span class="text-sm font-bold uppercase tracking-wider text-slate-200 block">Our Core Services</span>
+                    <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+                        <li><a href="#services" class="hover:text-brand-accent transition-colors">Water Heater Repair & Install</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition-colors">Tankless Water Heaters</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition-colors">Clogged Toilet Repair</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition-colors">Sewer Line Repair & Diagnostics</a></li>
+                        <li><a href="#services" class="hover:text-brand-accent transition-colors">Burst Pipe Urgent Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Direct Area Support -->
+                <div class="space-y-4 text-left">
+                    <span class="text-sm font-bold uppercase tracking-wider text-slate-200 block">Contact Info</span>
+                    <p class="text-slate-400 text-xs sm:text-sm">
+                        Austin, Texas & Surrounding Communities. Available 24/7 for critical emergencies.
+                    </p>
+                    <div class="space-y-1">
+                        <span class="text-xs text-slate-500 block">Call Toll-Free or Direct:</span>
+                        <a href="tel:5125550192" class="text-brand-accent font-extrabold text-base hover:underline block">(512) 555-0192</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom legal row -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+                <span>&copy; 2026 BenjaminBL Plumbing. All rights reserved. Austin, TX.</span>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-slate-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-300 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- HERO VIDEO DIALOG MODAL -->
+    <div id="video-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/85 backdrop-blur-md hidden transition-all duration-300 opacity-0" onclick="closeVideoModalOnOutsideClick(event)">
+        <!-- Video box container -->
+        <div class="relative w-full max-w-3xl bg-slate-900 border border-slate-700 rounded-3xl p-4 shadow-2xl overflow-hidden transform scale-95 transition-all duration-300" id="video-container">
+            <button class="absolute top-4 right-4 text-slate-400 hover:text-white text-3xl font-light focus:outline-none z-55 cursor-pointer" onclick="closeVideoModal()">&times;</button>
+            
+            <div class="border-b border-slate-800 pb-3 mb-4">
+                <h4 class="font-extrabold text-lg text-white">How Benjamin & Emily Solve Your Plumbing Concerns</h4>
+            </div>
+
+            <!-- Mock Interactive High-Quality Video Screen -->
+            <div class="aspect-video bg-slate-950 rounded-2xl relative overflow-hidden flex flex-col items-center justify-center">
+                <!-- Video thumbnail or placeholder animation -->
+                <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 to-blue-900/40 opacity-70"></div>
+                <div class="relative z-10 text-center px-6 space-y-4">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-accent text-white font-extrabold text-xs uppercase tracking-wider rounded-full">Demo Playback</span>
+                    <h5 class="text-xl font-bold text-white max-w-lg">"Quality Repairs, Upfront Pricing, Meticulous Craftsmanship"</h5>
+                    <p class="text-slate-300 text-sm max-w-md mx-auto">
+                        This custom demo features standard walkthrough video clips of Emily testing water heating valves, and Benjamin repairing kitchen drain leaks in Austin.
+                    </p>
+                    <div class="flex items-center justify-center gap-4 pt-4">
+                        <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl flex items-center gap-2 shadow transition-all" onclick="alert('Demo Video Playing... (Mock Action)')">
+                            <span>▶ Start Demo Clip</span>
+                        </button>
+                        <button class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold rounded-xl transition-all" onclick="closeVideoModal()">
+                            Close Window
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM INTERACTIVE SCRIPTS -->
+    <script>
+        // Toggle mobile nav menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        // Hero Video Dialog Modal controllers
+        function openVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('video-container');
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.add('opacity-100');
+                container.classList.remove('scale-95');
+                container.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('video-container');
+            
+            modal.classList.remove('opacity-100');
+            container.classList.remove('scale-100');
+            container.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function closeVideoModalOnOutsideClick(event) {
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('video-container');
+            if (event.target === modal) {
+                closeVideoModal();
+            }
+        }
+
+        // TILT CARD 3D Effect script
+        const tiltCard = document.getElementById('tilt-card');
+        if (tiltCard) {
+            tiltCard.addEventListener('mousemove', (e) => {
+                const rect = tiltCard.getBoundingClientRect();
+                const x = e.clientX - rect.left; // x position within element
+                const y = e.clientY - rect.top;  // y position within element
+                
+                // Calculate percentage positions
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                
+                // Max degrees rotation
+                const rotateX = -(y - yc) / 10;
+                const rotateY = (x - xc) / 10;
+                
+                tiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`;
+            });
+            
+            tiltCard.addEventListener('mouseleave', () => {
+                tiltCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+        }
+
+        // Accordion Toggle Controllers
+        function toggleAccordion(id) {
+            const content = document.getElementById(`accordion-content-${id}`);
+            const arrow = document.getElementById(`accordion-arrow-${id}`);
+            const button = content.previousElementSibling;
+            
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0px';
+                arrow.classList.remove('rotate-180');
+                button.parentElement.classList.remove('border-blue-500');
+            } else {
+                // Close any open accordions first for professional interface
+                for (let i = 1; i <= 4; i++) {
+                    const c = document.getElementById(`accordion-content-${i}`);
+                    const a = document.getElementById(`accordion-arrow-${i}`);
+                    if (c && c.style.maxHeight !== '0px') {
+                        c.style.maxHeight = '0px';
+                        if (a) a.classList.remove('rotate-180');
+                        c.parentElement.classList.remove('border-blue-500');
+                    }
+                }
+                
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.classList.add('rotate-180');
+                button.parentElement.classList.add('border-blue-500');
+            }
+        }
+
+        // Form Submit handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const successMsg = document.getElementById('form-success');
+            
+            // Show custom inline success confirmation
+            successMsg.classList.remove('hidden');
+            
+            // Clear inputs
+            event.target.reset();
+            
+            setTimeout(() => {
+                successMsg.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>

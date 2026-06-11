@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin's Greatest Plumbing | Your Trusted Local Experts in Austin, TX</title>
+    <meta name="description" content="Austin's Greatest Plumbing offers reliable residential and commercial plumbing services including leak repair, drain cleaning, and installations in the greater Austin area. Upfront pricing, quality service, and lasting solutions.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233B82F6' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'/%3E%3C/svg%3E" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryBlue: '#3B82F6', // Tailwind's blue-500
+                        darkGray: '#333333',
+                        lightGray: '#eeeeee',
+                        accentBlue: '#2563EB', // Tailwind's blue-600 for hover
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .trapezoid-cutout-top-right {
+            position: relative;
+        }
+        .trapezoid-cutout-top-right::before {
+            content: '';
+            position: absolute;
+            top: -30px; /* Adjust height of the cutout */
+            right: 0;
+            width: 100%;
+            height: 30px; /* Same as top value */
+            background: linear-gradient(to bottom left, transparent 50%, theme('colors.darkGray') 50%);
+            transform: skewX(-20deg); /* Adjust angle of the slant */
+            transform-origin: 100% 0;
+            z-index: 10;
+        }
+        @media (min-width: 768px) {
+            .trapezoid-cutout-top-right::before {
+                top: -40px;
+                height: 40px;
+                transform: skewX(-15deg);
+            }
+        }
+        /* Custom styles for hero background image */
+        .hero-bg-plumber {
+            background-image: url('https://images.unsplash.com/photo-1542037104857-ff799981886e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjYwNjF8MHwxfHNlYXJjaHw1NHx8cGx1bWJpbmd8ZW58MHx8fHwxNzE4MDM2ODk5fDA&ixlib=rb-4.0.3&q=80&w=1080'); /* Placeholder from Unsplash */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-bg-plumber::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+        .hero-content-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+        /* Style for hands shaking image background in the card */
+        .hands-shaking-bg {
+            background-image: url('https://images.unsplash.com/photo-1628126665792-570a294d1df0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NjYwNjF8MHwxfHNlYXJjaHwyfHxoYW5kcyUyMHNoYWtpbmd8ZW58MHx8fHwxNzE4MDM4OTM2fDA&ixlib=rb-4.0.3&q=80&w=1080'); /* Placeholder from Unsplash */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hands-shaking-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(238, 238, 238, 0.8); /* Light gray overlay with transparency */
+            border-radius: 8px; /* Match card border-radius */
+            z-index: 1;
+        }
+        .hands-shaking-bg > * {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-darkGray bg-opacity-90 shadow-lg">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold text-white hover:text-primaryBlue transition-colors duration-300">
+                Austin's Greatest Plumbing
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#services" class="text-white hover:text-primaryBlue transition-colors duration-300">Services</a>
+                <a href="#areas" class="text-white hover:text-primaryBlue transition-colors duration-300">Areas Served</a>
+                <a href="#why-us" class="text-white hover:text-primaryBlue transition-colors duration-300">Why Choose Us</a>
+                <a href="#contact" class="text-white hover:text-primaryBlue transition-colors duration-300">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-darkGray bg-opacity-90">
+            <a href="#services" class="block px-6 py-3 text-white hover:bg-gray-700 transition-colors duration-300">Services</a>
+            <a href="#areas" class="block px-6 py-3 text-white hover:bg-gray-700 transition-colors duration-300">Areas Served</a>
+            <a href="#why-us" class="block px-6 py-3 text-white hover:bg-gray-700 transition-colors duration-300">Why Choose Us</a>
+            <a href="#contact" class="block px-6 py-3 text-white hover:bg-gray-700 transition-colors duration-300">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-bg-plumber min-h-screen flex items-center justify-center text-center p-6 relative">
+        <div class="hero-content-wrapper container mx-auto max-w-4xl">
+            <span class="inline-block bg-primaryBlue text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
+                BBB Accredited & A-Rated
+            </span>
+            <h1 class="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                Austin's Greatest Plumbing: <br class="hidden sm:inline">Your Trusted Experts in the Greater Austin Area
+            </h1>
+            <p class="text-xl md:text-2xl text-white opacity-90 mb-10">
+                Experience clear communication, upfront pricing, and honest service for all your residential and commercial plumbing needs.
+            </p>
+            <a href="tel:+15123779919" class="inline-block bg-primaryBlue text-white text-lg md:text-xl font-bold px-10 py-4 rounded-lg shadow-xl hover:bg-accentBlue transition-all duration-300 transform hover:scale-105">
+                Call Us Today: (512) 377-9919
+            </a>
+            <p class="text-white text-sm mt-4 opacity-80">
+                Available for emergency services.
+            </p>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-darkGray mb-4">Comprehensive Plumbing Services You Can Rely On</h2>
+            <p class="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
+                From urgent repairs to new installations, Austin's Greatest Plumbing provides top-tier service using only the highest quality materials.
+            </p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-lightGray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Leak Detection & Repair</h3>
+                    <p class="text-gray-700">
+                        Expertly locating and fixing leaks, from hidden pipe issues to visible drips, ensuring no water goes to waste and protecting your property.
+                    </p>
+                </div>
+                <div class="bg-lightGray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Drain Cleaning</h3>
+                    <p class="text-gray-700">
+                        Thorough drain cleaning services to clear blockages, prevent backups, and restore optimal flow in your sinks, showers, and main lines.
+                    </p>
+                </div>
+                <div class="bg-lightGray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Bathtub & Sink Plumbing</h3>
+                    <p class="text-gray-700">
+                        Specialized repairs for bathtub and sink leaks, clogs, and fixture installations. We handle everything to keep your bathroom and kitchen running smoothly.
+                    </p>
+                </div>
+                <div class="bg-lightGray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Emergency Repair Services</h3>
+                    <p class="text-gray-700">
+                        Plumbing emergencies don't wait, and neither do we. Rapid response for critical issues to minimize damage and restore peace of mind.
+                    </p>
+                </div>
+                <div class="bg-lightGray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Plumbing Installations</h3>
+                    <p class="text-gray-700">
+                        Professional installation of new fixtures, water heaters, and complete plumbing systems for residential and commercial properties.
+                    </p>
+                </div>
+                <div class="bg-lightGray p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <h3 class="text-2xl font-semibold text-primaryBlue mb-4">Water Heater Services</h3>
+                    <p class="text-gray-700">
+                        Installation, repair, and maintenance for all types of water heaters, ensuring you always have reliable hot water when you need it.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Served Section -->
+    <section id="areas" class="py-16 bg-primaryBlue text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-4">Proudly Serving the Greater Austin Area</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">
+                Austin's Greatest Plumbing is dedicated to providing exceptional service to homes and businesses across a wide range of communities.
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Austin, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Buda, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Cedar Park, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Del Valle, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Georgetown, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Leander, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Manchaca, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Manor, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Pflugerville, TX</span>
+                <span class="bg-white text-darkGray py-2 px-4 rounded-full shadow-md text-sm md:text-base">Round Rock, TX</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust/Why Us Section -->
+    <section id="why-us" class="py-16 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-darkGray mb-4">Why Austin's Greatest Plumbing is Your Best Choice</h2>
+            <p class="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
+                We're not just plumbers; we're your neighbors committed to delivering exceptional service, guaranteed.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+                <div class="text-left space-y-6">
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-primaryBlue flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold text-darkGray">Clear Communication & Upfront Pricing</h3>
+                            <p class="text-gray-700">
+                                No hidden fees or surprises. We believe in honest service, ensuring you always know what to expect before any work begins.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-primaryBlue flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold text-darkGray">Quality Materials & Lasting Repairs</h3>
+                            <p class="text-gray-700">
+                                We use only the highest quality materials, guaranteeing that our repairs and installations are built to last, providing you with long-term peace of mind.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-primaryBlue flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold text-darkGray">Exceptional Customer Satisfaction</h3>
+                            <p class="text-gray-700">
+                                Our commitment to excellence shines through in positive reviews and testimonials from satisfied customers. We ensure every job meets your needs.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-primaryBlue flex-shrink-0 mr-4 mt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        <div>
+                            <h3 class="text-xl font-semibold text-darkGray">Fast, Friendly, and Knowledgeable Service</h3>
+                            <p class="text-gray-700">
+                                Our team is highly professional, efficient, and experienced, capable of tackling even the most challenging plumbing issues with expertise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hands-shaking-bg bg-lightGray p-8 rounded-lg shadow-xl relative overflow-hidden h-full flex flex-col justify-center items-center">
+                    <p class="text-lg md:text-xl font-medium text-darkGray text-center leading-relaxed mb-6">
+                        "I'm extremely impressed with the service I received from Austin's Greatest Plumbing! Their commitment to customer satisfaction is truly top-notch. The communication was excellent."
+                    </p>
+                    <p class="text-primaryBlue font-semibold text-right w-full">- Satisfied Customer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/CTA Footer -->
+    <footer id="contact" class="bg-darkGray text-white py-16 px-6 relative overflow-hidden trapezoid-cutout-top-right">
+        <div class="container mx-auto text-center relative z-20">
+            <h2 class="text-4xl font-bold mb-4">Need Plumbing Service? Get in Touch!</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                Contact Austin's Greatest Plumbing today for reliable, transparent, and high-quality plumbing solutions. We're ready to help!
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8 mb-10">
+                <a href="tel:+15123779919" class="flex items-center text-white hover:text-primaryBlue transition-colors duration-300">
+                    <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02L6.62 10.79z"/></svg>
+                    <span class="text-2xl font-bold">(512) 377-9919</span>
+                </a>
+                <a href="mailto:info@austinsgreatestplumbing.com" class="flex items-center text-white hover:text-primaryBlue transition-colors duration-300">
+                    <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span class="text-xl font-bold">info@austinsgreatestplumbing.com</span>
+                </a>
+            </div>
+
+            <p class="text-sm opacity-70 mt-8">&copy; <span id="current-year"></span> Austin's Greatest Plumbing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+I have created a single, self-contained HTML file for Austin's Greatest Plumbing, incorporating all the specified requirements.
+
+**Here's a summary of what's included:**
+
+*   **Raw HTML output:** Starts with `<!DOCTYPE html>` and ends with `</html>

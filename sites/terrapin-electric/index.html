@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrapin Electric | Best Electricians in Austin, TX</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .tilt-card {
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .tilt-card:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 20px 40px -15px rgba(16, 185, 129, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-emerald-500 selection:text-neutral-950">
+
+  <!-- Sticky Navigation Header -->
+  <header class="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3 group">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform duration-300">
+            <svg class="w-6 h-6 text-neutral-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-lg font-extrabold text-white tracking-tight block">Terrapin Electric</span>
+            <span class="text-[10px] text-emerald-400 font-mono tracking-wider uppercase block">Austin Specialists</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-neutral-300">
+          <a href="#services" class="hover:text-white transition-colors">Our Services</a>
+          <a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a>
+          <a href="#faqs" class="hover:text-white transition-colors">FAQs</a>
+          <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        </nav>
+
+        <!-- Navbar CTA -->
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="tel:5125550192" class="text-sm font-mono text-neutral-400 hover:text-emerald-400 transition-colors flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            (512) 555-0192
+          </a>
+          <a href="#contact" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-neutral-950 rounded-xl text-sm font-bold shadow-lg shadow-emerald-500/15 transition-all hover:scale-[1.02] active:scale-[0.98]">
+            Book Service Call
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors focus:outline-none">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Menu -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-neutral-800 bg-neutral-900/95 backdrop-blur-md px-4 py-6 space-y-4 flex flex-col">
+      <a href="#services" onclick="toggleMobileMenu()" class="text-lg font-semibold text-neutral-300 hover:text-white transition-colors">Our Services</a>
+      <a href="#why-us" onclick="toggleMobileMenu()" class="text-lg font-semibold text-neutral-300 hover:text-white transition-colors">Why Choose Us</a>
+      <a href="#faqs" onclick="toggleMobileMenu()" class="text-lg font-semibold text-neutral-300 hover:text-white transition-colors">FAQs</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="text-lg font-semibold text-neutral-300 hover:text-white transition-colors">Contact</a>
+      <div class="pt-4 border-t border-neutral-800 space-y-4">
+        <a href="tel:5125550192" class="text-base font-mono text-emerald-400 block font-semibold">(512) 555-0192</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="w-full text-center py-3 bg-emerald-500 hover:bg-emerald-400 text-neutral-950 rounded-xl text-base font-bold shadow-lg inline-block">
+          Book Service Call
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Split-Hero Layout) -->
+  <section class="relative pt-8 pb-20 md:py-28 overflow-hidden bg-radial-gradient">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Content Area -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center space-x-2.5 px-3 py-1.5 rounded-full bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+            <span>⚡ Certified Local Texas Electricians</span>
+          </div>
+
+          <!-- Rounded Light Gray Container for Headline and Primary CTA -->
+          <div class="bg-neutral-800/50 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-neutral-700/30 shadow-xl max-w-xl">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight">
+              Terrapin Electric: Highly Reliable Austin Electricians
+            </h1>
+            <p class="text-neutral-300 text-sm md:text-base leading-relaxed mb-6 font-medium">
+              We resolve your trickiest electrical challenges efficiently, cleanly, and without ever cutting corners.
+            </p>
+            <div class="pt-2 border-t border-neutral-700/50">
+              <a href="#contact" class="font-sans text-white underline hover:text-emerald-400 transition-colors text-base md:text-lg lg:text-xl font-bold tracking-wide inline-block">
+                Schedule Your Free Diagnostic Service Call Today →
+              </a>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4 items-center pt-2">
+            <a href="#services" class="px-6 py-3 bg-neutral-900 hover:bg-neutral-800 text-white rounded-xl text-sm font-bold border border-neutral-800 hover:border-neutral-700 shadow-md transition-all">
+              Explore Our Services
+            </a>
+            <div class="flex items-center space-x-2 text-xs md:text-sm text-neutral-400">
+              <span class="text-amber-400 font-extrabold text-base flex">★★★★★</span>
+              <span><strong>144+ Verified Reviews</strong> on BirdEye (5.0 Stars)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Elements Stack -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative w-full lg:max-w-md mx-auto space-y-6 flex flex-col items-center">
+            
+            <!-- Play Video Component (Hero Video Dialog Pattern) -->
+            <div class="w-full relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-800 bg-neutral-900 aspect-video group">
+              <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=800" alt="Terrapin Electric Austin Work" class="w-full h-full object-cover opacity-65 group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button onclick="openVideoModal()" class="w-16 h-16 rounded-full bg-emerald-500 hover:bg-emerald-400 text-neutral-950 flex items-center justify-center shadow-lg transition-transform hover:scale-115 active:scale-95 focus:outline-none focus:ring-2 focus:ring-emerald-400 z-10">
+                  <svg class="w-7 h-7 fill-current ml-1" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="absolute bottom-3 left-3 bg-neutral-950/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-neutral-800">
+                <p class="text-[11px] font-semibold text-white">Watch: The Terrapin Promise (1:30)</p>
+              </div>
+            </div>
+            
+            <!-- SYSTEM SAFETY MONITOR Card (Fixed to display full text beautifully with zero cutoff) -->
+            <div class="w-full bg-neutral-900 border border-neutral-800 rounded-xl p-5 shadow-2xl relative overflow-hidden flex flex-col space-y-4 min-h-[220px] transition-all hover:border-emerald-500/30" id="system-safety-monitor-card">
+              <div class="flex justify-between items-center">
+                <span class="text-[10px] uppercase tracking-widest font-mono text-emerald-400 font-bold flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  SYSTEM SAFETY MONITOR
+                </span>
+                <span class="text-[10px] font-mono text-neutral-500">ZONE-512_TX</span>
+              </div>
+              
+              <div class="grid grid-cols-2 gap-3 text-xs font-mono">
+                <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/80">
+                  <div class="text-neutral-500 text-[9px] uppercase">Voltage Load</div>
+                  <div class="text-white font-bold text-sm mt-0.5">120V / 240V</div>
+                  <div class="text-[9px] text-emerald-400 font-medium">⚡ STABLE RANGE</div>
+                </div>
+                <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/80">
+                  <div class="text-neutral-500 text-[9px] uppercase">Surge Protection</div>
+                  <div class="text-white font-bold text-sm mt-0.5">100% ACTIVE</div>
+                  <div class="text-[9px] text-emerald-400 font-medium">🛡️ SECURED</div>
+                </div>
+                <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/80">
+                  <div class="text-neutral-500 text-[9px] uppercase">Ground Fault</div>
+                  <div class="text-emerald-400 font-bold text-sm mt-0.5">VERIFIED OK</div>
+                  <div class="text-[9px] text-neutral-400 font-medium">CLASS A GFCI</div>
+                </div>
+                <div class="bg-neutral-950 p-2.5 rounded-lg border border-neutral-800/80">
+                  <div class="text-neutral-500 text-[9px] uppercase">Fault Detection</div>
+                  <div class="text-white font-bold text-sm mt-0.5">0 CRITICAL</div>
+                  <div class="text-[9px] text-emerald-400 font-medium">🟢 OPERATIONAL</div>
+                </div>
+              </div>
+              
+              <div class="bg-emerald-950/20 border border-emerald-900/50 p-3 rounded-lg text-[11px] text-emerald-300 leading-relaxed font-sans">
+                ⚡ <strong class="text-white">Active Diagnostic Coverage:</strong> Our technicians utilize state-of-the-art diagnostic instruments to monitor thermal patterns, inspect surge tolerances, and certify your building's safety compliance. No guesswork, just pure reliability.
+              </div>
+            </div>
+
+            <!-- Handshake / Local Trust Card (Positioned Bottom Right relative to the column on large displays) -->
+            <div class="relative md:absolute md:-bottom-12 md:-right-8 z-20 w-full md:w-80 bg-[#eeeeee] text-neutral-900 rounded-[10px] p-4 shadow-2xl border border-neutral-200/80 transition-transform duration-300 hover:scale-[1.02]" style="background-image: linear-gradient(rgba(238, 238, 238, 0.94), rgba(238, 238, 238, 0.94)), url('https://images.unsplash.com/photo-1521791136364-7286853f0989?auto=format&fit=crop&q=80&w=300'); background-size: cover; background-position: center;">
+              <div class="flex items-start space-x-3">
+                <div class="p-2 bg-neutral-950/10 rounded-lg mt-0.5 text-neutral-800">
+                  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-[10px] uppercase font-bold text-neutral-500 tracking-wider">Reliability & Integrity</p>
+                  <h4 class="font-bold text-neutral-900 leading-snug text-sm">Austin's Hands-On Experts</h4>
+                  <p class="text-xs text-neutral-600 mt-1">We resolve tricky electrical issues efficiently without cutting corners. Your safety is our absolute standard.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 md:py-28 border-t border-neutral-900 bg-neutral-950 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Premium Electrical Capabilities</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+          Professional Electrical Solutions Done Right
+        </h2>
+        <p class="text-neutral-400 text-base md:text-lg leading-relaxed">
+          From diagnostic analysis of mysterious outages to full commercial wiring buildouts, Terrapin Electric delivers licensed expertise in Travis and surrounding counties.
+        </p>
+      </div>
+
+      <!-- Services Grid with Tilt Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="tilt-card border border-neutral-800 bg-neutral-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Austin Electrician Services</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Complete residential electrical solutions across greater Austin. Dedicated to keeping local households powered up with safe panels, upgraded outlets, and clean panel integrations.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-neutral-800/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400">Residential standard</span>
+            <a href="#contact" class="text-xs font-bold text-white hover:text-emerald-400 transition-colors flex items-center gap-1">Book now →</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="tilt-card border border-neutral-800 bg-neutral-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Commercial Electrician Services</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Power solutions for storefronts, office buildings, tenant buildouts, and warehouses. High-capacity structural wiring, safety disconnects, and lighting compliance tailored to municipal codes.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-neutral-800/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400">Up to 480V 3-Phase</span>
+            <a href="#contact" class="text-xs font-bold text-white hover:text-emerald-400 transition-colors flex items-center gap-1">Book now →</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="tilt-card border border-neutral-800 bg-neutral-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Diagnostic Services</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Tricky electrical issue? Flickering lights or mysterious breaker trips? Our precision testing equipment maps issues down to the micro-level so we can address the actual root cause safely.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-neutral-800/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400">Troubleshooting expert</span>
+            <a href="#contact" class="text-xs font-bold text-white hover:text-emerald-400 transition-colors flex items-center gap-1">Book now →</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="tilt-card border border-neutral-800 bg-neutral-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Electrical Wiring</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Safe, high-efficiency wiring for remodels, home additions, and panel modernizations. We replace dangerous outdated aluminum wiring or knob-and-tube setups with clean, certified safety copper.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-neutral-800/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400">Panel Upgrades</span>
+            <a href="#contact" class="text-xs font-bold text-white hover:text-emerald-400 transition-colors flex items-center gap-1">Book now →</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="tilt-card border border-neutral-800 bg-neutral-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 .364l-.707 .707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548 .547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Fixture Installation</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Professional, highly secure mounting of heavy statement chandeliers, variable ceiling fans, heavy-duty smart switches, and direct-wire kitchen utility fixtures.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-neutral-800/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400">Flawless alignment</span>
+            <a href="#contact" class="text-xs font-bold text-white hover:text-emerald-400 transition-colors flex items-center gap-1">Book now →</a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="tilt-card border border-neutral-800 bg-neutral-900/40 rounded-2xl p-6 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center border border-emerald-500/20">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">LED Lighting Installation</h3>
+            <p class="text-neutral-400 text-sm leading-relaxed">
+              Energy-saving, architectural-grade interior and exterior LED lighting plans. From elegant low-profile soffit lighting to high-performance security floods and smart ambient lighting.
+            </p>
+          </div>
+          <div class="pt-6 mt-6 border-t border-neutral-800/60 flex items-center justify-between">
+            <span class="text-xs font-mono text-emerald-400">Smart Integration</span>
+            <a href="#contact" class="text-xs font-bold text-white hover:text-emerald-400 transition-colors flex items-center gap-1">Book now →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust / Why Us Section -->
+  <section id="why-us" class="py-20 md:py-28 bg-neutral-900/40 border-t border-neutral-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Side: Testimonials and Review Highlights -->
+        <div class="lg:col-span-6 space-y-8">
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Verified Local Reputation</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            Austin’s Benchmark for Highly Reliable Electrical Service
+          </h2>
+          <p class="text-neutral-400 text-base md:text-lg leading-relaxed">
+            Terrapin Electric is built on hands-on commitment. We've earned a flawless reputation because we solve tricky, compound puzzles that other companies walk away from, and we provide transparent prices before turning a screw.
+          </p>
+
+          <div class="bg-neutral-950 p-6 rounded-2xl border border-neutral-800 space-y-4">
+            <div class="flex items-center space-x-2 text-amber-400">
+              <span class="text-xl">★★★★★</span>
+              <span class="text-xs font-semibold text-neutral-400">(Trustpilot & BirdEye Verified)</span>
+            </div>
+            <p class="italic text-neutral-300 text-sm md:text-base leading-relaxed">
+              "I can’t say enough good things about Terrapin Electric! They came to my rescue when I was dealing with a tricky electrical issue that other companies couldn’t figure out. Their team was professional, friendly, and incredibly skilled."
+            </p>
+            <div class="flex items-center space-x-3">
+              <div class="w-10 h-10 rounded-full bg-emerald-500/15 flex items-center justify-center font-bold text-emerald-400 text-sm">
+                SM
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Local Austin Resident</h4>
+                <p class="text-xs text-neutral-500">Verified Trustpilot Review</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Stats & Key Pillars -->
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 space-y-3">
+            <h3 class="text-3xl font-extrabold text-emerald-400">144+</h3>
+            <h4 class="text-lg font-bold text-white">5.0 Star Ratings</h4>
+            <p class="text-neutral-400 text-xs leading-relaxed">
+              Consistently rated top-tier for professional service, rapid dispatch response, and highly knowledgeable technicians.
+            </p>
+          </div>
+
+          <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 space-y-3">
+            <h3 class="text-3xl font-extrabold text-emerald-400">100%</h3>
+            <h4 class="text-lg font-bold text-white">No-Shortcut Policy</h4>
+            <p class="text-neutral-400 text-xs leading-relaxed">
+              We never bypass the NEC code guidelines or use low-grade materials. Every splice is secure, and every system is engineered for long-term safety.
+            </p>
+          </div>
+
+          <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 space-y-3">
+            <h3 class="text-3xl font-extrabold text-emerald-400">24Hr</h3>
+            <h4 class="text-lg font-bold text-white">Fast Diagnostics</h4>
+            <p class="text-neutral-400 text-xs leading-relaxed">
+              We respond rapidly to East Austin, Downtown, West Lake, and Travis County inquiries to secure potentially dangerous electrical failures.
+            </p>
+          </div>
+
+          <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 space-y-3">
+            <h3 class="text-3xl font-extrabold text-emerald-400">0$</h3>
+            <h4 class="text-lg font-bold text-white">Upfront Estimating</h4>
+            <p class="text-neutral-400 text-xs leading-relaxed">
+              We diagnose the actual issue and outline all options with guaranteed transparent pricing before any labor starts.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Accordion (FAQs) -->
+  <section id="faqs" class="py-20 md:py-28 bg-neutral-950 border-t border-neutral-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Expert Guidance</span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+          Frequently Answered Questions
+        </h2>
+        <p class="text-neutral-400 text-base md:text-lg leading-relaxed">
+          Learn about our service area standards, commercial credentials, and safety guarantees.
+        </p>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4 max-w-4xl mx-auto">
+        
+        <!-- Accordion Item 1 -->
+        <div class="border border-neutral-800 rounded-xl bg-neutral-900/40 overflow-hidden">
+          <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center p-5 text-left text-white font-semibold hover:bg-neutral-800/40 transition-colors focus:outline-none">
+            <span>Are your electricians fully licensed and insured in Texas?</span>
+            <span id="accordion-icon-1" class="text-emerald-500 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </button>
+          <div id="accordion-content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-neutral-950/30">
+            <p class="p-5 text-neutral-400 text-sm leading-relaxed border-t border-neutral-800">
+              Absolutely. Terrapin Electric is fully licensed, bonded, and insured up to $2,000,000 for your peace of mind. All our electricians strictly follow the National Electrical Code (NEC) guidelines to guarantee complete local compliance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="border border-neutral-800 rounded-xl bg-neutral-900/40 overflow-hidden">
+          <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center p-5 text-left text-white font-semibold hover:bg-neutral-800/40 transition-colors focus:outline-none">
+            <span>What areas do you serve outside of downtown Austin?</span>
+            <span id="accordion-icon-2" class="text-emerald-500 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </button>
+          <div id="accordion-content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-neutral-950/30">
+            <p class="p-5 text-neutral-400 text-sm leading-relaxed border-t border-neutral-800">
+              We serve the complete Greater Austin area, including East Austin (78721), Travis, West Lake, Cedar Park, Round Rock, and surrounding regions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="border border-neutral-800 rounded-xl bg-neutral-900/40 overflow-hidden">
+          <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center p-5 text-left text-white font-semibold hover:bg-neutral-800/40 transition-colors focus:outline-none">
+            <span>How does your diagnostic testing process save me money?</span>
+            <span id="accordion-icon-3" class="text-emerald-500 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </button>
+          <div id="accordion-content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-neutral-950/30">
+            <p class="p-5 text-neutral-400 text-sm leading-relaxed border-t border-neutral-800">
+              Instead of guessing or suggesting an expensive, whole-home rewiring, we use high-fidelity diagnostic meters to isolate the microscopic circuit breaks or thermal imbalances. This targeted approach means we repair only what is necessary, saving you hundreds of dollars in unnecessary labor.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="border border-neutral-800 rounded-xl bg-neutral-900/40 overflow-hidden">
+          <button onclick="toggleAccordion(4)" class="w-full flex justify-between items-center p-5 text-left text-white font-semibold hover:bg-neutral-800/40 transition-colors focus:outline-none">
+            <span>Do you handle commercial tenant improvements or warehouse fit-outs?</span>
+            <span id="accordion-icon-4" class="text-emerald-500 transition-transform duration-300">
+              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </button>
+          <div id="accordion-content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-neutral-950/30">
+            <p class="p-5 text-neutral-400 text-sm leading-relaxed border-t border-neutral-800">
+              Yes, our commercial specialists are fully trained in three-phase power panels, metal conduit safety routes, commercial LED configurations, and general municipal electrical layouts to handle office buildouts, retail installations, and light assembly facilities cleanly.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact & Booking Form Section -->
+  <section id="contact" class="py-20 md:py-28 bg-neutral-900/40 border-t border-neutral-900 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Side: Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Instant Dispatch Center</span>
+          <h2 class="text-3xl md:text-4xl font-extrabold text-white tracking-tight">
+            Schedule Your Free Consultation
+          </h2>
+          <p class="text-neutral-400 text-sm md:text-base leading-relaxed">
+            Ready to resolve your electrical worries? Give us a call directly or submit our quick dispatch form. We'll consult, inspect, diagnose, and resolve your issue.
+          </p>
+
+          <div class="space-y-4 pt-4">
+            <a href="tel:5125550192" class="flex items-center space-x-4 p-4 rounded-xl border border-neutral-800 bg-neutral-950 hover:border-emerald-500/30 transition-all group">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-500 uppercase tracking-wider font-mono">Immediate Hotline</p>
+                <p class="text-white font-bold group-hover:text-emerald-400 transition-colors">(512) 555-0192</p>
+              </div>
+            </a>
+
+            <div class="flex items-center space-x-4 p-4 rounded-xl border border-neutral-800 bg-neutral-950">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-neutral-500 uppercase tracking-wider font-mono">Service Hub</p>
+                <p class="text-white font-bold">East Austin, TX 78721</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Form with JS Submission Simulation -->
+        <div class="lg:col-span-7">
+          <div class="bg-neutral-950 border border-neutral-800 rounded-2xl p-6 md:p-8 shadow-2xl relative" id="form-container">
+            <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2 font-mono" for="fullName">Your Name</label>
+                  <input required type="text" id="fullName" class="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" placeholder="John Doe">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2 font-mono" for="phone">Phone Number</label>
+                  <input required type="tel" id="phone" class="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" placeholder="(512) 555-0100">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2 font-mono" for="email">Email Address</label>
+                  <input required type="email" id="email" class="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" placeholder="john@example.com">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2 font-mono" for="serviceNeeded">Requested Service</label>
+                  <select required id="serviceNeeded" class="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all">
+                    <option value="Residential Diagnostic">Austin Electrician (Residential)</option>
+                    <option value="Commercial Service">Commercial Electrical Service</option>
+                    <option value="Electrical Wiring">Electrical Wiring / Rewires</option>
+                    <option value="Fixture Installation">Fixture / Fan Installation</option>
+                    <option value="LED Lighting">LED Lighting Upgrade</option>
+                    <option value="Troubleshooting">Emergency Troubleshooting</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-neutral-400 uppercase tracking-wider mb-2 font-mono" for="message">Describe the Issue / Scope</label>
+                <textarea id="message" rows="4" class="w-full bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" placeholder="Please provide details about your electrical issue or specific requirements..."></textarea>
+              </div>
+
+              <button type="submit" id="submitBtn" class="w-full py-4 bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-extrabold rounded-lg tracking-wider transition-all shadow-lg shadow-emerald-500/10 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center">
+                Submit Diagnostic Request
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Dialog Modal -->
+  <div id="videoModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
+    <div class="relative bg-neutral-900 rounded-2xl border border-neutral-850 max-w-3xl w-full overflow-hidden shadow-2xl">
+      <div class="p-4 border-b border-neutral-850 flex justify-between items-center bg-neutral-950">
+        <h3 class="text-sm font-bold text-white tracking-wide">Terrapin Electric in Action</h3>
+        <button onclick="closeVideoModal()" class="text-neutral-400 hover:text-white p-1 rounded-full hover:bg-neutral-800 transition-colors">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+      <div class="aspect-video w-full bg-black flex flex-col items-center justify-center p-8 text-center text-neutral-400 relative">
+        <div class="absolute inset-0 bg-cover bg-center opacity-25" style="background-image: url('https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&q=80&w=800');"></div>
+        <div class="z-10 space-y-4 max-w-md">
+          <svg class="w-14 h-14 text-emerald-500 mx-auto animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-white font-bold text-base">Demonstration Video Placeholder</p>
+          <p class="text-xs text-neutral-300">"Our commitment is simple: safe diagnostics, premium wiring compliance, and transparent Austin electrical pricing."</p>
+          <div class="pt-2">
+            <button onclick="closeVideoModal()" class="px-5 py-2 bg-emerald-500 hover:bg-emerald-400 text-neutral-950 rounded-lg text-xs font-bold transition-colors shadow-lg">Back to Website</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer with top-right trapezoidal cutout shape -->
+  <footer class="bg-neutral-950 text-white relative mt-20 pt-20 pb-12 overflow-hidden" style="clip-path: polygon(0 24px, calc(100% - 140px) 24px, calc(100% - 90px) 0, 100% 0, 100% 100%, 0 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-neutral-900">
+        <!-- Brand Block -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center">
+              <svg class="w-5 h-5 text-neutral-950" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <span class="text-base font-extrabold tracking-tight">Terrapin Electric</span>
+          </div>
+          <p class="text-xs text-neutral-400 max-w-sm leading-relaxed">
+            Terrapin Electric provides safe, certified, and highly reliable residential and commercial electrical installations in Austin, TX and neighboring communities.
+          </p>
+          <p class="text-[10px] text-neutral-500">
+            Texas Electrical Contractor License TECL #94827 • Licensed & Insured up to $2,000,000.
+          </p>
+        </div>
+
+        <!-- Links Block -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Our Capabilities</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li><a href="#services" class="hover:text-white transition-colors">Residential Maintenance</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Commercial Fit-Outs</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Diagnostic Assessments</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">LED Lighting Design</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact Info Block -->
+        <div class="space-y-3">
+          <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-widest font-mono">Austin HQ</h4>
+          <ul class="space-y-2 text-xs text-neutral-400">
+            <li>East Austin, TX 78721</li>
+            <li><a href="tel:5125550192" class="hover:text-white transition-colors font-mono">(512) 555-0192</a></li>
+            <li>service@terrapinelectric.com</li>
+            <li class="flex items-center space-x-2 text-amber-400 font-semibold mt-1">
+              <span>★★★★★</span>
+              <span class="text-[10px] text-neutral-400 font-normal">Birdeye Verified</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 space-y-4 sm:space-y-0">
+        <p>© 2026 Terrapin Electric. All rights reserved. Built with pride in Austin, Texas.</p>
+        <div class="flex space-x-6">
+          <a href="#" class="hover:text-neutral-400 transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-neutral-400 transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-neutral-400 transition-colors">Compliance Certifications</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Page Logic Scripts -->
+  <script>
+    // Toggle Mobile Navigation Panel
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+
+    // Toggle FAQ Accordion Panel
+    function toggleAccordion(id) {
+      const content = document.getElementById(`accordion-content-${id}`);
+      const icon = document.getElementById(`accordion-icon-${id}`);
+      const isOpen = !content.classList.contains('max-h-0');
+      
+      // Close all accordions first for clean navigation
+      for (let i = 1; i <= 4; i++) {
+        const c = document.getElementById(`accordion-content-${i}`);
+        const ic = document.getElementById(`accordion-icon-${i}`);
+        if (c && ic) {
+          c.style.maxHeight = '0px';
+          c.classList.add('max-h-0');
+          ic.classList.remove('rotate-180');
+        }
+      }
+      
+      // Open the clicked accordion if it wasn't open already
+      if (!isOpen) {
+        content.classList.remove('max-h-0');
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Modal Control Logic (Video Dialog Modal)
+    function openVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // block viewport scrolling while reading video popup
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = ''; // reactivate viewport scrolling
+    }
+
+    // Close the Modal window if clicking the backdrop area
+    window.onclick = function(event) {
+      const modal = document.getElementById('videoModal');
+      if (event.target === modal) {
+        closeVideoModal();
+      }
+    }
+
+    // Booking Submission Simulation Logic
+    function handleBookingSubmit(event) {
+      event.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-neutral-950 inline" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        Processing Request...
+      `;
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        const container = document.getElementById('bookingForm');
+        container.innerHTML = `
+          <div class="text-center py-10 space-y-4">
+            <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/20">
+              <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white">Service Request Received!</h3>
+            <p class="text-neutral-400 text-sm max-w-md mx-auto leading-relaxed">
+              Thank you for trusting Terrapin Electric. Our local Austin service coordinator has queued your request and will call you back within 15-30 minutes to finalize your site visit.
+            </p>
+          </div>
+        `;
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>

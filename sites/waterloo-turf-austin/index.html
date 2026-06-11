@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waterloo Turf Austin | Premium Artificial Grass & Turf Installation</title>
+  <meta name="description" content="Transform your space with Waterloo Turf Austin. Premium artificial grass & turf installation for residential and commercial properties in Austin, TX. 5-star rated, completed in a single day.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0faf2',
+              100: '#dbf3e2',
+              200: '#b9eac6',
+              300: '#87d79b',
+              400: '#50bd6c',
+              500: '#2da14c',
+              600: '#1f823a',
+              700: '#1c6830',
+              800: '#1a5229',
+              900: '#164424',
+              950: '#0a2512',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .footer-trapezoid {
+      clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 30px, 100% 100%, 0 100%);
+    }
+    @media (min-width: 768px) {
+      .footer-trapezoid {
+        clip-path: polygon(0 0, calc(100% - 100px) 0, 100% 50px, 100% 100%, 0 100%);
+      }
+    }
+    .tilt-card {
+      transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+  </style>
+</head>
+<body class="bg-zinc-50 text-zinc-950 overflow-x-hidden pt-20">
+
+  <!-- Sticky Header & Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-zinc-900/90 backdrop-blur-md border-b border-zinc-800 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-brand-500/20 group-hover:bg-brand-600 transition">
+            W
+          </div>
+          <div class="flex flex-col">
+            <span class="text-white font-extrabold tracking-tight text-lg leading-tight">Waterloo Turf</span>
+            <span class="text-brand-400 font-bold text-xs tracking-wider uppercase leading-none">Austin, TX</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-zinc-300 hover:text-white font-medium text-sm transition">Services</a>
+          <a href="#why-us" class="text-zinc-300 hover:text-white font-medium text-sm transition">Why Us</a>
+          <a href="#care-guide" class="text-zinc-300 hover:text-white font-medium text-sm transition">Care Guide</a>
+          <a href="#faqs" class="text-zinc-300 hover:text-white font-medium text-sm transition">FAQs</a>
+          <a href="tel:5125550190" class="text-zinc-300 hover:text-white font-medium text-sm flex items-center gap-1.5 transition">
+            <svg class="w-4 h-4 text-brand-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            (512) 555-0190
+          </a>
+        </nav>
+
+        <!-- Desktop Action Button -->
+        <div class="hidden md:block">
+          <a href="#quote-form" class="inline-flex items-center justify-center px-5 py-2.5 bg-brand-500 hover:bg-brand-600 text-white font-semibold text-sm rounded-lg shadow-lg shadow-brand-500/20 transition duration-150">
+            Get a Free Estimate
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-zinc-400 hover:text-white hover:bg-zinc-800 transition" aria-label="Toggle navigation menu">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-zinc-800 bg-zinc-900 px-4 py-6 space-y-4">
+      <a href="#services" class="block text-zinc-300 hover:text-white font-semibold text-base transition">Services</a>
+      <a href="#why-us" class="block text-zinc-300 hover:text-white font-semibold text-base transition">Why Us</a>
+      <a href="#care-guide" class="block text-zinc-300 hover:text-white font-semibold text-base transition">Care Guide</a>
+      <a href="#faqs" class="block text-zinc-300 hover:text-white font-semibold text-base transition">FAQs</a>
+      <hr class="border-zinc-800 my-4">
+      <div class="flex flex-col gap-4">
+        <a href="tel:5125550190" class="flex items-center gap-3 text-zinc-300 font-semibold text-base hover:text-white transition">
+          <div class="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center text-brand-400">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          Call (512) 555-0190
+        </a>
+        <a href="#quote-form" class="inline-flex items-center justify-center w-full px-5 py-3 bg-brand-500 hover:bg-brand-600 text-white font-bold text-base rounded-lg shadow-lg shadow-brand-500/20 transition duration-150">
+          Get a Free Estimate
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Split-Hero & Static layout) -->
+  <section class="relative bg-zinc-950 text-white overflow-hidden py-12 lg:py-24 xl:py-32">
+    <!-- Subtle Background Accent Patterns -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(45,161,76,0.15),transparent_50%)]"></div>
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-900/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left Side: Content Area (Centered feeling inside split-layout) -->
+        <div class="lg:col-span-7 flex flex-col justify-center text-left">
+          
+          <!-- Rating & Status Badge -->
+          <div class="inline-flex items-center self-start gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-brand-950/80 text-brand-400 border border-brand-800/60 mb-6 shadow-sm">
+            <span class="flex h-2 w-2 relative">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+            </span>
+            <span>★ Austin's #1 Rated Turf Installer — 238 Five-Star Reviews</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Immaculate Lawns. <br class="hidden sm:inline">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-brand-300 to-emerald-400">Zero Maintenance.</span>
+          </h1>
+
+          <!-- Sub-copy -->
+          <p class="mt-6 text-lg sm:text-xl text-zinc-300 leading-relaxed max-w-2xl">
+            Upgrade your backyard or corporate entrance to Austin's finest commercial-grade turf. Complete single-day installation, unmatched durability, and absolute 5-star customer service.
+          </p>
+
+          <!-- Primary CTA Block (Light Gray Rounded Rectangle with White Text Sans-Serif Underlined Link) -->
+          <div class="mt-8 p-6 bg-[#eeeeee] rounded-xl border border-zinc-200/10 shadow-lg max-w-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-left">
+              <span class="block text-zinc-900 font-bold text-sm tracking-wide uppercase">Limited-Time Offer</span>
+              <span class="block text-zinc-600 text-xs mt-0.5 font-medium">Free site appraisal + Post-care manual included!</span>
+            </div>
+            <a href="#quote-form" class="inline-flex items-center justify-center px-6 py-3 bg-zinc-900 text-white font-sans font-semibold rounded-lg underline decoration-brand-400 hover:decoration-white transition duration-200 shadow-md w-full sm:w-auto text-center shrink-0">
+              Claim Free Estimate
+            </a>
+          </div>
+
+          <!-- Quick Trust Marks -->
+          <div class="mt-8 grid grid-cols-3 gap-4 border-t border-zinc-800 pt-6">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-400 text-lg">✔</span>
+              <span class="text-xs text-zinc-400 font-medium">Pet & Kid Safe</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-400 text-lg">✔</span>
+              <span class="text-xs text-zinc-400 font-medium">1-Day Installs</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-400 text-lg">✔</span>
+              <span class="text-xs text-zinc-400 font-medium">15-Year Warranty</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Visual Showcase with Tilt Card & Video Dialog Overlay -->
+        <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+          
+          <!-- Outer Tilt Card Wrap -->
+          <div class="tilt-card relative w-full max-w-[450px] bg-zinc-900 rounded-2xl p-3 shadow-2xl border border-zinc-800 overflow-hidden group">
+            
+            <!-- Beautiful Turf Representation Image -->
+            <div class="relative aspect-[4/5] rounded-xl overflow-hidden bg-brand-950">
+              <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&q=80&w=600" alt="Beautiful installed artificial green turf lawn" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-500">
+              
+              <!-- Subtle Dark Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-zinc-950/20"></div>
+
+              <!-- Hero Video Dialog Play Trigger -->
+              <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                <button onclick="openVideoModal()" class="w-20 h-20 rounded-full bg-brand-500 hover:bg-brand-400 text-white flex items-center justify-center shadow-lg shadow-brand-500/40 hover:scale-110 transition duration-300 mb-4 focus:outline-none focus:ring-4 focus:ring-brand-400" aria-label="Watch project transformation video">
+                  <svg class="w-8 h-8 fill-current translate-x-0.5" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+                <span class="text-white font-extrabold text-lg tracking-wide uppercase drop-shadow">Watch Transformation</span>
+                <span class="text-brand-300 text-xs mt-1 font-medium drop-shadow-sm">1-Minute Project Overview</span>
+              </div>
+            </div>
+
+            <!-- Positioned Bottom-Right Static Card (#eeeeee, 8-12px border radius, ~1rem padding, shaking hands bg) -->
+            <div class="absolute bottom-6 right-6 bg-[#eeeeee] text-zinc-950 rounded-xl p-4 shadow-2xl border border-zinc-300/40 max-w-[260px] z-20 overflow-hidden">
+              <!-- Handshake SVG Subtle Background -->
+              <svg class="absolute inset-0 w-full h-full text-zinc-400/25 opacity-20 pointer-events-none p-2 translate-x-4 translate-y-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+              <!-- Content -->
+              <div class="relative z-10">
+                <p class="text-xs font-bold uppercase tracking-wider text-brand-700">Exceptional Service</p>
+                <p class="text-xs text-zinc-700 font-semibold mt-1 leading-relaxed">
+                  "Renowned for meticulous installation and completing projects in a single day, leaving properties immaculate."
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Video Dialog Modal (Hidden initially) -->
+  <div id="video-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-zinc-950/90 backdrop-blur-md">
+    <div class="relative w-full max-w-4xl bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 shadow-2xl">
+      <!-- Modal Close Button -->
+      <button onclick="closeVideoModal()" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-zinc-950/60 hover:bg-zinc-950 text-white flex items-center justify-center transition" aria-label="Close video dialog">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <!-- Video Frame Ratio Box -->
+      <div class="aspect-video w-full bg-black">
+        <!-- Mock Transformation video utilizing standard embed or beautiful simulation -->
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0" title="Waterloo Turf Installation Showcase" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Proof / Trust Signals Section -->
+  <section class="py-12 bg-white border-y border-zinc-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+        
+        <!-- Trust Scores -->
+        <div class="flex items-center gap-4 shrink-0">
+          <div class="flex flex-col">
+            <span class="text-3xl font-extrabold text-zinc-950">5.0</span>
+            <div class="flex text-amber-500 gap-0.5">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+            <span class="text-xs text-zinc-500 font-medium mt-1">238 Reviews on Birdeye</span>
+          </div>
+          <div class="h-12 w-[1px] bg-zinc-200"></div>
+          <div>
+            <span class="text-sm font-bold block text-zinc-900">Meticulous Craftsmanship</span>
+            <span class="text-xs text-zinc-500 max-w-[200px] block mt-0.5">Single-day installations completed to absolute perfection.</span>
+          </div>
+        </div>
+
+        <!-- Featured In / Trusted Badges -->
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
+          <span class="text-zinc-400 font-extrabold tracking-widest text-sm">AUSTIN CHRONICLE</span>
+          <span class="text-zinc-400 font-extrabold tracking-widest text-sm">WEST SIXTH NEIGHBOURS</span>
+          <span class="text-zinc-400 font-extrabold tracking-widest text-sm">TRUSTINDEX VERIFIED</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 lg:py-28 bg-zinc-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-brand-600 font-bold tracking-wider text-xs uppercase block mb-3">Professional Solutions</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
+          Austin's Premium Turf Services
+        </h2>
+        <p class="text-lg text-zinc-600 mt-4 leading-relaxed">
+          From residential backyard paradises to massive low-maintenance commercial green spaces, we deliver immaculate turf layouts tailored to withstand the Texas heat.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Service Card 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-md border border-zinc-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-zinc-950 mb-3">Residential Turf Services</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+            Transform your backyard, dog run, or personal putting green. Completely pet-safe, hyper-realistic, and optimized for instant storm drainage. No mud, no pests, just lush green all year.
+          </p>
+          <ul class="text-xs text-zinc-600 space-y-2 mt-auto mb-6">
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Premium UV-protected fibers</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Advanced anti-odor infill</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Custom putting green design</li>
+          </ul>
+          <a href="#quote-form" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition">
+            Book Home Consultation <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-md border border-zinc-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-zinc-950 mb-3">Commercial Turf Services</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+            Durable, traffic-resistant landscaping for offices, apartments, restaurants, and municipal areas. Minimal care needed, stays clean, fresh, and professional-looking 365 days a year.
+          </p>
+          <ul class="text-xs text-zinc-600 space-y-2 mt-auto mb-6">
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Heavy-duty, high-occupancy layout</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Class A fire-rated options</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Brand-defining green entryways</li>
+          </ul>
+          <a href="#quote-form" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition">
+            Request Commercial Bid <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-md border border-zinc-100 hover:shadow-xl transition-all duration-300 flex flex-col h-full group">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-6 group-hover:bg-brand-500 group-hover:text-white transition-colors">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-zinc-950 mb-3">Immaculate Setup & Support</h3>
+          <p class="text-zinc-600 text-sm leading-relaxed mb-6">
+            Our crews clean continuously. We ensure your space is left spotless at the end of single-day installation. Receive personalized post-installation blueprints for years of zero-hassle turf care.
+          </p>
+          <ul class="text-xs text-zinc-600 space-y-2 mt-auto mb-6">
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Complete structural sub-base preparation</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Meticulous single-day installation</li>
+            <li class="flex items-center gap-2"><span class="text-brand-500 font-bold">✓</span> Tailored care manuals</li>
+          </ul>
+          <a href="#care-guide" class="inline-flex items-center gap-2 text-brand-600 font-bold text-sm hover:text-brand-700 transition">
+            View Post-Care Blueprint <span class="group-hover:translate-x-1 transition-transform">→</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust & Value Proposition Section (Why Us) -->
+  <section id="why-us" class="py-20 lg:py-28 bg-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(45,161,76,0.04),transparent_50%)]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        <!-- Why Us Text Area -->
+        <div>
+          <span class="text-brand-600 font-bold tracking-wider text-xs uppercase block mb-3">The Waterloo Standard</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight leading-tight">
+            Designed for Beauty. <br>Engineered to Last.
+          </h2>
+          <p class="text-lg text-zinc-600 mt-6 leading-relaxed">
+            What sets Waterloo Turf Austin apart is our relentless commitment to immaculate detail. We never take shortcuts on underbase grading, weed membrane application, or structural perimeter anchors.
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="mt-8 space-y-6">
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 font-bold text-sm">
+                1
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-zinc-950">Meticulous Single-Day Installations</h4>
+                <p class="text-zinc-600 text-sm mt-1">Our certified crews complete almost all projects in a single day, working with surgical precision so you get your oasis back instantly.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 font-bold text-sm">
+                2
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-zinc-950">Premium Turf Selection</h4>
+                <p class="text-zinc-600 text-sm mt-1">We source the highest quality, non-toxic, lead-free synthetic grass that stays remarkably soft and mimics true natural grass blades.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-8 h-8 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0 font-bold text-sm">
+                3
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-zinc-950">Exceptional Customer Service</h4>
+                <p class="text-zinc-600 text-sm mt-1">With a 5-star rating across 238 verified reviews, we communicate clearly, execute seamlessly, and clean your property immaculately.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Before / After Slider Component -->
+        <div class="relative w-full aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 bg-zinc-900 group">
+          <div class="absolute inset-0">
+            <!-- After Image -->
+            <img src="https://images.unsplash.com/photo-1558904541-efa8c1a68feb?auto=format&fit=crop&q=80&w=800" alt="Immaculate Installed Turf Lawn" class="absolute inset-0 w-full h-full object-cover">
+          </div>
+          
+          <!-- Before Image Overlay with clipping mask -->
+          <div id="slider-before-box" class="absolute inset-y-0 left-0 right-1/2 overflow-hidden border-r-2 border-white shadow-xl z-10">
+            <img src="https://images.unsplash.com/photo-1508873696983-2df519f0397e?auto=format&fit=crop&q=80&w=800" alt="Muddy brown patchy grass yard" class="absolute inset-0 w-full h-full object-cover max-w-none">
+          </div>
+
+          <!-- Label Badges -->
+          <div class="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-md px-3 py-1 rounded text-xs text-white font-bold uppercase tracking-wider">Before</div>
+          <div class="absolute top-4 right-4 z-20 bg-brand-600/90 backdrop-blur-md px-3 py-1 rounded text-xs text-white font-bold uppercase tracking-wider">Waterloo Turf</div>
+
+          <!-- Slider Interactive Guide Handle (Pure HTML styling) -->
+          <div id="slider-handle" class="absolute inset-y-0 left-1/2 z-20 w-10 h-10 -ml-5 top-1/2 -mt-5 rounded-full bg-white text-zinc-950 flex items-center justify-center shadow-2xl cursor-ew-resize select-none border border-zinc-300">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l4-4 4 4m0 6l-4 4-4-4" class="rotate-90 origin-center" />
+            </svg>
+          </div>
+
+          <!-- Interactive Drag Controller (Full Width Transparent Input Overlay) -->
+          <input type="range" min="0" max="100" value="50" id="before-after-range" class="absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize" aria-label="Before and after slider adjust">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Post-Installation Care Advice (Interactive Accordion) -->
+  <section id="care-guide" class="py-20 lg:py-28 bg-zinc-50 border-t border-zinc-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-brand-600 font-bold tracking-wider text-xs uppercase block mb-3">Lifetime Care Blueprint</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
+          How to Maintain Perfect Turf
+        </h2>
+        <p class="text-zinc-600 mt-4 leading-relaxed max-w-2xl mx-auto">
+          Unlike natural grass that drains your time and bank account, synthetic turf requires exceptionally minimal maintenance to look fresh and professional all year.
+        </p>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4">
+        
+        <!-- Accordion Item 1 -->
+        <div class="border border-zinc-200 rounded-xl bg-white shadow-sm overflow-hidden">
+          <button onclick="toggleAccordion('care-1')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-50 transition focus:outline-none">
+            <span class="text-base sm:text-lg flex items-center gap-3">
+              <span class="w-6 h-6 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center text-xs">01</span>
+              Occasional Brushing (Keep Fibers Upright)
+            </span>
+            <svg id="accordion-icon-care-1" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-care-1" class="hidden px-6 pb-6 pt-2 border-t border-zinc-100 text-sm sm:text-base text-zinc-600 leading-relaxed space-y-2">
+            <p>
+              Over time, heavy foot traffic or patio furniture might flatten turf fibers. A quick brush with a synthetic bristle broom (never use metal wires) easily lifts the blades back to their beautiful, upright position.
+            </p>
+            <p class="text-xs text-brand-600 font-semibold">★ Pro tip: Brush against the grain of the blades for immediate vertical definition.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="border border-zinc-200 rounded-xl bg-white shadow-sm overflow-hidden">
+          <button onclick="toggleAccordion('care-2')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-50 transition focus:outline-none">
+            <span class="text-base sm:text-lg flex items-center gap-3">
+              <span class="w-6 h-6 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center text-xs">02</span>
+              A Quick Rinse (Dust & Debris Removal)
+            </span>
+            <svg id="accordion-icon-care-2" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-care-2" class="hidden px-6 pb-6 pt-2 border-t border-zinc-100 text-sm sm:text-base text-zinc-600 leading-relaxed space-y-2">
+            <p>
+              During dry Austin summers, dust and pollen can settle on the turf. A swift spray with a standard garden hose removes debris and restores the vibrant, pristine deep green shade of your lawn.
+            </p>
+            <p class="text-xs text-brand-600 font-semibold">★ Pro tip: For pet owners, a quick rinse over heavy-use areas keeps everything perfectly odorless and fresh.</p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="border border-zinc-200 rounded-xl bg-white shadow-sm overflow-hidden">
+          <button onclick="toggleAccordion('care-3')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-50 transition focus:outline-none">
+            <span class="text-base sm:text-lg flex items-center gap-3">
+              <span class="w-6 h-6 rounded-md bg-brand-50 text-brand-600 flex items-center justify-center text-xs">03</span>
+              Minimal Effort, Year-Round Durability
+            </span>
+            <svg id="accordion-icon-care-3" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-care-3" class="hidden px-6 pb-6 pt-2 border-t border-zinc-100 text-sm sm:text-base text-zinc-600 leading-relaxed space-y-2">
+            <p>
+              Unlike standard turf which fades, requires mowing, weed-eating, fertilization, and massive utility bills, Waterloo Turf requires no weeding, no cutting, and zero harmful chemicals. Enjoy a lush, emerald lawn 365 days a year.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions Accordion -->
+  <section id="faqs" class="py-20 lg:py-28 bg-white border-t border-zinc-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <span class="text-brand-600 font-bold tracking-wider text-xs uppercase block mb-3">Your Questions Answered</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-zinc-950 tracking-tight">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-zinc-600 mt-4 leading-relaxed max-w-2xl mx-auto">
+          We want you to feel completely confident. Here are answers to the questions we receive most frequently.
+        </p>
+      </div>
+
+      <!-- FAQ Accordions -->
+      <div class="space-y-4">
+        
+        <div class="border border-zinc-200 rounded-xl bg-zinc-50 overflow-hidden">
+          <button onclick="toggleAccordion('faq-1')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-100 transition focus:outline-none">
+            <span class="text-base sm:text-lg">Is artificial grass safe for dogs and young kids?</span>
+            <svg id="accordion-icon-faq-1" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-faq-1" class="hidden px-6 pb-6 pt-2 border-t border-zinc-200 text-zinc-600 text-sm sm:text-base leading-relaxed">
+            Absolutely. All turf materials used by Waterloo Turf Austin are 100% non-toxic, lead-free, and hyper-allergenic. It is highly resistant to dog urine and will not discolor, and pet waste is easily scooped and washed clean.
+          </div>
+        </div>
+
+        <div class="border border-zinc-200 rounded-xl bg-zinc-50 overflow-hidden">
+          <button onclick="toggleAccordion('faq-2')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-100 transition focus:outline-none">
+            <span class="text-base sm:text-lg">How long does the installation process typically take?</span>
+            <svg id="accordion-icon-faq-2" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-faq-2" class="hidden px-6 pb-6 pt-2 border-t border-zinc-200 text-zinc-600 text-sm sm:text-base leading-relaxed">
+            Most residential projects are fully completed in a single day! More complex designs or extensive commercial landscaping might take two days. We pride ourselves on clean, swift work that leaves your home spotless.
+          </div>
+        </div>
+
+        <div class="border border-zinc-200 rounded-xl bg-zinc-50 overflow-hidden">
+          <button onclick="toggleAccordion('faq-3')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-100 transition focus:outline-none">
+            <span class="text-base sm:text-lg">How well does artificial turf drain during heavy storms?</span>
+            <svg id="accordion-icon-faq-3" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-faq-3" class="hidden px-6 pb-6 pt-2 border-t border-zinc-200 text-zinc-600 text-sm sm:text-base leading-relaxed">
+            Actually, better than natural grass! Our installations feature a perforated, heavy-flow backing system placed over a meticulous crushed stone drainage base. Water flows directly through to the sub-base, preventing puddles or mud.
+          </div>
+        </div>
+
+        <div class="border border-zinc-200 rounded-xl bg-zinc-50 overflow-hidden">
+          <button onclick="toggleAccordion('faq-4')" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-zinc-950 hover:bg-zinc-100 transition focus:outline-none">
+            <span class="text-base sm:text-lg">What is the lifespan of Waterloo Turf?</span>
+            <svg id="accordion-icon-faq-4" class="w-5 h-5 text-zinc-400 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div id="accordion-content-faq-4" class="hidden px-6 pb-6 pt-2 border-t border-zinc-200 text-zinc-600 text-sm sm:text-base leading-relaxed">
+            Our premium turf products have a lifespan of up to 15 to 20 years, depending on traffic levels. Every installation comes with our comprehensive warranty to secure your investment for the long run.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Split Contact / Free Estimate Section -->
+  <section id="quote-form" class="py-20 lg:py-28 bg-zinc-950 text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(45,161,76,0.1),transparent_50%)]"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        
+        <!-- Quote Copy Area -->
+        <div class="lg:col-span-5">
+          <span class="text-brand-400 font-bold tracking-wider text-xs uppercase block mb-3">Claim Your Premium Lawn Upgrade</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+            Claim Your Free Estimate & Project Consultation
+          </h2>
+          <p class="text-zinc-300 text-base sm:text-lg mt-6 leading-relaxed">
+            No obligation. We will visit your property, perform precise professional grading measurements, show you turf samples in person, and deliver a clean, exact bid for your project.
+          </p>
+
+          <!-- Contact Details -->
+          <div class="mt-8 space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-brand-400 font-bold shrink-0">
+                📍
+              </div>
+              <div>
+                <span class="block text-xs text-zinc-400 font-bold uppercase tracking-wider">Showroom Headquarters</span>
+                <span class="block text-white font-semibold">1012 Rio Grande St, Austin, TX 78701</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center text-brand-400 font-bold shrink-0">
+                ☎
+              </div>
+              <div>
+                <span class="block text-xs text-zinc-400 font-bold uppercase tracking-wider">Speak with an Expert</span>
+                <a href="tel:5125550190" class="block text-white font-bold hover:text-brand-400 transition">(512) 555-0190</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Lead Form Box -->
+        <div class="lg:col-span-7 bg-zinc-900 rounded-2xl p-6 sm:p-10 border border-zinc-800 shadow-2xl relative">
+          
+          <!-- Success State Overlay (Hidden initially) -->
+          <div id="success-state" class="absolute inset-0 bg-zinc-900 rounded-2xl p-6 sm:p-10 flex flex-col items-center justify-center text-center z-50 hidden">
+            <div class="w-16 h-16 rounded-full bg-brand-500/10 border border-brand-500/30 text-brand-400 flex items-center justify-center text-3xl mb-6">
+              ✓
+            </div>
+            <h3 class="text-2xl font-bold text-white">Your Request is Received!</h3>
+            <p class="text-zinc-300 text-sm mt-3 max-w-sm">
+              Thank you for trusting Waterloo Turf Austin. One of our local project estimators will call you in the next 15 minutes to schedule your free on-site appraisal.
+            </p>
+          </div>
+
+          <!-- The Real Form -->
+          <form id="lead-capture-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="form-name" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">First & Last Name *</label>
+                <input required type="text" id="form-name" placeholder="John Doe" class="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition placeholder-zinc-600">
+              </div>
+              <div>
+                <label for="form-phone" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Phone Number *</label>
+                <input required type="tel" id="form-phone" placeholder="(512) 555-0199" class="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition placeholder-zinc-600">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label for="form-email" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Email Address *</label>
+                <input required type="email" id="form-email" placeholder="johndoe@email.com" class="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition placeholder-zinc-600">
+              </div>
+              <div>
+                <label for="form-service" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Service Needed</label>
+                <select id="form-service" class="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition">
+                  <option value="residential">Residential Turf Installation</option>
+                  <option value="commercial">Commercial Turf Services</option>
+                  <option value="custom">Putting Green / Custom Layout</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="form-size" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Approximate Lawn Size (Sq. Ft.)</label>
+              <input type="number" id="form-size" placeholder="e.g., 500" class="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition placeholder-zinc-600">
+            </div>
+
+            <div>
+              <label for="form-message" class="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">Project Details / Custom Requests</label>
+              <textarea id="form-message" rows="4" placeholder="Tell us about your yard (e.g., dog run, sloping ground, shaded patio area)..." class="w-full px-4 py-3 bg-zinc-950 border border-zinc-800 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition placeholder-zinc-600"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 px-6 bg-brand-500 hover:bg-brand-600 text-white font-bold text-base rounded-lg shadow-lg shadow-brand-500/20 transition duration-150 focus:outline-none focus:ring-4 focus:ring-brand-400">
+              Submit Request for Free Estimate
+            </button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer (Solid dark grey band, trapezoidal cutout top-right) -->
+  <footer class="bg-zinc-950 text-zinc-400 relative border-t border-zinc-800 pt-16">
+    
+    <!-- Trapezoidal Cutout Wrapper -->
+    <div class="absolute top-0 right-0 left-0 h-10 bg-zinc-900 footer-trapezoid pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 relative z-10 mt-6">
+      
+      <!-- Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+        
+        <!-- Left Brand & Address Column -->
+        <div class="md:col-span-5 flex flex-col gap-4">
+          <a href="#" class="flex items-center gap-2 group self-start">
+            <div class="w-10 h-10 rounded-lg bg-brand-500 flex items-center justify-center text-white font-extrabold text-xl">
+              W
+            </div>
+            <div class="flex flex-col">
+              <span class="text-white font-extrabold tracking-tight text-lg">Waterloo Turf Austin</span>
+              <span class="text-zinc-500 font-bold text-xs">Premium Artificial Grass Specialists</span>
+            </div>
+          </a>
+          <p class="text-sm text-zinc-500 leading-relaxed max-w-sm">
+            Providing Austin homes and businesses with pristine, highly durable, low-maintenance synthetic turf lawns. Safely installed in just one day.
+          </p>
+          <div class="text-sm text-zinc-400 space-y-1">
+            <span class="block">📍 1012 Rio Grande St, Austin, TX 78701</span>
+            <span class="block">☎ (512) 555-0190</span>
+            <span class="block">✉ hello@waterlooturfaustin.com</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="md:col-span-3">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Navigations</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#services" class="hover:text-white transition">Installation Services</a></li>
+            <li><a href="#why-us" class="hover:text-white transition">Why Choose Waterloo</a></li>
+            <li><a href="#care-guide" class="hover:text-white transition">Fibers & Care Advice</a></li>
+            <li><a href="#faqs" class="hover:text-white transition">General FAQs</a></li>
+          </ul>
+        </div>
+
+        <!-- Business Hour / Working Signals -->
+        <div class="md:col-span-4">
+          <h4 class="text-white font-bold text-sm tracking-wider uppercase mb-4">Estimating Hours</h4>
+          <ul class="space-y-2 text-sm text-zinc-500">
+            <li class="flex justify-between"><span>Monday - Friday</span> <span class="text-zinc-300">7:00 AM - 7:00 PM</span></li>
+            <li class="flex justify-between"><span>Saturday</span> <span class="text-zinc-300">8:00 AM - 5:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday</span> <span class="text-emerald-500 font-semibold">Closed</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="border-zinc-800 my-8">
+
+      <!-- Bottom bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600">
+        <p>&copy; 2026 Waterloo Turf Austin. All rights reserved. Built for Austin, TX synthetic landscaping.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-zinc-400 transition">Privacy Policy</a>
+          <a href="#" class="hover:text-zinc-400 transition">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Vanilla JS Interactive logic -->
+  <script>
+    // Mobile Navigation Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Close mobile menu on clicking any navigation link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Hero Video Dialog Modal Controllers
+    function openVideoModal() {
+      const modal = document.getElementById('video-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('video-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    // Escape Key closes Video Modal
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeVideoModal();
+      }
+    });
+
+    // Tilt Card Interactive Movement Effect
+    document.querySelectorAll('.tilt-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xc = rect.width / 2;
+        const yc = rect.height / 2;
+        const angleX = (yc - y) / 12;
+        const angleY = (x - xc) / 12;
+        card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale3d(1.01, 1.01, 1.01)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      });
+    });
+
+    // Before/After Slider Control logic
+    const rangeInput = document.getElementById('before-after-range');
+    const beforeBox = document.getElementById('slider-before-box');
+    const sliderHandle = document.getElementById('slider-handle');
+
+    if (rangeInput && beforeBox && sliderHandle) {
+      rangeInput.addEventListener('input', (e) => {
+        const value = e.target.value;
+        beforeBox.style.right = `${100 - value}%`;
+        sliderHandle.style.left = `${value}%`;
+      });
+    }
+
+    // Accordion Component Controllers (Care blueprint & FAQs)
+    function toggleAccordion(id) {
+      const content = document.getElementById(`accordion-content-${id}`);
+      const icon = document.getElementById(`accordion-icon-${id}`);
+      
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    // Form submission simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Select input items to verify
+      const name = document.getElementById('form-name').value;
+      const phone = document.getElementById('form-phone').value;
+      const email = document.getElementById('form-email').value;
+
+      if (name && phone && email) {
+        // Show Success state overlay
+        const successOverlay = document.getElementById('success-state');
+        successOverlay.classList.remove('hidden');
+        successOverlay.classList.add('flex');
+        
+        // Reset form inputs
+        document.getElementById('lead-capture-form').reset();
+      }
+    }
+  </script>
+
+</body>
+</html>

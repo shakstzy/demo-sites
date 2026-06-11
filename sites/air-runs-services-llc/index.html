@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Runs Services LLC | Expert Austin HVAC Services & Repair</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            cooling: '#0284c7',
+                            heating: '#f97316',
+                            accent: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tilt-card {
+            transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+            transform-style: preserve-3d;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0284c7;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-sky-500 to-orange-500 flex items-center justify-center shadow-lg shadow-sky-500/10 transition-transform group-hover:scale-105">
+                        <!-- Custom Air Flow SVG -->
+                        <svg class="w-6 h-6 text-white animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-tight text-white leading-none">AIR RUNS</span>
+                        <span class="text-[10px] font-bold tracking-widest text-sky-400 uppercase mt-0.5">Services LLC</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="text-sm font-semibold text-neutral-300 hover:text-white transition-colors">About Us</a>
+                    <a href="#services" class="text-sm font-semibold text-neutral-300 hover:text-white transition-colors">Services</a>
+                    <a href="#why-us" class="text-sm font-semibold text-neutral-300 hover:text-white transition-colors">Why Choose Us</a>
+                    <a href="#faqs" class="text-sm font-semibold text-neutral-300 hover:text-white transition-colors">FAQs</a>
+                </nav>
+
+                <!-- Desktop CTA Call/Book Button -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="tel:5129003388" class="flex items-center gap-2 text-sm font-bold text-sky-400 bg-sky-950/40 px-4 py-2.5 rounded-lg border border-sky-800/50 hover:bg-sky-900/30 transition-all">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        (512) 900-3388
+                    </a>
+                    <a href="#contact" class="text-sm font-bold bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white px-5 py-2.5 rounded-lg shadow-lg shadow-sky-500/20 hover:shadow-sky-500/30 transition-all">
+                        Book Service
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-neutral-400 hover:text-white focus:outline-none p-2 rounded-md" aria-label="Toggle menu">
+                        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-neutral-900 border-t border-neutral-800 px-4 pt-4 pb-6 space-y-4 shadow-xl">
+            <a href="#about" class="block text-base font-semibold text-neutral-300 hover:text-white px-3 py-2 rounded-md transition-colors">About Us</a>
+            <a href="#services" class="block text-base font-semibold text-neutral-300 hover:text-white px-3 py-2 rounded-md transition-colors">Services</a>
+            <a href="#why-us" class="block text-base font-semibold text-neutral-300 hover:text-white px-3 py-2 rounded-md transition-colors">Why Choose Us</a>
+            <a href="#faqs" class="block text-base font-semibold text-neutral-300 hover:text-white px-3 py-2 rounded-md transition-colors">FAQs</a>
+            <div class="pt-4 border-t border-neutral-800 flex flex-col gap-3">
+                <a href="tel:5129003388" class="flex items-center justify-center gap-2 text-base font-bold text-sky-400 bg-sky-950/40 py-3 rounded-lg border border-sky-800/50">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    (512) 900-3388
+                </a>
+                <a href="#contact" class="text-center text-base font-bold bg-sky-600 hover:bg-sky-700 text-white py-3 rounded-lg shadow-lg">
+                    Book Service
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Split Hero Section -->
+    <section class="relative pt-32 pb-24 lg:pt-40 lg:pb-36 bg-gradient-to-b from-neutral-900 via-slate-950 to-slate-950 overflow-hidden">
+        <!-- SVG Glow Background effect -->
+        <div class="absolute inset-0 pointer-events-none opacity-40">
+            <svg class="absolute top-0 left-1/4 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 text-sky-500/10" viewBox="0 0 100 100" fill="currentColor">
+                <circle cx="50" cy="50" r="50" />
+            </svg>
+            <svg class="absolute bottom-0 right-1/4 w-[600px] h-[600px] translate-x-1/2 translate-y-1/2 text-orange-500/10" viewBox="0 0 100 100" fill="currentColor">
+                <circle cx="50" cy="50" r="50" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Content -->
+                <div class="lg:col-span-7 flex flex-col items-start text-left">
+                    <!-- Status Badge -->
+                    <div class="inline-flex items-center gap-2 bg-sky-950/60 border border-sky-800/60 px-3.5 py-1.5 rounded-full mb-6">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        <span class="text-xs sm:text-sm font-bold tracking-wide text-sky-300 uppercase">Now Serving Austin, TX • Free Estimates</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-none mb-6">
+                        Your Trusted <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-sky-500">HVAC Experts</span> <br class="hidden sm:inline">
+                        on Travis Cook Rd.
+                    </h1>
+
+                    <!-- Sub-copy -->
+                    <p class="text-lg text-slate-300 leading-relaxed max-w-xl mb-8">
+                        Air Runs Services LLC is Austin's premier local choice for fast, reliable, and premium AC repair, furnace maintenance, system retrofits, water heaters, and custom mini-split setups. We handle your comfort with professional care.
+                    </p>
+
+                    <!-- Interactive CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                        <a href="#contact" class="text-center font-extrabold bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white px-8 py-4 rounded-xl shadow-lg shadow-sky-500/20 hover:shadow-sky-500/35 transition-all text-lg">
+                            Schedule Service
+                        </a>
+                        <button onclick="openVideoModal()" class="flex items-center justify-center gap-3 font-bold bg-neutral-900 border border-neutral-700/80 text-white hover:bg-neutral-800 hover:border-neutral-600 px-8 py-4 rounded-xl transition-all text-lg group">
+                            <!-- Play Icon -->
+                            <svg class="w-6 h-6 text-sky-400 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                            Watch How We Work
+                        </button>
+                    </div>
+
+                    <!-- Primary-CTA: Light gray rounded rectangle containing interactive, highly readable action link -->
+                    <div class="mt-8 bg-neutral-100 rounded-xl p-4 flex items-center gap-3 border border-neutral-200 max-w-full">
+                        <span class="flex h-2.5 w-2.5 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                        </span>
+                        <p class="text-sm font-sans text-neutral-800 font-semibold">
+                            Need immediate emergency dispatch?
+                            <a href="#contact" class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-bold rounded-lg px-3 py-1.5 underline transition-colors ml-1 shadow-sm">
+                                Book Now
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Component Block & Floating Card -->
+                <div class="lg:col-span-5 relative flex flex-col items-center lg:items-end">
+                    <!-- Beautiful Custom Self-Contained HVAC Vector Graphic -->
+                    <div class="relative w-full max-w-md bg-slate-900/80 border border-slate-800/80 p-8 rounded-2xl shadow-2xl overflow-hidden mb-6">
+                        <!-- HVAC Unit Mockup -->
+                        <div class="flex items-center justify-between mb-6">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-full bg-sky-500 animate-pulse"></div>
+                                <span class="text-xs font-bold text-sky-400 tracking-wider uppercase">System Active</span>
+                            </div>
+                            <span class="text-xs font-mono text-slate-500">MOD-5604-TX</span>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- SVG drawing representing smart AC console -->
+                            <div class="h-32 bg-slate-950/80 rounded-xl border border-slate-800 flex items-center justify-center relative overflow-hidden">
+                                <svg class="absolute inset-0 w-full h-full opacity-10" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <path d="M0,50 Q25,20 50,50 T100,50" stroke="#0284c7" stroke-width="2" fill="none"></path>
+                                    <path d="M0,60 Q25,30 50,60 T100,60" stroke="#f97316" stroke-width="1" fill="none"></path>
+                                </svg>
+                                <div class="text-center z-10">
+                                    <span class="text-xs font-semibold text-sky-400 uppercase tracking-widest">Cooling Temperature</span>
+                                    <div class="text-5xl font-black text-white mt-1">71°<span class="text-2xl text-slate-500 font-normal">F</span></div>
+                                </div>
+                            </div>
+                            <!-- Small Progress/Indicator bars -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-950/40 border border-slate-800 p-3 rounded-lg text-center">
+                                    <span class="text-[10px] uppercase tracking-wider text-slate-400">Air Filter Life</span>
+                                    <div class="w-full bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                        <div class="bg-emerald-500 h-full rounded-full" style="width: 94%;"></div>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-950/40 border border-slate-800 p-3 rounded-lg text-center">
+                                    <span class="text-[10px] uppercase tracking-wider text-slate-400">Airflow Rate</span>
+                                    <div class="w-full bg-slate-800 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                                        <div class="bg-sky-500 h-full rounded-full" style="width: 82%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- REQUIRED Card: Light gray rounded rectangle (#eeeeee), completely contained to avoid clipping -->
+                    <div class="w-full max-w-md bg-[#eeeeee] border border-neutral-300 rounded-[12px] p-6 shadow-xl relative overflow-hidden">
+                        <!-- Subtle background vector of shaking hands -->
+                        <div class="absolute inset-0 opacity-10 flex items-center justify-center pointer-events-none">
+                            <svg class="w-40 h-40 text-neutral-800" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 10h4.757a2 2 0 011.414.586l1.243 1.243a2 2 0 010 2.828l-1.243 1.243a2 2 0 01-1.414.586H14M4 10h4.757a2 2 0 001.414.586l1.243 1.243a2 2 0 000 2.828l-1.243 1.243a2 2 0 00-1.414.586H4M7 8h10M7 16h10" />
+                            </svg>
+                        </div>
+                        <div class="relative z-10 text-neutral-900">
+                            <span class="inline-block text-[10px] uppercase tracking-widest font-extrabold text-sky-700 bg-sky-100 px-2 py-0.5 rounded-md mb-2">Our Promise</span>
+                            <h4 class="text-xl font-black tracking-tight mb-2">Built on Local Trust</h4>
+                            <p class="text-sm text-neutral-700 leading-relaxed font-medium">
+                                From Travis Cook Rd to all across Travis County, Air Runs Services LLC stands behind every single repair, maintenance job, and new HVAC system installation. Rest assured your home's comfort is in master hands.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Brief Bio / About Us Section -->
+    <section id="about" class="py-20 bg-slate-950 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Vector HVAC Blueprint -->
+                <div class="lg:col-span-5">
+                    <div class="relative p-6 bg-slate-900/60 border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
+                        <svg class="w-full h-auto text-sky-500/10" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="1">
+                            <!-- Draw abstract blueprint lines -->
+                            <rect x="20" y="20" width="360" height="260" rx="10" />
+                            <line x1="20" y1="150" x2="380" y2="150" stroke-dasharray="5 5" />
+                            <line x1="200" y1="20" x2="200" y2="280" stroke-dasharray="5 5" />
+                            <circle cx="200" cy="150" r="80" />
+                            <circle cx="200" cy="150" r="10" fill="currentColor" class="text-orange-500/30" />
+                            <!-- HVAC airflow representation -->
+                            <path d="M 120,150 Q 160,110 200,150 T 280,150" stroke="#0284c7" stroke-width="2" fill="none" />
+                            <path d="M 120,160 Q 160,120 200,160 T 280,160" stroke="#f97316" stroke-width="2" fill="none" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- Copy content -->
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">About Air Runs Services LLC</span>
+                    <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight mt-2 mb-6">Serving Austin Homes Since April 2026</h2>
+                    <p class="text-slate-300 leading-relaxed mb-6">
+                        Located at <strong>5604 Travis Cook Rd, Austin, Texas</strong>, Air Runs Services LLC is fully licensed, insured, and deeply familiar with the unique climate challenges Travis County face. We don't believe in quick-fix band-aids; we deliver absolute, energy-efficient solutions built to perform.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400">✓</span>
+                            <span class="text-sm font-bold text-slate-200">24/7 Emergency Dispatch</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400">✓</span>
+                            <span class="text-sm font-bold text-slate-200">100% Free On-Site Estimates</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400">✓</span>
+                            <span class="text-sm font-bold text-slate-200">Licensed Austin Technicians</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="w-8 h-8 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400">✓</span>
+                            <span class="text-sm font-bold text-slate-200">Locally Owned & Operated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid (Tilt Cards) -->
+    <section id="services" class="py-24 bg-slate-900 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Professional Capabilities</span>
+                <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight mt-2 mb-4">Complete Comfort Services</h2>
+                <p class="text-slate-400 text-lg">
+                    Whether you need a simple tune-up or a state-of-the-art heat pump system, we deliver year-round mechanical excellence.
+                </p>
+            </div>
+
+            <!-- 6 Services Grid of Tilt Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Service 1: AC Repair -->
+                <div class="tilt-card bg-slate-950 border border-slate-800/80 rounded-2xl p-8 hover:border-sky-500/50 hover:shadow-2xl hover:shadow-sky-500/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-950/60 border border-sky-800/50 flex items-center justify-center mb-6 text-sky-400">
+                            <!-- AC Repair Icon -->
+                            <svg class="w-6 h-6 animate-spin" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="animation-duration: 8s;">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">AC Repair</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Swift, professional diagnoses and repairs for all brands. We resolve system freeze-ups, refrigerant leaks, compressor failures, and electrical faults.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-white transition-colors">
+                        Book Diagnostic →
+                    </a>
+                </div>
+
+                <!-- Service 2: AC Maintenance -->
+                <div class="tilt-card bg-slate-950 border border-slate-800/80 rounded-2xl p-8 hover:border-sky-500/50 hover:shadow-2xl hover:shadow-sky-500/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-950/60 border border-sky-800/50 flex items-center justify-center mb-6 text-sky-400">
+                            <!-- Gear/Tool Icon -->
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">AC Maintenance</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Rigorous safety checks, system cleaning, electrical tests, and condenser coil washing to maximize capacity and efficiency.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-white transition-colors">
+                        Schedule Tune-up →
+                    </a>
+                </div>
+
+                <!-- Service 3: AC Installation -->
+                <div class="tilt-card bg-slate-950 border border-slate-800/80 rounded-2xl p-8 hover:border-sky-500/50 hover:shadow-2xl hover:shadow-sky-500/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-sky-950/60 border border-sky-800/50 flex items-center justify-center mb-6 text-sky-400">
+                            <!-- AC Installation Icon -->
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-sky-400 transition-colors">AC Installation</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Custom layouts and modern system installations featuring extreme performance indices and professional warranty backups.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-sky-400 hover:text-white transition-colors">
+                        Request Quote →
+                    </a>
+                </div>
+
+                <!-- Service 4: Mini Splits -->
+                <div class="tilt-card bg-slate-950 border border-slate-800/80 rounded-2xl p-8 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-950/60 border border-orange-800/50 flex items-center justify-center mb-6 text-orange-400">
+                            <!-- Mini Split Icon -->
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Mini Splits</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Zoned heating and cooling that doesn't require any ductwork. Highly aesthetic, silent, and perfect for master additions and garages.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-orange-400 hover:text-white transition-colors">
+                        View Mini Splits →
+                    </a>
+                </div>
+
+                <!-- Service 5: Water Heaters -->
+                <div class="tilt-card bg-slate-950 border border-slate-800/80 rounded-2xl p-8 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-950/60 border border-orange-800/50 flex items-center justify-center mb-6 text-orange-400">
+                            <!-- Water Heater Icon -->
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Water Heaters</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Repairs and complete replacements for both tankless and classic tank water heaters. Enjoy rapid hot water and lower energy consumption.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-orange-400 hover:text-white transition-colors">
+                        Book Service →
+                    </a>
+                </div>
+
+                <!-- Service 6: Furnace Repair -->
+                <div class="tilt-card bg-slate-950 border border-slate-800/80 rounded-2xl p-8 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/5 group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-950/60 border border-orange-800/50 flex items-center justify-center mb-6 text-orange-400">
+                            <!-- Flame Icon -->
+                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Furnace Repair</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                            Stay perfectly heated when temperatures plummet. We diagnose heat exchangers, burners, pilot assemblies, and electrical elements safely.
+                        </p>
+                    </div>
+                    <a href="#contact" class="inline-flex items-center gap-2 text-sm font-bold text-orange-400 hover:text-white transition-colors">
+                        Book Repair →
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us / Trust Section -->
+    <section id="why-us" class="py-24 bg-slate-950 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Left Side: Copy & Trust Seals -->
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Elite Standards</span>
+                    <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight mt-2 mb-6">The Air Runs Standard</h2>
+                    <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                        Austin residents choose Air Runs Services LLC because we set the absolute standard for premium diagnostics and transparent repair estimates. No complex jargon, no hidden fees—just honest mechanical trade craftsmanship.
+                    </p>
+
+                    <!-- Trust Stats Grid -->
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+                            <span class="text-3xl font-extrabold text-white">5.0</span>
+                            <span class="text-yellow-400 text-sm block">★★★★★ Yelp Rated</span>
+                            <p class="text-xs text-slate-400 mt-2">Highly trusted by our local community.</p>
+                        </div>
+                        <div class="bg-slate-900 border border-slate-800 p-5 rounded-xl">
+                            <span class="text-3xl font-extrabold text-white">100%</span>
+                            <span class="text-sky-400 text-sm block">Guaranteed Output</span>
+                            <p class="text-xs text-slate-400 mt-2">Every job comes backed with complete warranty support.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Beautiful Service Area map visualization block -->
+                <div class="relative bg-slate-900/60 border border-slate-800/80 p-8 rounded-2xl flex flex-col justify-between overflow-hidden shadow-2xl">
+                    <div class="mb-6">
+                        <h3 class="text-xl font-bold text-white mb-2">Locally Managed Service Territory</h3>
+                        <p class="text-sm text-slate-400">Located at 5604 Travis Cook Rd, proudly serving Austin, Oak Hill, Sunset Valley, Lost Creek, West Lake Hills, and surrounding communities.</p>
+                    </div>
+                    
+                    <!-- Dynamic Service Coverage Vector Diagram -->
+                    <div class="h-48 bg-slate-950/80 rounded-xl border border-slate-800 relative flex items-center justify-center overflow-hidden">
+                        <!-- Simulated Grid map overlay -->
+                        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, #fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                        
+                        <!-- Pulsing Dispatch Hub -->
+                        <div class="absolute flex items-center justify-center z-10">
+                            <span class="flex h-12 w-12 relative items-center justify-center">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-500 opacity-20"></span>
+                                <span class="relative inline-flex rounded-full h-4 w-4 bg-sky-500"></span>
+                            </span>
+                            <div class="absolute bg-slate-900 border border-slate-700 text-[10px] font-extrabold text-white px-2 py-1 rounded shadow-lg whitespace-nowrap -translate-y-10">
+                                Dispatch Hub (78736)
+                            </div>
+                        </div>
+
+                        <!-- Outer service region boundary indicators -->
+                        <div class="absolute left-8 top-10 w-2 h-2 rounded-full bg-slate-500"></div>
+                        <div class="absolute right-12 top-6 w-2 h-2 rounded-full bg-slate-500"></div>
+                        <div class="absolute left-16 bottom-8 w-2 h-2 rounded-full bg-slate-500"></div>
+                        <div class="absolute right-20 bottom-12 w-2 h-2 rounded-full bg-slate-500"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faqs" class="py-24 bg-slate-900 border-t border-slate-800 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Common Questions</span>
+                <h2 class="text-4xl font-black text-white tracking-tight mt-2 mb-4">Frequently Asked Questions</h2>
+                <p class="text-slate-400 text-lg">Everything you need to know about our heating, cooling, and maintenance offerings.</p>
+            </div>
+
+            <!-- Custom Clean Accordion (HTML native details summary with CSS layout adjustments) -->
+            <div class="space-y-4">
+                
+                <details class="group bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center p-6 text-white font-bold text-lg cursor-pointer select-none hover:bg-slate-900 transition-colors list-none">
+                        <span>How often should my AC system receive professional maintenance?</span>
+                        <span class="transition group-open:rotate-180 text-sky-400">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-300 border-t border-slate-900/60 leading-relaxed text-sm">
+                        For maximum efficiency and life extension, your central cooling system should be professionally serviced once a year, ideally in the spring. Heating systems should be tuned up in the autumn. Consistent maintenance keeps your system under manufacturer warranty active and prevents most unexpected breakdown calls.
+                    </div>
+                </details>
+
+                <details class="group bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center p-6 text-white font-bold text-lg cursor-pointer select-none hover:bg-slate-900 transition-colors list-none">
+                        <span>Do you provide 100% free estimates?</span>
+                        <span class="transition group-open:rotate-180 text-sky-400">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-300 border-t border-slate-900/60 leading-relaxed text-sm">
+                        Absolutely. We provide free on-site consultations and detailed project cost estimates for new AC installations, heating retrofits, complete system ductwork layout design, and mini-split setups. For general mechanical repair visits, contact our team directly for direct transparent pricing structures.
+                    </div>
+                </details>
+
+                <details class="group bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center p-6 text-white font-bold text-lg cursor-pointer select-none hover:bg-slate-900 transition-colors list-none">
+                        <span>Are mini splits better than traditional ducted AC?</span>
+                        <span class="transition group-open:rotate-180 text-sky-400">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-300 border-t border-slate-900/60 leading-relaxed text-sm">
+                        Mini splits offer outstanding targeted zone heating and cooling control and are highly energy efficient, as there is zero energy loss in ductwork. They represent the perfect solution for custom house additions, garage workspaces, and historical residences where ducting installation isn't possible. Traditional central systems remain the standard choice for full comprehensive whole-house airflow.
+                    </div>
+                </details>
+
+                <details class="group bg-slate-950 border border-slate-800/80 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
+                    <summary class="flex justify-between items-center p-6 text-white font-bold text-lg cursor-pointer select-none hover:bg-slate-900 transition-colors list-none">
+                        <span>What are the signs that my water heater is failing?</span>
+                        <span class="transition group-open:rotate-180 text-sky-400">
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </summary>
+                    <div class="p-6 pt-0 text-slate-300 border-t border-slate-900/60 leading-relaxed text-sm">
+                        Key indicators of water heater degradation include rusty/discolored hot water, banging or rumbling sounds from within the tank (indicating sediment layer buildup), persistent low water temperatures, and moisture pools around the base. If you notice leaks, contact our dispatch instantly to avoid major water damage.
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Booking Section -->
+    <section id="contact" class="py-24 bg-slate-950 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Contact Info Panel -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Immediate Scheduling</span>
+                    <h2 class="text-4xl font-black text-white tracking-tight mt-2 mb-6">Contact Air Runs</h2>
+                    <p class="text-slate-300 leading-relaxed mb-8">
+                        Our administrative and field dispatchers are standing by to assist with emergency AC failures, diagnostic booking, and free upgrade consultations. Write to us or call our local headquarters directly.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400 shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Austin Headquarters Address</h4>
+                                <p class="text-sm text-slate-400 mt-1">5604 Travis Cook Rd, Austin, Texas 78736</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400 shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Direct Phone Contact</h4>
+                                <p class="text-sm text-sky-400 mt-1">Call/Text: <a href="tel:5129003388" class="text-sky-400 underline hover:text-white transition-colors">(512) 900-3388</a></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-sky-950 flex items-center justify-center border border-sky-800 text-sky-400 shrink-0">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">General Inquiry Email</h4>
+                                <p class="text-sm text-sky-400 mt-1">support@airrunsservices.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Contact Form Panel -->
+                <div class="lg:col-span-7 bg-slate-900 border border-slate-800 p-8 sm:p-10 rounded-2xl shadow-xl">
+                    <form id="hvac-contact-form" onsubmit="handleFormSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">First & Last Name</label>
+                                <input type="text" id="name" required class="w-full bg-slate-950 border border-slate-800 focus:border-sky-500 rounded-lg p-3 text-white placeholder-slate-600 focus:outline-none transition-colors" placeholder="Austin Resident">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" required class="w-full bg-slate-950 border border-slate-800 focus:border-sky-500 rounded-lg p-3 text-white placeholder-slate-600 focus:outline-none transition-colors" placeholder="(512) 555-0199">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full bg-slate-950 border border-slate-800 focus:border-sky-500 rounded-lg p-3 text-white placeholder-slate-600 focus:outline-none transition-colors" placeholder="name@domain.com">
+                        </div>
+
+                        <div>
+                            <label for="service-type" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Select Service Required</label>
+                            <select id="service-type" class="w-full bg-slate-950 border border-slate-800 focus:border-sky-500 rounded-lg p-3 text-white focus:outline-none transition-colors">
+                                <option value="ac-repair">AC Diagnostics & Repair</option>
+                                <option value="ac-maintenance">Seasonal AC Tune-up</option>
+                                <option value="ac-install">New AC System Installation</option>
+                                <option value="mini-splits">Mini Split Ductless Setup</option>
+                                <option value="water-heaters">Water Heater Diagnostics/Install</option>
+                                <option value="furnace-repair">Furnace Diagnostic & Heat Repair</option>
+                                <option value="other">Other Mechanical Question</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Details of request</label>
+                            <textarea id="message" rows="4" required class="w-full bg-slate-950 border border-slate-800 focus:border-sky-500 rounded-lg p-3 text-white placeholder-slate-600 focus:outline-none transition-colors" placeholder="Please describe how your cooling system is behaving..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-600 hover:to-sky-700 text-white font-extrabold text-lg rounded-xl shadow-lg shadow-sky-500/20 hover:shadow-sky-500/35 transition-all">
+                            Submit Estimate Booking
+                        </button>
+                    </form>
+
+                    <!-- Success Banner -->
+                    <div id="form-success" class="hidden text-center py-12">
+                        <div class="w-16 h-16 bg-emerald-950 border border-emerald-800 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-black text-white mb-2">Booking Requested!</h3>
+                        <p class="text-slate-300 max-w-md mx-auto mb-6">
+                            Thank you for contacting Air Runs Services LLC. Our local Travis Cook Road dispatcher is reviewing your request and will call you back shortly.
+                        </p>
+                        <button onclick="resetContactForm()" class="text-sm font-bold text-sky-400 hover:text-white transition-colors underline">
+                            Submit another booking
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Trapezoidal Cutout on top-right -->
+    <footer class="relative bg-neutral-900 text-white pt-24 pb-12 overflow-hidden" style="clip-path: polygon(0 40px, calc(100% - 80px) 40px, 100% 0, 100% 100%, 0 100%); margin-top: -40px;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Col 1: Brand Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded bg-gradient-to-br from-sky-500 to-orange-500 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span class="text-lg font-black tracking-wider text-white uppercase">Air Runs Services LLC</span>
+                    </div>
+                    <p class="text-sm text-neutral-400 leading-relaxed mb-6">
+                        Locally owned HVAC mechanical trade services. We maintain, repair, and install premium cooling and heating units with professional standards.
+                    </p>
+                    <div class="text-sm text-neutral-400">
+                        <strong>Licence:</strong> #HVAC-921820-TX
+                    </div>
+                </div>
+
+                <!-- Col 2: Services Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-300 mb-6">Our Services</h4>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">AC Repair & Diagnostics</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Seasonal AC Maintenance</a></li>
+                        <li><a href="#services" class="hover:text-sky-400 transition-colors">Premium System Installations</a></li>
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors">Ductless Mini Splits</a></li>
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors">Water Heater Services</a></li>
+                        <li><a href="#services" class="hover:text-orange-400 transition-colors">Furnace Repair & Heating</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Service Areas -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-300 mb-6">Service Areas</h4>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li>Travis Cook Rd Area</li>
+                        <li>South & Southwest Austin</li>
+                        <li>Sunset Valley</li>
+                        <li>Oak Hill / Bee Cave</li>
+                        <li>West Lake Hills</li>
+                        <li>Lakeway / Spicewood</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Shortcuts -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-neutral-300 mb-6">HQ Contact Details</h4>
+                    <ul class="space-y-3 text-sm text-neutral-400">
+                        <li>Air Runs Services LLC</li>
+                        <li>5604 Travis Cook Rd,</li>
+                        <li>Austin, Texas 78736</li>
+                        <li>Phone: <a href="tel:5129003388" class="text-sky-400 underline hover:text-white transition-colors">(512) 900-3388</a></li>
+                        <li>Email: support@airrunsservices.com</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright / Attribution -->
+            <div class="border-t border-neutral-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+                <p>© 2026 Air Runs Services LLC. All rights reserved. Serviced locally in Austin, Texas.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-neutral-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-neutral-300 transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE HERO VIDEO DIALOG (MODAL) -->
+    <div id="video-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-slate-950/80 backdrop-blur-md" onclick="closeVideoModal()"></div>
+        
+        <!-- Modal Content Box -->
+        <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-3xl w-full relative z-10 overflow-hidden shadow-2xl">
+            <!-- Header bar -->
+            <div class="flex items-center justify-between p-4 border-b border-slate-800">
+                <h3 class="font-bold text-white">How Air Runs Works • Cooling Cycle Simulation</h3>
+                <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white p-1 rounded-lg focus:outline-none" aria-label="Close modal">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Canvas Simulation Body (completely self-contained visualizer) -->
+            <div class="p-6">
+                <canvas id="hvac-canvas" class="w-full bg-slate-950 border border-slate-800 rounded-xl" width="600" height="320"></canvas>
+                <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="p-2 bg-slate-950 rounded-lg border border-slate-800">
+                        <div class="text-xs text-slate-500">Air Intake</div>
+                        <div class="text-sm font-bold text-sky-400">Warm Interior</div>
+                    </div>
+                    <div class="p-2 bg-slate-950 rounded-lg border border-slate-800">
+                        <div class="text-xs text-slate-500">Filtering Cycle</div>
+                        <div class="text-sm font-bold text-emerald-400">99.9% Clean</div>
+                    </div>
+                    <div class="p-2 bg-slate-950 rounded-lg border border-slate-800">
+                        <div class="text-xs text-slate-500">Heat Exchange</div>
+                        <div class="text-sm font-bold text-sky-400">Condensing</div>
+                    </div>
+                    <div class="p-2 bg-slate-950 rounded-lg border border-slate-800">
+                        <div class="text-xs text-slate-500">System Status</div>
+                        <div class="text-sm font-bold text-emerald-400 animate-pulse">Running</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN INTERACTIVE SCRIPTS -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenu.classList.toggle('hidden');
+            if (isExpanded) {
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            } else {
+                menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+            }
+        });
+
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+            });
+        });
+
+        // TILT CARD EFFECT FOR SERVICES
+        const tiltCards = document.querySelectorAll('.tilt-card');
+        tiltCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                // Maximum tilt angle of 6 degrees
+                const rotX = -(dy / yc) * 6;
+                const rotY = (dx / xc) * 6;
+                card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02, 1.02, 1.02)`;
+                card.style.boxShadow = `0 20px 40px rgba(2, 132, 199, 0.08)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                card.style.boxShadow = 'none';
+            });
+        });
+
+        // HERO VIDEO MODAL (HVAC SIMULATION PROCESS CANVAS)
+        const modal = document.getElementById('video-modal');
+        let canvas, ctx, animationFrameId;
+        let particles = [];
+
+        function openVideoModal() {
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            initVisualization();
+        }
+
+        function closeVideoModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = '';
+            stopVisualization();
+        }
+
+        function initVisualization() {
+            canvas = document.getElementById('hvac-canvas');
+            if (!canvas) return;
+            ctx = canvas.getContext('2d');
+            
+            // Generate distinct cool/heat particles
+            particles = [];
+            for (let i = 0; i < 45; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    vx: (Math.random() - 0.5) * 1.5 + 2, // moves across the blueprint
+                    vy: (Math.random() - 0.5) * 0.8,
+                    type: Math.random() > 0.55 ? 'cool' : 'heat',
+                    size: Math.random() * 3 + 2.5
+                });
+            }
+            animateVisualization();
+        }
+
+        function animateVisualization() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw Virtual House blueprint
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(50, 40, canvas.width - 100, canvas.height - 80);
+            
+            // Interior boundary line
+            ctx.beginPath();
+            ctx.moveTo(canvas.width / 2, 40);
+            ctx.lineTo(canvas.width / 2, canvas.height - 40);
+            ctx.stroke();
+
+            // Label Indicators
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+            ctx.font = 'bold 10px sans-serif';
+            ctx.fillText('OUTDOOR CONDENSER UNIT', 80, 60);
+            ctx.fillText('INDOOR COMFOR ZONE', canvas.width / 2 + 30, 60);
+            
+            // Central heat pump core
+            ctx.fillStyle = '#1e293b';
+            ctx.strokeStyle = 'rgba(2, 132, 199, 0.5)';
+            ctx.lineWidth = 3;
+            ctx.fillRect(canvas.width / 2 - 40, canvas.height / 2 - 30, 80, 60);
+            ctx.strokeRect(canvas.width / 2 - 40, canvas.height / 2 - 30, 80, 60);
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 11px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Heat Pump', canvas.width / 2, canvas.height / 2 + 2);
+            ctx.fillStyle = '#0284c7';
+            ctx.fillText('Core', canvas.width / 2, canvas.height / 2 + 15);
+
+            // Animate each active simulation node
+            particles.forEach(p => {
+                p.x += p.vx;
+                p.y += p.vy;
+                
+                // Keep particles inside house loop
+                if (p.x > canvas.width - 60) {
+                    p.x = 60;
+                    p.y = Math.random() * (canvas.height - 100) + 50;
+                }
+                if (p.y < 50 || p.y > canvas.height - 50) p.vy *= -1;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fillStyle = p.type === 'cool' ? 'rgba(56, 189, 248, 0.85)' : 'rgba(249, 115, 22, 0.85)';
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = p.type === 'cool' ? '#0284c7' : '#f97316';
+                ctx.fill();
+                ctx.shadowBlur = 0; // reset glow
+            });
+
+            animationFrameId = requestAnimationFrame(animateVisualization);
+        }
+
+        function stopVisualization() {
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
+        }
+
+        // CONTACT FORM LOGIC
+        const contactForm = document.getElementById('hvac-contact-form');
+        const successMessage = document.getElementById('form-success');
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            // Elegant fade simulation to show successful dispatch trigger
+            contactForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+        }
+
+        function resetContactForm() {
+            contactForm.reset();
+            successMessage.classList.add('hidden');
+            contactForm.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
