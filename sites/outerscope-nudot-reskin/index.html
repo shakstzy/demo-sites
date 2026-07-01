@@ -4622,6 +4622,105 @@
     filter: grayscale(1) contrast(1.04) brightness(0.92);
   }
 </style>
+<style id="outerscope-overlap-polish">
+  .os-overlap-section {
+    height: clamp(760px, 120vh, 1080px) !important;
+    min-height: 760px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #030303;
+  }
+  .os-overlap-stage {
+    position: relative;
+    width: min(100vw, 1680px);
+    height: min(100vh, 920px);
+    min-height: 720px;
+    isolation: isolate;
+  }
+  .os-overlap-media {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(42vw, 680px);
+    aspect-ratio: 1.08;
+    transform: translate(-50%, -50%) rotate(-1.5deg);
+    z-index: 2;
+    overflow: hidden;
+    background: #0a0a0a;
+    box-shadow: 0 36px 120px rgba(0,0,0,.58);
+  }
+  .os-overlap-media img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(1) contrast(1.08) brightness(.78);
+  }
+  .os-dot-word {
+    position: absolute;
+    z-index: 3;
+    font-family: "Zalando Sans SemiExpanded", "Arial Black", sans-serif;
+    font-size: clamp(66px, 12.2vw, 215px);
+    font-weight: 900;
+    line-height: .78;
+    letter-spacing: .03em;
+    color: transparent;
+    background-image: radial-gradient(circle, #fff 0 42%, transparent 44%);
+    background-size: .18em .18em;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    opacity: .98;
+    mix-blend-mode: screen;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  .os-dot-word.is-left { left: -5vw; top: 15%; }
+  .os-dot-word.is-right { right: -8vw; top: 52%; }
+  .os-dot-word.is-wide {
+    left: 4vw;
+    bottom: 13%;
+    font-size: clamp(46px, 7.8vw, 130px);
+    opacity: .88;
+  }
+  .os-side-copy {
+    position: absolute;
+    z-index: 4;
+    width: min(22vw, 320px);
+    color: rgba(255,255,255,.58);
+    font: 500 clamp(13px, 1.1vw, 19px)/1.35 "DM Sans", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    pointer-events: none;
+  }
+  .os-side-copy.is-top { right: 11vw; top: 11%; }
+  .os-side-copy.is-bottom { left: 8vw; bottom: 8%; }
+  .os-diagonal-dots {
+    position: absolute;
+    right: 10vw;
+    bottom: 17%;
+    width: 310px;
+    height: 84px;
+    transform: rotate(26deg);
+    background-image: radial-gradient(circle, rgba(255,255,255,.48) 0 3px, transparent 3.5px);
+    background-size: 16px 16px;
+    opacity: .42;
+    z-index: 1;
+  }
+  @media (max-width: 760px) {
+    .os-overlap-section { height: 760px !important; min-height: 760px; }
+    .os-overlap-stage { min-height: 720px; }
+    .os-overlap-media { width: 74vw; }
+    .os-dot-word { font-size: clamp(58px, 24vw, 118px); }
+    .os-dot-word.is-left { left: -20vw; top: 18%; }
+    .os-dot-word.is-right { right: -36vw; top: 56%; }
+    .os-dot-word.is-wide { left: -10vw; bottom: 16%; font-size: clamp(38px, 15vw, 78px); }
+    .os-side-copy { width: 54vw; font-size: 12px; }
+    .os-side-copy.is-top { right: 6vw; top: 8%; }
+    .os-side-copy.is-bottom { left: 6vw; bottom: 5%; }
+  }
+</style>
 </head>
 
 <body>
@@ -5315,6 +5414,18 @@
                     <div class="animated-text">Follow Up</div>
                     <div class="animated-text">Save Hours</div>
                   </div>
+                    <div class="animated-text">Qualify</div>
+                    <div class="animated-text">Route</div>
+                    <div class="animated-text">Draft</div>
+                    <div class="animated-text">Ship</div>
+                    <div class="animated-text">Measure</div>
+                    <div class="animated-text">Scale</div>
+                    <div class="animated-text">Integrate</div>
+                    <div class="animated-text">Support</div>
+                    <div class="animated-text">Convert</div>
+                    <div class="animated-text">Follow Up</div>
+                    <div class="animated-text">Save Hours</div>
+                  </div>
                     <div class="animated-text">Design</div>
                     <div class="animated-text">Tech</div>
                     <div class="animated-text">Creative</div>
@@ -5433,318 +5544,17 @@
           </div>
         </div>
 
-        <div class="stm-logo" id="stmLogo"><img src="images/textlogo.svg" alt="OUTERSCOPE" width="387" height="68"
-            loading="lazy" decoding="async"></div>
-        <section class="stm-section" id="stm-section">
-          <div class="stm-content">
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-2">AI workflow design</div>
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-2">Automation strategy</div>
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-2">Outerscope</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3">Lead routing</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3">CRM triggers</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3">Tool stack</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3">Ops direction</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3">System language</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-2" data-stm-scramble="2.5">O</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3" data-stm-scramble="0">Automation system loading</div>
-              <div class="stm-el stm-pos-1 stm-typing" data-stm-alt="stm-pos-3" data-stm-scramble="0">█</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-5">Internal tools</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-5">Audit funnel</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-5">Demo deployment</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-9" data-stm-scramble="2.5">U</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-2">Revenue ops</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-2">Follow-up systems</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-2">Process narrative</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-2">Client experience</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3" data-stm-scramble="0">Signal field loading</div>
-              <div class="stm-el stm-pos-1 stm-typing" data-stm-alt="stm-pos-3" data-stm-scramble="0">█</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-4">Process mapping</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-4">Custom AI build</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-4">AI forms</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-4">Signal rooms</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-4">Knowledge bases</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-4">Digital operations</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-3" data-stm-scramble="2.5">T</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-9">Integrations</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-9">Automation rules</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-9">CRM hygiene</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-9">Data routing</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-9">Automation partner</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-10" data-stm-scramble="2.5" data-stm-flip-ease="expo.in">E</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-3">Inbox triage</div>
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-3">Voice agents</div>
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-3">Quote builders</div>
-              <div class="stm-el stm-pos-4" data-stm-alt="stm-pos-3">AI strategy</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-3" data-stm-scramble="0">Operational leverage compounding</div>
-              <div class="stm-el stm-pos-1 stm-typing" data-stm-alt="stm-pos-3" data-stm-scramble="0">█</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-5">Reporting</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-5">Staff copilots</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-5">Scheduling</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-5">Call summaries</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-3" data-stm-scramble="2.5">R</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group" data-outerscope-letter="S">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-4" data-stm-scramble="2.5">S</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="C">
-              <div class="stm-el stm-el--xl stm-pos-3" data-stm-alt="stm-pos-7" data-stm-scramble="2.5">C</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="O2">
-              <div class="stm-el stm-el--xl stm-pos-2" data-stm-alt="stm-pos-8" data-stm-scramble="2.5">O</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="P">
-              <div class="stm-el stm-el--xl stm-pos-4" data-stm-alt="stm-pos-5" data-stm-scramble="2.5">P</div>
-            </div>
-            <div class="stm-group" data-outerscope-letter="E2">
-              <div class="stm-el stm-el--xl stm-pos-1" data-stm-alt="stm-pos-10" data-stm-scramble="2.5">E</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-6">Workflow discovery</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-6">Offer automation</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-6">Offer logic</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-6">Lead scoring</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-7">Systems thinking</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-7">Rapid demos</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-7">Ops research</div>
-              <div class="stm-el stm-pos-2" data-stm-alt="stm-pos-7">Sales scripts</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">AI product UI</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Responsive ops</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Trigger design</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Componentized tools</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Automation system</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Cross-tool syncing</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Demo site</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">System standards</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Pipeline rhythm</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Command surface</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Live signals</div>
-              <div class="stm-el stm-pos-3" data-stm-alt="stm-pos-8">Dynamic systems</div>
-            </div>
-
-            <div class="stm-group">
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-1">AI audit</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-2">Process analysis</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-4">Operating map</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-5">Operational value</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-6">SOP guide</div>
-              <div class="stm-el stm-pos-1" data-stm-alt="stm-pos-4">Automation launch</div>
-            </div>
-
+        <section class="stm-section os-overlap-section" id="stm-section">
+          <div class="stm-content os-overlap-stage">
+            <div class="os-side-copy is-top">Workflow discovery<br>Offer automation<br>Lead scoring</div>
+            <div class="os-dot-word is-left">AI</div>
+            <figure class="os-overlap-media">
+              <img src="images/outerscope/hero-04.png" alt="" loading="lazy" decoding="async">
+            </figure>
+            <div class="os-dot-word is-right">OPS</div>
+            <div class="os-dot-word is-wide">AUTOMATION</div>
+            <div class="os-side-copy is-bottom">Custom systems<br>CRM operations<br>Follow-up engine</div>
+            <div class="os-diagonal-dots" aria-hidden="true"></div>
           </div>
         </section>
 
