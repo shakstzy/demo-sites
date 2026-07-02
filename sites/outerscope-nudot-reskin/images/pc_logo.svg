@@ -27,7 +27,7 @@
       <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  
+
   <rect width="90" height="70" fill="none"/>
   <circle cx="34" cy="35" r="19" fill="none" stroke="url(#steel)" stroke-width="7"/>
   <path d="M53 49c5 5 18 4 21-4 3-9-5-13-14-15-9-2-13-5-10-11 4-8 18-8 24 0" fill="none" stroke="url(#steel)" stroke-width="7" stroke-linecap="round"/>

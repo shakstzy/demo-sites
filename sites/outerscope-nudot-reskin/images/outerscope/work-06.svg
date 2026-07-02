@@ -27,7 +27,7 @@
       <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  
+
   <defs>
     <filter id="photo-grain" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" seed="23"/>
@@ -319,7 +319,7 @@
     <ellipse cx="862.4" cy="600" rx="75.264" ry="22.932000000000002" fill="#cfc8ba" fill-opacity="0.11" stroke="#2b2d2d" stroke-opacity="0.35" stroke-width="2.94"/>
     <ellipse cx="841.232" cy="592.062" rx="23.52" ry="4.41" fill="#fff" opacity="0.20"/>
   </g>
-  
+
     <g transform="translate(705.6 400) rotate(9)" filter="url(#photo-shadow)">
     <rect x="-137.20000000000002" y="-117.6" width="274.40000000000003" height="235.2" fill="#f0ebe0" opacity="0.95"/>
     <text x="-104.27200000000002" y="-51.744" font-family="Georgia, serif" font-size="20.580000000000002" fill="#151515">OPS COPILOT</text>
@@ -352,7 +352,7 @@
     <text x="0" y="-14.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12.348" letter-spacing="1.6" fill="#252525" opacity="0.78">OPS</text>
     <text x="0" y="39.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="7.546000000000001" letter-spacing="1" fill="#555" opacity="0.62">OUTERSCOPE</text>
   </g>
-  
+
   <g transform="translate(509.6 600) rotate(-3)" filter="url(#photo-shadow)">
     <rect x="-439.43199999999996" y="-280.25" width="878.8639999999999" height="560.5" rx="21.9716" fill="#080a0b"/>
     <rect x="-404.27743999999996" y="-229.80499999999998" width="808.5548799999999" height="403.56" fill="#e8e3d8"/>

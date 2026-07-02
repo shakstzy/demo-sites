@@ -27,7 +27,7 @@
       <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  
+
   <defs>
     <filter id="photo-grain" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" seed="23"/>
@@ -133,7 +133,7 @@
     <ellipse cx="281.6" cy="192" rx="24.576" ry="7.4879999999999995" fill="#cfc8ba" fill-opacity="0.11" stroke="#2b2d2d" stroke-opacity="0.35" stroke-width="1"/>
     <ellipse cx="274.68800000000005" cy="189.408" rx="7.68" ry="1.44" fill="#fff" opacity="0.20"/>
   </g>
-  
+
   <g transform="translate(166.4 192) rotate(-3)" filter="url(#photo-shadow)">
     <rect x="-99.71199999999999" y="-62.31999999999999" width="199.42399999999998" height="124.63999999999999" rx="4.9856" fill="#080a0b"/>
     <rect x="-91.73504" y="-51.10239999999999" width="183.47008" height="89.7408" fill="#e8e3d8"/>

@@ -27,7 +27,7 @@
       <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  
+
   <rect width="720" height="126" fill="none"/>
   <text x="3" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="66" letter-spacing="6" fill="url(#steel)">OUTERSCOPE</text>
   <text x="8" y="116" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="7" fill="#7bdcff" fill-opacity="0.8">AI AUTOMATION STUDIO</text>

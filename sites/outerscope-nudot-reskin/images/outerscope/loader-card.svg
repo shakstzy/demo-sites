@@ -27,7 +27,7 @@
       <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  
+
   <rect width="430" height="290" fill="#050505"/>
   <rect width="430" height="290" fill="url(#grid)" opacity="0.10"/>
   <ellipse cx="218" cy="142" rx="120" ry="78" fill="#cfd6dc" opacity="0.06"/>

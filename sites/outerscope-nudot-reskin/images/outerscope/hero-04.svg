@@ -27,7 +27,7 @@
       <path d="M44 0H0v44" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  
+
   <defs>
     <filter id="photo-grain" x="-10%" y="-10%" width="120%" height="120%">
       <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="4" seed="21"/>
@@ -279,7 +279,7 @@
     <ellipse cx="1689.6" cy="518.4" rx="82.944" ry="25.272000000000002" fill="#cfc8ba" fill-opacity="0.11" stroke="#2b2d2d" stroke-opacity="0.35" stroke-width="3.24"/>
     <ellipse cx="1666.272" cy="509.652" rx="25.92" ry="4.86" fill="#fff" opacity="0.20"/>
   </g>
-  
+
     <g transform="translate(1382.3999999999999 345.6) rotate(9)" filter="url(#photo-shadow)">
     <rect x="-151.20000000000002" y="-129.6" width="302.40000000000003" height="259.2" fill="#f0ebe0" opacity="0.95"/>
     <text x="-114.91200000000002" y="-57.024" font-family="Georgia, serif" font-size="22.680000000000003" fill="#151515">PROOF ENGINE</text>
@@ -312,7 +312,7 @@
     <text x="0" y="-16.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13.608" letter-spacing="1.6" fill="#252525" opacity="0.78">OPS</text>
     <text x="0" y="43.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8.316" letter-spacing="1" fill="#555" opacity="0.62">OUTERSCOPE</text>
   </g>
-  
+
   <g transform="translate(825.6 583.2) rotate(5)" filter="url(#photo-shadow)">
     <rect x="-163.29600000000002" y="-338.25600000000003" width="326.59200000000004" height="676.5120000000001" rx="42.45696000000001" fill="#080a0b"/>
     <rect x="-145.33344000000002" y="-315.39456" width="290.66688000000005" height="630.78912" rx="31.026240000000005" fill="#ece8dd"/>

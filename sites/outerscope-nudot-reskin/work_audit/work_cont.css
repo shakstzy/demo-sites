@@ -14,7 +14,7 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
@@ -97,7 +97,7 @@
         /* ==========================================================================
            Section Styles
            ========================================================================== */
-        
+
         /* 1. Hero Section */
 
         .hero-bg img, .hero-bg video{
@@ -476,7 +476,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1vw;  
+            gap: 1vw;
         }
         .ph-col {
             position: relative;
@@ -731,7 +731,7 @@
             justify-content: center;
             overflow: hidden;
         }
-        
+
         .gallery-item img {
             max-width: 60%;
             max-height: 80%;
@@ -781,7 +781,7 @@
             line-height: 1;
             margin-bottom: 2rem;
         }
-        
+
         /* Dynamic Words Switcher */
         .dynamic-words-wrap {
             font-size: 1.5rem;
@@ -851,7 +851,7 @@
             }
             .ph-desc-arrow-row { flex-direction: column; }
             .ph-desc { gap: 1.2rem; }
-            
+
             .hero-media {
                 margin-bottom: 38px;
             }
@@ -1218,11 +1218,11 @@
 
         }
 
-       
+
         .col-right{
             display: none;
         }
-          
+
           .hero-content-wrapper {
             top: 50%;
           }
