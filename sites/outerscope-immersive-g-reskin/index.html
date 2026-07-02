@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-page="home">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outer Scope</title>
+  <meta name="description" content="Outer Scope builds autonomous business systems for operators who need work to move without manual drag.">
+  <link rel="icon" href="assets/outerscope/fav.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home" data-asset-base="assets/outerscope/">
+  <div class="preloader" aria-hidden="true">
+    <div class="loader-lockup"><span class="mark">OS</span><span>Outer Scope</span></div>
+    <span class="loader-line"></span>
+  </div>
+
+  <header class="site-nav" data-nav>
+    <a class="brand" href="./" aria-label="Outer Scope home"><span class="mark">OS</span><span>Outer Scope</span></a>
+    <nav>
+      <a href="about/">About</a>
+      <button class="menu-dot" type="button" data-open-projects aria-label="Open project list"><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Outer Scope hero">
+      <canvas id="reliefCanvas" class="relief-canvas" aria-hidden="true"></canvas>
+      <div class="hero-lockup">
+        <p class="hero-brand"><span class="mark">OS</span> Outer Scope</p>
+        <h1>Autonomous business systems studio</h1>
+      </div>
+      <a class="scroll-cue" href="#approach">Scroll down</a>
+      <button class="projects-cue" type="button" data-open-projects>See all projects</button>
+    </section>
+
+    <section id="approach" class="statement reveal">
+      <p class="eyebrow">Our approach</p>
+      <h2>Turn messy operations into precise, self-running systems for ambitious companies.</h2>
+      <p>A global automation partner for founders and operators, Outer Scope designs the workflows, data rails, and AI copilots that remove drag from daily work.</p>
+    </section>
+
+    <section class="mission reveal">
+      <p class="eyebrow">Our mission</p>
+      <h2>We partner with teams that need leverage, not more dashboards.</h2>
+    </section>
+
+    <section class="project-feed" data-project-feed aria-label="Selected systems"></section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <p class="footer-title">Start with the work that keeps slipping.</p>
+      <a href="mailto:inquiries@outerscope.xyz">inquiries@outerscope.xyz</a>
+    </div>
+    <div>
+      <p>Outer Scope</p>
+      <p>Austin, TX<br>Remote systems studio</p>
+    </div>
+    <form class="newsletter">
+      <label for="newsletter">Newsletter</label>
+      <div><input id="newsletter" type="email" placeholder="Email"><button type="submit">Join</button></div>
+    </form>
+    <div class="social">
+      <a href="projects/">See all projects</a>
+      <a href="https://x.com/" rel="noreferrer">X</a>
+      <a href="https://www.instagram.com/" rel="noreferrer">Instagram</a>
+      <a href="https://www.linkedin.com/" rel="noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+
+  <div class="project-popin" data-project-popin hidden>
+    <button type="button" class="popin-close" data-close-projects>Close</button>
+    <p class="eyebrow">Projects listing</p>
+    <div class="popin-list" data-popin-list></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
