@@ -25,6 +25,32 @@
     document.querySelectorAll('img[data-src]').forEach((img) => {
       const dataSrc = img.getAttribute('data-src') || '';
       if (!dataSrc || img.getAttribute('src')) return;
+      if (/\.webm(?:[?#].*)?$/i.test(dataSrc)) {
+        const video = document.createElement('video');
+        video.className = img.className;
+        video.setAttribute('data-src', dataSrc);
+        video.setAttribute('src', dataSrc);
+        video.setAttribute('preload', 'auto');
+        video.setAttribute('autoplay', '');
+        video.setAttribute('muted', '');
+        video.setAttribute('loop', '');
+        video.setAttribute('playsinline', '');
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
+        video.autoplay = true;
+        Array.from(img.attributes).forEach((attr) => {
+          if (['class', 'src', 'data-src'].includes(attr.name)) return;
+          video.setAttribute(attr.name, attr.value);
+        });
+        video.style.cssText = img.style.cssText;
+        const poster = dataSrc.replace('/loop-', '/still-').replace(/\.webm(?:[?#].*)?$/i, '.jpg');
+        video.setAttribute('poster', poster);
+        img.replaceWith(video);
+        const p = video.play();
+        if (p && typeof p.catch === 'function') p.catch(() => {});
+        return;
+      }
       const still = dataSrc.replace('/loop-', '/still-').replace(/\.webm(?:[?#].*)?$/i, '.jpg');
       img.setAttribute('src', still);
       img.setAttribute('loading', 'eager');
