@@ -1,0 +1,43 @@
+/* Outer Scope brand/content layer. Source layout, spacing, and generic backgrounds stay intact. */
+:root { color-scheme: light; }
+html,
+body {
+  min-height: 100%;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  background: #e8e8e8;
+}
+.webglApp,
+.introLoader {
+  display: none !important;
+}
+.main,
+.page,
+.page__wrapper {
+  position: relative !important;
+  height: auto !important;
+  min-height: 100vh;
+  overflow: visible !important;
+}
+.hero.hasFitHeight {
+  min-height: 100vh !important;
+  height: 100vh !important;
+}
+[data-webgl-title],
+.hero__text1 {
+  visibility: visible !important;
+}
+.mediaBlock__image.image {
+  display: block;
+  min-height: 180px;
+  object-fit: cover;
+  background: #111;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.mediaBlock__image.image[src=""],
+.mediaBlock__image.image:not([src]) {
+  opacity: 0 !important;
+}
+.os-route-fallback { display: none; }
